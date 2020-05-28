@@ -1,0 +1,149 @@
+<!doctype html> 
+<html>
+  
+    <head>
+
+        <meta charset="UTF-8">
+        <title>FAQgit</title>
+        <meta name="description" content="Wszystko o dotychczas wiem o GIT">
+        <meta name="author" content="Blanka Witczak">
+        <meta name="viewport" content="width=device-width,initial-scale=1-0">
+        <meta name="keywords" content="git, github, kurs, programowanie">
+
+    </head>
+    
+    <body>
+       
+        <header id="top">
+          <h2><b>Podsumowanie wiedzy o <i>GIT</i></b></h2>
+        </header>
+
+        <main>
+            <!--<p align="center"><a name="top" href="#bottom">Na dół strony</a></p>-->
+            <section> <!--Creating a repository-->
+                <ul><b>Tworzenie repozytorium na Github:</b>
+                    <li>Wpisanie nazwy nowego repozytorium</li>
+                    <li>Utworzenie opisu (nieobowiązkowe na tym etapie)</li>
+                    <li>Wybór repozytorium publicznego lub prywatnego</li>
+                    <li>Pominięcie inicjowania README.md, dodania .gitignore oraz licencji</li>
+                </ul><br />
+                <ul><b>W folderze źródłowym wybieramy git bash here i wpisujemy komendy:</b>
+                    <li>git init</li>
+                    <li>git remote add origin <i>link do repozytorium z github</i></li>
+                    <li>> README.md </li>
+                    <li>> .gitignore </li>
+                    <li>wprowadzenie plików do gitignore jeśli jakieś są</li>
+                    <li>git add . </li>
+                    <li>git commit -m "Initial commit"</li>
+                    <li>git push -u origin master (pierwszy push ustalający domyślnego brancha)</li>
+                    <li>po zmianach add, commit, push</li>
+                </ul><br /><br />
+               
+            </section>
+
+            <section> <!--README.md-->
+                <h3><b>README.md</b></h3>
+                <p>Tworzenie pliku README.md - opisu repozytorium</p><br />
+                <span># jako h1 - największy tekst</span><br />
+                <span>## jako h2 </span><br />
+                <span>### jako h3</span><br />
+                <span>[odnośnik](linkdoodnośnika)</span><br /><br />
+
+            </section>
+
+            <section> <!--.gitgnore-->
+               <h3><b>.gitignore</b></h3>
+                  <span>#Można w ten sposób dodać komentarz do ignorowanych plików/folderów</span><br />
+                  <span>/ignoruje cały folder</span><br /><br />
+                
+
+            </section>
+            
+            <section> <!--Informations-->
+                <h3><b>Informacje</b></h3>
+                  <p><b>Working directory/tree</b> - pliki niedodane do śledzenia, istniejące w folderze roboczym</p>
+                  <p><b>Index/Stage area</b> - Dodane do śledzenia gotowe do commita</p>
+                  <p><b>Repozytorium gita</b> - Po commicie w folderze lokalnym</p>
+                  <p><b>Repozytorium github</b> - Po (commicie i) push, umieszczone na githubie</p>
+                  <p><b>Commit message</b> - Nie powinien zawierać więcej niż 40/60 znaków w wierszu dla ułatwienia czytania.</p>
+                  <p>Pisany po angielsku w czasie present simple pierwszy wiersz.</p><br /><br />
+                
+
+            </section>
+
+            <section> <!--Commends-->
+                <h3><b>Komendy</b></h3>
+                    <div><b>git config --global user.name "<i>imię i nazwisko</i>"</b> - ustala dane użytkownika</div><br />
+                    <div><b>git config user.name</b> - sprawdza podane dane </div><br />
+                    <div><b>git config --global user.email "<i>adres e-mail</i>"</b> - ustala adresu email</div><br />
+                    <div><b>git config --unset --global user.name / user.email</b> - usuwa adres email lub dane użytkownika</div><br />
+                    <div><b>git config --global core.editor</b> - wskazuje jaki jest ustawiony domyślnie edytor</div><br />
+                    <div><b>git config --global --list</b> - lista ustawień globalnych</div><br />
+                    <div><b>git config user.name "<i>imię i nazwisko</i>"</b> - ustala dane użytkownika dla pojedyńczego repo (w pliku .git/config)</div><br />
+                    <div><b>git XXX -h</b> - XXX to zamiennik komendy, po wpisaniu pokaże się lista parametrów jakich można użyć z XXX</div><br />
+                    <div><b>git init</b> - inicjuje repozytorium lokalne</div><br />
+                    <div><b>git remote add origin <i>link do repozytorium z github</i></b> - łączy repozytorium lokalne ze zdalnym</div><br />
+                    <div><b>git status</b> - sprawdza aktualny stan repozytorium</div><br />
+                    <div><b>git diff <i>nazwapliku.format</i></b> - pokazuje porównanie pliku ze stage a zmodyfikowanym przed dodaniem aktualnej wersji do stage (podgląd przed git add .)</div><br />
+                    <div><b>git diff --cached/--staged</b> - porównanie plików ze stage do stanu plików z najnowszego commitu (podgląd zmian przed nowym commitem)</div><br />
+                    <div><b>git diff <i>hashcommitu</i> <i>hashdrugiegocommitu</i> <i>nazwapliku.format</i></b> - porównuje plik względem wskazanych dwóch commitów</div><br />
+                    <div><b>git add <i>nazwapliku.format</i></b> - dodaje konkretny plik do śledzenia</div><br />
+                    <div><b>git add ./all</b> - dodaje wszystkie pliki do śledzenia</div><br />
+                    <div><b>git commit -m "<i>Message commitu</i>"</b> - zatwierdzenie zmian w plikach do repo, aktualizowanie zmian</div><br />
+                    <div><b>git commit --amend</b> - nadpisuje ostatni commit można edytować treść i message</div><br />
+                    <div><b>git commit --amend -m "<i>Nowy message commitu</i>"</b> - nadpisuje tylko message commitu</div><br />
+                    <div><b>git commit -a/--all</b> - git add all git commit w jednym</div><br />
+                    <div><b>git commit <i>nazwapliku.format</i></b> - commit z dodaniem zmian ze śledzonego danego pliku</div><br />
+                    <div><b>git log</b> - pokazuje wcześniejsze commity z zawartością</div><br />
+                    <div><b>git log --oneline</b> - pokazuje commity tylko z ich nazwami</div><br />
+                    <div><b>git log --oneline 10</b> - pokazuje 10 najnowszych commitów</div><br />
+                    <div><b>git log --sincee "<i>2020</i>"</b> - pokazuje commity od początku 2020r</div><br />
+                    <div><b>git log --since="<i>5.5.2020</i>"</b> - pokazuje commity od konkretnej daty</div><br />
+                    <div><b>git log --grep <i>nazwapliku.format</i></b> - wyszukuje commity dotyczące danego pliku (wielkość liter ma znaczenie)</div><br />
+                    <div><b>git log --stat</b> - pokazuje niektóre pliki i w jaki sposób zmienił je commit</div><br />
+                    <div><b>git show</b> - pokazuje co się szczegółowo zmieniło w ostatnim commicie</div><br />
+                    <div><b>git show <i>hashcommitu</i></b> - pokazuje szczegółowe zmiany w danym commicie</div><br />
+                    <div><b>ls / dir</b> - pokazuje listę plików w ścieżce</div><br />
+                    <div><b>dir -h</b> - pokazuje ukryte pliki </div><br />
+                    <div><b>pwd</b> - pokazuje na jakiej ścieżce jestem</div> <br />
+                    <div><b>cd <i>nazwafolderu</i></b> - otwiera wskazany folder</div><br />
+                    <div><b>cd <i>nazwafolderu/nazwapliku.format</i></b> - otwiera plik w nowym oknie</div><br />
+                    <div><b>mkdir <i>nazwafolderu</i></b> - tworzy nowy folder</div><br />
+                    <div><b>touch/echo/>>/> <i>nazwapliku.format</i></b> - tworzy nowy plik w ścieżce</div><br />
+                    <div><b>rm <i>nazwapliku.format</i></b> - usuwa plik z folderu roboczego</div><br />
+                    <div><b>git rm --cached <i>nazwapliku.format</i></b> - usuwa ze stage (plik istnieje w folderze roboczyma jego stan to nieśledzony)</div><br />
+                    <div><b>git rm <i>nazwapliku.format</i></b> - usuwa plik z folderu roboczego i stage (kolejny commit to uwzględni tak samo status, plik nadal będzie w historii repozytorium)</div><br />
+                    <div><b>git reset HEAD / <i>nazwapliku.format</i></b> - usuwa pliki(HEAD) lub wskazany plik ze stage (istnieją w folderze i są nadal śledzone)</div><br />
+                    <div><b>git mv <i>nazwapliku.format</i> <i>nowanazwapliku.format</i></b> - zmienia nazwę pliku</div><br />
+                    <div><b>git cat-file -p <i>nazwapliku.format</i></b> - wyświetli zawartość pliku</div><br />
+                    <div><b>git cat-file -t <i>nazwapliku.format</i></b> - wyświetli typ pliku</div><br />
+                    <div><b>git checkout --<i>nazwapliku.format</i></b> - przywraca wersję zmodyfikowanego pliku do wersji w stage (jeśli commit jeszcze nie był wykonany)</div><br />
+                    <div><b>git checkout HEAD --<i>nazwapliku.format</i></b> - przywraca wersję pliku z najnowszego commita</div><br />
+                    <div><b>git checkout <i>hashcommita</i></b> - przywraca stage do stanu przed wskazanym commitem</div><br />
+                    <div><b>git hash-object <i>nazwapliku.format</i></b> - podaje hash (identyfikator pliku w folderze lokalnym, oznaczonym jako 2losowe znaki i 38 kolejnych w nazwie pliku) można używać też pierwszych 7 początkowych znaków</div><br />
+                    <div><b>code</b> - otwiera edytor</div><br />
+                    <div><b>git clone <i>nazwafolderuzrepo</i> <i>nazwaklonowanegofolderu</i></b> - klonuje folder z repozytorium</div><br />
+                    <div><b>git clone <i>link do klonowania z github</i></b> - klonuje repozytorium z github</div><br />
+                    <div><b>git checkout -b <i>nazwabrancha</i></b> - tworzy nową gałąź repozytorium</div><br />
+                    <div><b>git branch -a</b> - pokazuje listę utworzonych gałęzi</div><br />
+                    <div><b>git checkout master</b> - przenosi na wskazaną gałąź</div><br />
+                    <div><b>git branch -d <i>nazwabrancha</i></b> - usuwa wskazaną galąź</div><br />
+                    <div><b>git merge <i>nazwabrancha</i></b> - łączy gałąź wskazaną z tą, na której się znajdujemy</div><br />
+                    <div><b>q</b> - zakończenie komendy przewijanej (najczęściej listy)</div><br />
+                    <div><b>git push</b> - przesyła zmiany z repo lokalnego na zdalne (github)</div><br />
+                    <div><b>git pull</b> - pobiera zmiany z repo zdalnego na lokalnego</div><br />
+                    <div><b>git remote -v</b> - wskazuje do jakich miejsc jest przypisany push i pull</div><br /><br />
+
+                    
+            </section>
+
+        </main>
+        
+    </body>
+
+    <footer>
+        <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.0 z dnia 29.05.2020r.</p>
+    </footer>
+
+</html>
