@@ -1,0 +1,311 @@
+<!doctype html>
+<html>
+
+   <head>
+
+     <meta charset="UTF-8">
+     <title>FAQ HTML</title>
+     <meta name="description" content="Wszystko co dotychczas wiem o HTML">
+     <meta name="author" content="Blanka Witczak">
+     <meta name="viewport" content="width=device-width,initial-scale=1-0">
+     <meta name="keywords" content="html, course, kurs, programowanie">
+
+   </head>
+
+   <body>
+     <header id="top">
+       <h3><b>Podsumowanie wiedzy z języka <i>HTML</i></b></h3>
+     </header>
+
+     <main>
+
+      <article id="prefromatted-text-definicje">
+        <h5>Preformatted text - definicje</h5>
+        <pre>
+          1. Div zajmuje całą długość bloku niezależnie od długości tekstu.
+          2. Span zajmuje tylko tyle ile wymaga dodatkowo nie tworzy odstępów.
+          3. Article lub section plus id dla określenia zawartości.
+          4. & x ; - W miejscu x różne wartości aby uzyskać znak niekodowany, encje:
+             lt - less than
+             gt - greater than,
+             quot - Quote/cudzysłów,
+             apos - Apostrophe/apostrof,
+             amp - Ampersand/et,
+             nbsp - nonbreakablespace/spacja,
+             copy - Copyrights/Prawa autorskie.
+          5. &lt;i&gt; - italic/Kursywa, semantycznie &lt;em&gt; emphasis,
+             &lt;b&gt; - bold/Pogrubienie, semantycznie &lt;strong&gt; ,
+             &lt;u&gt; - underline/Podkreślenie,
+             &lt;s&gt; - strikethrough/Przekreślenie.
+          6. p - paragraph/paragraf z linią odstępu nad i pod tekstem, samozamykający.
+          7. br / - breaker/odstęp(enter) samozamykający.
+          8. Rozmiar tekstu określany w heading:
+             h1 - największy,
+             h2, h3, h4, h5,
+             h6 - najmniejszy.
+          9. Valign: top, middle, bottom.
+          10. Align: left, right, center, justify (dopasowanie).
+          11. Można dodać w p/div/span itd. title, przykład: najedź na tekst poniżej
+              <span title="Jest to nakładka na prezentowany tekst">Prezentowany tekst.</span>
+          12. Raczej się już font nie używa ale warto wiedzieć:
+              <font size="10">Size 10</font>,
+              <font color="coral">Color Coral </font>,
+              <font face="arial">Face - nazwa czcionki- Arial</font>.
+          13. Tekst o różnej wysokości np. do pisania potęg, adnotacji:
+              <sup>text</sup>Superscript,
+              <sub>text</sub>Subscript.
+          14. Preformatted text w którym są napisane te definicje, zachowuje wszystko,
+              bez konieczności użycia p, div, span, br, itd. = &lt;pre&gt; .
+          15. Cytat cite i blockquote
+              <cite>Cytat A.Einsteina</cite>
+                <blockquote cite="źródło cytatu.pl">
+                  Wiadomo, że taki a taki pomysł jest nie do zrealizowania.
+                  Ale żyje sobie jakiś nieuk, który o tym nie wie.
+                  I on właśnie dokonuje tego wynalazku.
+                </blockquote>
+           16. Adres &lt;address&gt;.
+           17. Skróty:
+               Akronim - acronym do nazw własnych, zwrotów itd:
+               <acronym lang="en" title="World Wide Web Consortium">W3C</acronym>
+               Abbreviation - abrewiatura do pojedyńczych lub podwójnych słów:
+               <abbr title="Profesor">Prof.</abbr>&nbsp;Falkowicz z serialu.
+           18. hr horizontal rule - linia oddzielająca,
+               można ją dostosować poprzez width w %, px lub bez oznaczenia,
+               dodatkowo można ustalać color, samozamykająca:
+               <hr color="coral" width="50%"/>
+
+        </pre>
+      </article><br /><br />
+
+      <section id="link">
+        <h5>Link</h5>
+        <a href="http://google.com" target="_blank">Google z target _blank</a>
+        <a href="##">Pusty z #nieistniejąceid lub "javascript:;" lub "##"</a> 
+        <a name="top" href="#bottom">Na dół strony</a>
+        <a name="bottom" href="#top">Do góry strony</a>
+
+      </section><br /><br />
+
+      <section id="lists">
+        <h5>Lists</h5>
+        <span>Unordered list - ul, Ordered list - ol, List item - li.<br />
+              UL może mieć type circle, square lub dysc.<br />
+              OL może mieć type domyślny 1, a, A, i, I. <br />
+              Może zaczynać się dla np. typu a start = g,<br />
+              Dowolny element listy może mieć określoną wartość poprzez: li value</span>
+          <ul>Unordered
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        <br />
+          <ol>Ordered
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ol>
+        <br />
+
+      </section><br /><br />
+
+      <section id="aside">
+        <h5>Aside</h5>
+        <aside style="float:left; width:150px; height:100px;">Aside float left w150xh100</aside><br /><br />
+        <aside style="float:right; width:150px; height:100px;">Aside float right w150xh100</aside><br /><br />
+        <br /><br /><br /><br /><span>W panelu inspect są opcje ułatwiające wpisanie tych danych</span>
+      </section><br /><br />
+
+      <section id="table">
+        <h5>Table</h5>
+        <span>Table border, header, row, data, width.</span>
+
+          <table border="1px" width="50%" cellpadding="5" cellspacing="0">
+            <caption>Nazwa niemożebnie fascynującej tabelki</caption>
+            <thead>
+              <tr>
+                <th>Nagłówek 1</th>
+                <th>Nagłówek 2</th>
+                <th>Nagłówek 3</th>
+                <th>Nagłówek 4</th>
+              </tr>
+            </thead>
+            <tfoot color="coral">
+              <tr>
+                <td colspan="4" align="center">&copy;Blanka Witczak</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>Dane 1</td>
+                <td>Dane 2</td>
+                <td colspan="2">Dane 3 i 4</td>
+              </tr>
+              <tr>
+                <td rowspan="2" valign="middle">Obi. i Poj. 1</td>
+                <td>Obiekt 2</td>
+                <td>Obiekt 3</td>
+                <td>Obiekt 4</td>
+              </tr>
+              <tr>
+                <td>Pojazd 2</td>
+                <td>Pojazd 3</td>
+                <td>Pojazd 4</td>
+              </tr>
+            </tbody>
+          </table>
+
+      </section><br /><br />
+
+      <section id="pictures">
+        <h5>Pictures</h5>
+        <span>Ścieżkę pliku jeśli jest w tym samym folderze co dokument, <br />
+              możesz podać jako samą nazwę ./ albo całość ścieżki, samozamykający.</span><br /><br />
+        <img border="1" src="./kotku.jpg"
+        alt="Tutaj powinno znajdować się zdjęcie agresywnego przedstawiciela dzikich kotów" />
+
+      </section><br /><br />
+
+      <section id="video">
+        <h5>Video</h5>
+        <span>Dodając controls można uzyskać dostęp do przycisków.</span><br /><br />
+          <video controls>
+            <source src="./foczka.mp4" type="video/mp4" alt="Tu powinna być foczka :(">
+          </video>
+
+      </section><br /><br />
+
+      <section id="audio">
+        <h5>Audio</h5>
+        <span>Można dodać po controls autoplay albo loop, <br />
+              można pominąć controls, wpisać autoplay i loop oraz cieszyć się efektem :D</span><br /><br />
+        <audio controls>
+          <source src="./21-Pilots-Ride.mp3" type="audio/mp3" alt="Tutaj powinien być fragment utworu">
+        </audio>
+
+      </section><br /><br />
+
+      <section id="Description-list-term-definition">
+        <h5>Description list, term, definition</h5>
+        <dl>Description list:
+          <dt>Pojęcie - description term</dt>
+             <dd>Definicja - definition.</dd>
+          <dt>Inne pojęcie</dt>
+             <dd>Inna definicja.</dd>
+        </dl>
+
+      </section><br /><br />
+
+      <section id="fieldset-ramka-mała">
+        <h5>Fieldset</h5>
+        <fieldset>
+          <legend>Niezwykle ciekawa ramka</legend>
+          Opis niewyobrażalnie ciekawej ramki.
+        </fieldset>
+
+      </section><br /><br />
+
+      <section id="frameset-obramowanie-ramka">
+        <h5>Frameset ukryty w komentarzu</h5>
+        <!-- W komentarzu z oczywistego powodu
+        <span>Frameset powinien być użyty na całą stronę jedynie z html, head bez body.<br />
+              sam frame jest samozamykający.</span>
+        <frameset rows="20%, *">
+           <frame src="FAQhtml.html" noresize="noresize" />
+           <noframe><body>Twoja Przeglądarka nie obsługuje ramek</body></noframe>
+              <frameset cols="20%, *, 20%" frameborder="1">
+                 <frame src="FAQhtml.html" noresize="noresize" />
+                 <frame src="FAQhtml.html" name="main" />
+                 <frame src="FAQhtml.html" noresize="noresize" />
+                 <noframe><body>Twoja przeglądarka nie obsługuje ramek</body></noframe>
+              </frameset>
+        </frameset> -->
+      </section><br /><br />
+
+      <section id="textarea">
+        <h5>Textarea</h5>
+        <span>Cols = columns, rows.<br /><br />
+        <textarea cols="20" rows="4">
+        </textarea>
+      </section><br /><br />
+
+      <section id="form-input">
+        <h5>Form input</h5>
+        <span>Metoda formularza get zapisuje dane w linku, można używać post dla prywatności<br />
+              action="mailto:" może być też "nazwapliku.php".<br />
+              Można dodać też accept-charset="utf-8" oraz enctype:<br />
+              enctype="text/plain" dla tekstu i enctype="multipart/form-data" dla różnych plików.</span>
+          <form method="post" action="mailto:google.com" accept-charset="utf-8" enctype="multipart/form-data">
+             <input name="dane-logowania" placeholder="E-mail" class="lg-input" size="20"/><br />
+             <input name="dane-logowania" placeholder="Login" class="sm-input" />
+             <input name="dane-logowania" placeholder="Hasło" class="lg-input" type="password" /><br />
+             <input name="dane-logowania" class="sm-input" value="Facebook" disabled="disabled" />
+             <input name="ostrzeżenie" value="StayHome" readonly="readonly" /><br />
+             <input name="plik" type="file" />
+             <input name="data" type="hidden" value="05.05.2020" class="lg-input" />
+          </form>
+
+      </section><br /><br />
+
+      <section id="form-input-checkbox">
+        <h5>Form input checkbox</h5>
+        <span>Po dodaniu id i przy nazwie checkboxa label for (zamykającym normalnie), <br />
+              da to ułatwienie w postaci zaznaczania checkboxa już z poziomu tekstu a nie tylko boxa.<br />
+              W przeciwieństwie do radiobuttons w checkboxach mimo tego samego name można zaznaczać wiele wariantów.</span><br /><br />
+               <input name="obiekty" type="checkbox" value="obiekt1" id="Obiekt 1"><label for="Obiekt 1"/>Jeden</label><br />
+               <input name="obiekty" type="checkbox" value="obiekt2" id="Obiekt 2"><label for="Obiekt 2"/>Dwa</label><br />
+               <input name="obiekty" type="checkbox" value="obiekt3" id="Obiekt 3"><label for="Obiekt 3"/>Trzy</label><br />
+               <input name="obiekty" type="checkbox" value="obiekt4" id="Obiekt 4"><label for="Obiekt 4"/>Cztery</label><br />
+               <input name="też-obiekty" type="checkbox" value="innyobiekt5" id="Inny Obiekt 5"><label for="Inny Obiekt 5"/>Dziesięć</label><br />
+
+      </section><br /><br />
+
+      <section id="form-input-radio">
+        <h5>Form input radio</h5>
+        <span>W tej opcji możesz nadając ten sam name wybrać tylko jeden wariant.<br /><br />
+              <input name="obiekty" type="radio" value="1" id="klucz"/><label for="klucz">Klucz do kół</label><br />
+              <input name="obiekty" type="radio" value="2" id="zamek"/><label for="zamek">Zamek błyskawiczny</label><br />
+              <input name="obiekty" type="radio" value="3" id="drzwi"/><label for="drzwi">Drzwi wejściowe</label><br />
+              <span>Natomiast przy różnych name dowolną ilość.</span><br />
+              <input name="przedmiot" type="radio" value="1" id="kluczyk"/><label for="kluczyk">Klucz do auta</label><br />
+              <input name="rzecz" type="radio" value="2" id="zameczek"/><label for="zameczek">Zamek w Malborku</label><br />
+              <input name="narzędzie" type="radio" value="3" id="drzwiczki"/><label for="drzwiczki">Drzwiczki od piekarnika</label><br />
+
+      </section><br /><br />
+
+      <section id="select-rollup">
+        <h5>Select rollup</h5>
+        <span>Wybierz dowolne zwierzątko </span><select name="animals">
+          <option value="cat">Kot</option>
+          <option value="dog">Pies</option>
+          <option value="seal">Foka</option>
+          <option value="hamster">Chomik</option>
+        </select>
+
+      </section><br /><br />
+
+      <section id="button">
+        <h5>Button<h5>
+        <button type="submit">Przycisk</button>
+      </section><br /><br />
+
+      <section id="comment">
+        <h5>Comment</h5>
+        <span>Komentarz wpisuje się &lt;!-- tekst komentarza --&gt;.<br />
+              Jest niewidoczny dla użytkownika nawet po Crtl+I.</span>
+              <!-- Przykładowy komentarz -->
+      </section><br /><br />
+
+      <section id="keyboard-shortcuts">
+        <h5>Keyboard shortcuts:</h5>
+        <span>Ctrl+I=inspect/zbadaj,</span>
+        <span>Ctrl+S=save/autozapis,</span>
+        <span>Ctrl+R=refresh/odśwież.</span>
+
+      </section><br /><br />
+    </main>
+   </body>
+
+   <footer>
+     <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.0 z dnia 05.05.2020r.</p>
+   </footer>
+</html>
