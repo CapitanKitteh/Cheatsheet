@@ -15,7 +15,7 @@
     <body>
        
         <header id="top">
-          <h2><b>Podsumowanie wiedzy o <i>GIT</i></b></h2>
+          <h2><b>Podsumowanie mojej aktualnej wiedzy o <i>GIT</i></b></h2>
         </header>
 
         <main>
@@ -43,11 +43,65 @@
 
             <section> <!--README.md-->
                 <h3><b>README.md</b></h3>
-                <p>Tworzenie pliku README.md - opisu repozytorium</p><br />
+                <p>Tworzenie pliku README.md - opisu repozytorium (zalecany po angielsku)</p><br />
+                <ul>Co warto zawrzeć:
+                    <li>Project name</li>
+                    <li>Table of contents(as links)</li>
+                    <li>About/Informations</li>
+                    <li>Pictures (mogą przedstawiać wygląd gotowego produktu)</li>
+                    <li>Technologies</li>
+                    <li>Setup</li>
+                    <li>Code element</li>
+                    <li>Features</li>
+                    <li>Status</li>
+                    <li>Credit/Inspiration<!--/Sources (where from etc.)--></li>
+                    <li>Contact</li>
+                </ul>
                 <span># jako h1 - największy tekst</span><br />
                 <span>## jako h2 </span><br />
                 <span>### jako h3</span><br />
+                <span>#### jako h4</span><br />
+                <span>##### jako h5</span><br />
+                <span>###### jako h6 - najmniejszy tekst</span><br />
+                <span>*kursywa* lub _kursywa_ - italic</span><br />
+                <span>**pogrubienie** lub __pogrubienie__ - bold</span><br />
+                <span>**tekst pogrubiony i _kursywa_** - kombinacja italic i bold</span><br />
+                <span>~~przekreślenie~~ - strikethrough</span><br />
+                <span>`przykładowy tekst` - jako panel ukazujący kod w wersji edytora</span><br />
+                <span>_in progress_, _finished_, _no longer continue_ - oznaczenia statusu projektu/repo</span><br />
+                <span>![Tekst alternatywny](./ścieżkazdjęcia "Title") - dodaje zdjęcie</span><br />
                 <span>[odnośnik](linkdoodnośnika)</span><br /><br />
+                <span>Unordered list można użyć:<br />
+                      *list item<br />
+                      -list item<br />
+                      +list item</span><br /><br />
+                <span>1.Ordered list<br />
+                       1.list item<br />
+                       2.list item</span><br /><br />
+                <span>Odnośniki i linki<br /></span>
+                      <span>[Nazwa odnośnika](link)</span><br />
+                      <span>[Nazwa odnośnika](link "Title") - np. https://google.com "Google's Homepage" </span><br />
+                      <span>[Nazwa odnośnika do pliku](./ścieżkapliku)</span><br />
+                      <span>[1]</span><br />
+                      <span>[Nazwa odnośnika do linku/pliku, który można dodać później]</span><br />
+                      <span>[1]: https:/google.com </span><br />
+                      <span>[Nazwa odnośnika do linku/pliku, który można dodać później]: https://google.com </span><br />
+                      <!--<span>link z pytania na discordzie</span>--><r /><br />
+                <span>Tabele</span><br />
+                <span>|Column 1|Column 2|Column 3|</span><br />
+                <span>|--------|:------:|-------:| (co najmniej 3x -)</span><br />
+                <span>|Row 1   |Row 1   |Row 1   |</span><br />
+                <span>|Row 2   |Row 2   |Row 2   |</span><br />
+                <span>|align : | center |   right|</span><br /><br />
+                <span>Kwestia estetyki jak jest napisana tabela co widać w kodzie</span><br />
+                <span>|C1|C2|C3|</span><br />
+                <span>|---|---|---|</span><br />
+                <span>|R1|R1|R1|</span><br /><br />
+                <span>> - Blockquote</span><br />
+                <span>---/***/___ (3 lub więcej) - horizontal rule</span><br />
+                <span>[![Alternative image text](./source/pic or screenshot of youtube video)](youtube link)</span><br />
+
+
 
             </section>
 
@@ -61,10 +115,10 @@
             
             <section> <!--Informations-->
                 <h3><b>Informacje</b></h3>
-                  <p><b>Working directory/tree</b> - pliki niedodane do śledzenia, istniejące w folderze roboczym</p>
-                  <p><b>Index/Stage area</b> - Dodane do śledzenia gotowe do commita</p>
-                  <p><b>Repozytorium gita</b> - Po commicie w folderze lokalnym</p>
-                  <p><b>Repozytorium github</b> - Po (commicie i) push, umieszczone na githubie</p>
+                  <p><b>Working directory/tree</b> - Pliki niedodane do śledzenia, istniejące w folderze roboczym</p>
+                  <p><b>Index/Stage area</b> - Pliki dodane do śledzenia gotowe do commita</p>
+                  <p><b>Repozytorium gita</b> - Pliki po commicie w folderze lokalnym</p>
+                  <p><b>Repozytorium github</b> - Pliki po (commicie i) push, umieszczone na githubie</p>
                   <p><b>Commit message</b> - Nie powinien zawierać więcej niż 40/60 znaków w wierszu dla ułatwienia czytania.</p>
                   <p>Pisany po angielsku w czasie present simple pierwszy wiersz.</p><br /><br />
                 
@@ -143,7 +197,7 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.0 z dnia 29.05.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.0 z dnia 29.05.2020r.</p>
     </footer>
 
 </html>
