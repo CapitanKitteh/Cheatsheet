@@ -1,11 +1,11 @@
-#Cheatsheet from anything that I know yet from learning how to code and become a programmer.
+Cheatsheet from anything that I know yet from learning how to code and become a programmer.
 
-######Author: Blanka Witczak
+Author: Blanka Witczak
 
-##Status: _in progress_.
+Status: _in progress_.
 
 
-##About this project
+About this project
 
 **This project is bilingual which means some things are written in English or Polish, for example (from FAQhtml):**
 
@@ -21,9 +21,10 @@
 
         </select>```
 
-**Please keep in mind that I'm learning from courses and other sources and I'm writing down what I learned. It's not a form of teaching and I'm not describing everything in full phrases or examples (which may change in future).**
+**Please keep in mind that I'm learning from courses and other sources and I'm writing down what I learned. 
+It's not a form of teaching and I'm not describing everything in full phrases or examples (which may change in future).**
 
------
+
 
 I wanted to create something exactly like a cheatsheet because
 *My memory could never remember all of those tiny details
@@ -34,14 +35,15 @@ I wanted to create something exactly like a cheatsheet because
 
 Plans about this project? I have no idea yet except for learning more and helping others.
 
------
 
-##Languages (more coming soon!)
+
+Languages (more coming soon!)
 
 *HTML
 
 
-##Features
+
+Features
 
 1.What can you find in this project that I already know?
 
@@ -51,26 +53,26 @@ Plans about this project? I have no idea yet except for learning more and helpin
 
 3.Basic knowlege about html tags and more (FAQhtml)
 
------
 
-##What issues did I face already and how to solve them?
+
+What issues did I face already and how to solve them?
 
 Find more in:
 
 IssuesGIT
 
------
 
-##Inspiration/Sources
+
+Inspiration/Sources
 
 *Udemy courses
 
 *Discord group - Szkoła Programisty
 
------
 
-##Contact
+
+Contact
 
 Discord app - Blanka#5252
 
-Version: 1.1 from 31.05.2020
+Version: 1.2 from 31.05.2020
