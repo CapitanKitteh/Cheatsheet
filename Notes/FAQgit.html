@@ -39,11 +39,11 @@
                 <ul><b>W folderze źródłowym wybieramy git bash here i wpisujemy komendy:</b>
                     <li>git init</li>
                     <li>git remote add origin <i>link do repozytorium z github</i></li>
-                    <li>> README.md </li>
-                    <li>> .gitignore </li>
+                    <li>&gt; README.md </li>
+                    <li>&gt; .gitignore </li>
                     <li>wprowadzenie plików do gitignore jeśli jakieś są</li>
                     <li>git add . </li>
-                    <li>git commit -m "Initial commit"</li>
+                    <li>git commit -m &quot;Initial commit&quot;</li>
                     <li>git push -u origin master (pierwszy push ustalający domyślnego brancha)</li>
                     <li>po zmianach add, commit, push</li>
                 </ul><br /><br />
@@ -63,7 +63,7 @@
                     <li>Code element</li>
                     <li>Features</li>
                     <li>Status</li>
-                    <li>Credit/Inspiration<!--/Sources (where from etc.)--></li>
+                    <li>Credit/Inspiration/Sources</li>
                     <li>Contact</li>
                 </ul>
                 <span># jako h1 - największy tekst (zazwyczaj tytuł)<br />
@@ -78,7 +78,7 @@
                       <b>~~przekreślenie~~</b> - strikethrough<br />
                       <b>`przykładowy tekst`</b> - jako panel ukazujący kod w wersji edytora><br />
                       <b>_in progress_, _finished_, _no longer continue_</b> - oznaczenia statusu projektu/repo<br />
-                      <b>></b> - Blockquote<br />
+                      <b>&gt;</b> - Blockquote<br />
                       <b>---</b> lub <b>***</b> lub <b>___</b> (minimum 3x) - horizontal rule<br />
                       </span><br /><br />
                 <span><h4>Unordered list można użyć dowolnie:</h4><br />
@@ -90,8 +90,8 @@
                        2.<i>list item</i></span><br /><br />
                 <span><h4>Odnośniki i linki</h4><br />
                       [Nazwa odnośnika](link)<br />
-                      [Nazwa odnośnika](link "Title") - np. https://google.com "Google's Homepage" <br />
-                      ![Tekst alternatywny](./ścieżkazdjęcia "Title")<br />
+                      [Nazwa odnośnika](link &quot;Title&quot;) - np. https://google.com &quot;Google&apos;s Homepage&quot; <br />
+                      ![Tekst alternatywny](./ścieżkazdjęcia &quot;Title&quot;)<br />
                       [Nazwa odnośnika do pliku](./ścieżkapliku)<br />
                       [Nazwa odnośnika do linku/pliku, który można dodać później]<br />
                       [Inny przykład powyższego]<br />
@@ -125,21 +125,21 @@
                   <p><b>Index/Stage area</b> - Pliki dodane do śledzenia gotowe do commita</p>
                   <p><b>Repozytorium gita</b> - Pliki po commicie w folderze lokalnym</p>
                   <p><b>Repozytorium github</b> - Pliki po (commicie i) push, umieszczone na githubie</p>
-                  <p><b>Commit message</b> - Nie powinien zawierać więcej niż 40/60 znaków w wierszu dla ułatwienia czytania.</p>
-                  <p>Pisany po angielsku w czasie present simple pierwszy wiersz.</p><br /><br />
+                  <p><b>Commit message</b> - Nie powinien zawierać więcej niż 40/60 znaków w wierszu dla ułatwienia czytania.
+                        Pisany po angielsku w czasie present simple pierwszy wiersz.</p><br /><br />
                 
 
             </section>
 
             <section id="commands"> <!--Commands-->
                 <h3><b>Komendy</b></h3>
-                    <div><b>git config --global user.name "<i>imię i nazwisko</i>"</b> - ustala dane użytkownika</div><br />
+                    <div><b>git config --global user.name &quot;<i>imię i nazwisko</i>&quot;</b> - ustala dane użytkownika</div><br />
                     <div><b>git config user.name</b> - sprawdza podane dane </div><br />
-                    <div><b>git config --global user.email "<i>adres e-mail</i>"</b> - ustala adresu email</div><br />
+                    <div><b>git config --global user.email &quot;<i>adres e-mail</i>&quot;</b> - ustala adresu email</div><br />
                     <div><b>git config --unset --global user.name / user.email</b> - usuwa adres email lub dane użytkownika</div><br />
                     <div><b>git config --global core.editor</b> - wskazuje jaki jest ustawiony domyślnie edytor</div><br />
                     <div><b>git config --global --list</b> - lista ustawień globalnych</div><br />
-                    <div><b>git config user.name "<i>imię i nazwisko</i>"</b> - ustala dane użytkownika dla pojedyńczego repo (w pliku .git/config)</div><br />
+                    <div><b>git config user.name &quot;<i>imię i nazwisko</i>&quot;</b> - ustala dane użytkownika dla pojedyńczego repo (w pliku .git/config)</div><br />
                     <div><b>git XXX -h</b> - XXX to zamiennik komendy, po wpisaniu pokaże się lista parametrów jakich można użyć z XXX</div><br />
                     <div><b>git init</b> - inicjuje repozytorium lokalne</div><br />
                     <div><b>git remote add origin <i>link do repozytorium z github</i></b> - łączy repozytorium lokalne ze zdalnym</div><br />
@@ -149,16 +149,16 @@
                     <div><b>git diff <i>hashcommitu</i> <i>hashdrugiegocommitu</i> <i>nazwapliku.format</i></b> - porównuje plik względem wskazanych dwóch commitów</div><br />
                     <div><b>git add <i>nazwapliku.format</i></b> - dodaje konkretny plik do śledzenia</div><br />
                     <div><b>git add ./all</b> - dodaje wszystkie pliki do śledzenia</div><br />
-                    <div><b>git commit -m "<i>Message commitu</i>"</b> - zatwierdzenie zmian w plikach do repo, aktualizowanie zmian</div><br />
+                    <div><b>git commit -m &quot;<i>Message commitu</i>&quot;</b> - zatwierdzenie zmian w plikach do repo, aktualizowanie zmian</div><br />
                     <div><b>git commit --amend</b> - nadpisuje ostatni commit można edytować treść i message</div><br />
-                    <div><b>git commit --amend -m "<i>Nowy message commitu</i>"</b> - nadpisuje tylko message commitu</div><br />
+                    <div><b>git commit --amend -m &quot;<i>Nowy message commitu</i>&quot;</b> - nadpisuje tylko message commitu</div><br />
                     <div><b>git commit -a/--all</b> - git add all git commit w jednym</div><br />
                     <div><b>git commit <i>nazwapliku.format</i></b> - commit z dodaniem zmian ze śledzonego danego pliku</div><br />
                     <div><b>git log</b> - pokazuje wcześniejsze commity z zawartością</div><br />
                     <div><b>git log --oneline</b> - pokazuje commity tylko z ich nazwami</div><br />
                     <div><b>git log --oneline 10</b> - pokazuje 10 najnowszych commitów</div><br />
-                    <div><b>git log --sincee "<i>2020</i>"</b> - pokazuje commity od początku 2020r</div><br />
-                    <div><b>git log --since="<i>5.5.2020</i>"</b> - pokazuje commity od konkretnej daty</div><br />
+                    <div><b>git log --sincee &quot;<i>2020</i>&quot;</b> - pokazuje commity od początku 2020r</div><br />
+                    <div><b>git log --since=&quot;<i>5.5.2020</i>&quot;</b> - pokazuje commity od konkretnej daty</div><br />
                     <div><b>git log --grep <i>nazwapliku.format</i></b> - wyszukuje commity dotyczące danego pliku (wielkość liter ma znaczenie)</div><br />
                     <div><b>git log --stat</b> - pokazuje niektóre pliki i w jaki sposób zmienił je commit</div><br />
                     <div><b>git show</b> - pokazuje co się szczegółowo zmieniło w ostatnim commicie</div><br />
@@ -203,7 +203,7 @@
 
     <footer>
         <p align="center"><a href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.2 z dnia 30.05.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.3 z dnia 30.05.2020r.</p>
     </footer>
 
 </html>
