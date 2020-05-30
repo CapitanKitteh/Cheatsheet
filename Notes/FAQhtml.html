@@ -18,8 +18,29 @@
      </header>
 
      <main>
+       <section> <!--Reference list-->
+         <p>Spis treści:</p>
+         <a href="#pre">Preformatted text</a><br />
+         <a href="#link">Link</a><br />
+         <a href="#list">List</a><br />
+         <a href="#aside">Aside</a><br />
+         <a href="#table">Table</a><br />
+         <a href="#picture">Picture</a><br />
+         <a href="#video">Video</a><br />
+         <a href="#audio">Audio</a><br />
+         <a href="#description">Description list, term, definition</a><br />
+         <a href="#fieldset">Fieldset</a><br />
+         <a href="#frameset">Frameset</a><br />
+         <a href="#textarea">Text area</a><br />
+         <a href="#input">Form input</a><br />
+         <a href="#checkbox">Form input - checkbox</a><br />
+         <a href="#radio">Form input - radio</a><br />
+         <a href="#selectrollup">Select rollup</a><br />
+         <a href="#button">Button</a><br />
+         <a href="#comment">Comment</a><br />
+       </section>
 
-      <article> <!--Preformatted text-->
+      <article id="pre"> <!--Preformatted text-->
         <h5>Preformatted text - definicje</h5>
         <pre>
           1. Div zajmuje całą długość bloku niezależnie od długości tekstu.
@@ -77,7 +98,7 @@
         </pre>
       </article><br /><br />
 
-      <section> <!--Link-->
+      <section id="link"> <!--Link-->
         <h5>Link</h5>
         <a href="http://google.com" target="_blank">Google z target _blank</a>
         <a href="##">Pusty z #nieistniejąceid lub "javascript:;" lub "##"</a> 
@@ -86,7 +107,7 @@
 
       </section><br /><br />
 
-      <section> <!--List-->
+      <section id="list"> <!--List-->
         <h5>Lists</h5>
         <span>Unordered list - ul, Ordered list - ol, List item - li.<br />
               UL może mieć type circle, square lub dysc.<br />
@@ -108,14 +129,14 @@
 
       </section><br /><br />
 
-      <section> <!--Aside-->
+      <section id="aside"> <!--Aside-->
         <h5>Aside</h5>
         <aside style="float:left; width:150px; height:100px;">Aside float left w150xh100</aside><br /><br />
         <aside style="float:right; width:150px; height:100px;">Aside float right w150xh100</aside><br /><br />
         <br /><br /><br /><br /><span>W panelu inspect są opcje ułatwiające wpisanie tych danych</span>
       </section><br /><br />
 
-      <section> <!--Table-->
+      <section id="table"> <!--Table-->
         <h5>Table</h5>
         <span>Table border, header, row, data, width.</span>
 
@@ -156,7 +177,7 @@
 
       </section><br /><br />
 
-      <section> <!--Picture-->
+      <section id="picture"> <!--Picture-->
         <h5>Pictures</h5>
         <span>Ścieżkę pliku jeśli jest w tym samym folderze co dokument, <br />
               możesz podać jako samą nazwę ./ albo całość ścieżki, samozamykający.</span><br /><br />
@@ -165,7 +186,7 @@
 
       </section><br /><br />
 
-      <section> <!--Video-->
+      <section id="video"> <!--Video-->
         <h5>Video</h5>
         <span>Dodając controls można uzyskać dostęp do przycisków.</span><br /><br />
           <video controls>
@@ -174,7 +195,7 @@
 
       </section><br /><br />
 
-      <section> <!--Audio-->
+      <section id="audio"> <!--Audio-->
         <h5>Audio</h5>
         <span>Można dodać po controls autoplay albo loop, <br />
               można pominąć controls, wpisać autoplay i loop oraz cieszyć się efektem :D</span><br /><br />
@@ -184,7 +205,7 @@
 
       </section><br /><br />
 
-      <section> <!--Description list, term, definition-->
+      <section id="description"> <!--Description list, term, definition-->
         <h5>Description list, term, definition</h5>
         <dl>Description list:
           <dt>Pojęcie - description term</dt>
@@ -195,7 +216,7 @@
 
       </section><br /><br />
 
-      <section> <!--Fieldset-->
+      <section id="fieldset"> <!--Fieldset-->
         <h5>Fieldset</h5>
         <fieldset>
           <legend>Niezwykle ciekawa ramka</legend>
@@ -204,7 +225,7 @@
 
       </section><br /><br />
 
-      <section> <!--Frameset-->
+      <section id="frameset"> <!--Frameset-->
         <h5>Frameset ukryty w komentarzu</h5>
         <!-- W komentarzu z oczywistego powodu
         <span>Frameset powinien być użyty na całą stronę jedynie z html, head bez body.<br />
@@ -221,14 +242,14 @@
         </frameset> -->
       </section><br /><br />
 
-      <section> <!--Text area-->
+      <section id="textarea"> <!--Text area-->
         <h5>Textarea</h5>
         <span>Cols = columns, rows.<br /><br />
         <textarea cols="20" rows="4">
         </textarea>
       </section><br /><br />
 
-      <section> <!--Form input-->
+      <section id="input"> <!--Form input-->
         <h5>Form input</h5>
         <span>Metoda formularza get zapisuje dane w linku, można używać post dla prywatności<br />
               action="mailto:" może być też "nazwapliku.php".<br />
@@ -246,7 +267,7 @@
 
       </section><br /><br />
 
-      <section> <!--Form input, checkbox-->
+      <section id="checkbox"> <!--Form input, checkbox-->
         <h5>Form input checkbox</h5>
         <span>Po dodaniu id i przy nazwie checkboxa label for (zamykającym normalnie), <br />
               da to ułatwienie w postaci zaznaczania checkboxa już z poziomu tekstu a nie tylko boxa.<br />
@@ -259,7 +280,7 @@
 
       </section><br /><br />
 
-      <section> <!--Form input, radio-->
+      <section id="radio"> <!--Form input, radio-->
         <h5>Form input radio</h5>
         <span>W tej opcji możesz nadając ten sam name wybrać tylko jeden wariant.<br /><br />
               <input name="obiekty" type="radio" value="1" id="klucz"/><label for="klucz">Klucz do kół</label><br />
@@ -272,7 +293,7 @@
 
       </section><br /><br />
 
-      <section> <!--Select rollup-->
+      <section id="selectrollup"> <!--Select rollup-->
         <h5>Select rollup</h5>
         <span>Wybierz dowolne zwierzątko </span><select name="animals">
           <option value="cat">Kot</option>
@@ -283,29 +304,23 @@
 
       </section><br /><br />
 
-      <section> <!--Button-->
+      <section id="button"> <!--Button-->
         <h5>Button<h5>
         <button type="submit">Przycisk</button>
       </section><br /><br />
 
-      <section> <!--Comment-->
+      <section id="comment"> <!--Comment-->
         <h5>Comment</h5>
         <span>Komentarz wpisuje się &lt;!-- tekst komentarza --&gt;.<br />
               Jest niewidoczny dla użytkownika nawet po Crtl+I.</span>
               <!-- Przykładowy komentarz -->
       </section><br /><br />
 
-      <section> <!--Keyboard shortcuts-->
-        <h5>Keyboard shortcuts:</h5>
-        <span>Ctrl+I=inspect/zbadaj,</span>
-        <span>Ctrl+S=save/autozapis,</span>
-        <span>Ctrl+R=refresh/odśwież.</span>
-
-      </section><br /><br />
     </main>
    </body>
 
    <footer>
-     <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.0 z dnia 05.05.2020r.</p>
+     <p align="center"><a href="#top">Do góry strony</a></p>
+     <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.1 z dnia 05.05.2020r.</p>
    </footer>
 </html>
