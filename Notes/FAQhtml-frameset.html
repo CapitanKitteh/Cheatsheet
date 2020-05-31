@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>FAQ HTML - Frameset</title>
+        <meta name="description" content="Zastosowanie frameset - FAQhtml">
+        <meta name="author" content="Blanka Witczak">
+        <meta name="viewport" content="width=device-width,initial-scale=1-0">
+        <meta name="keywords" content="html, course, kurs, programowanie">
+   
+      </head>
+
+    <frameset rows="20%, *">
+        <frame src="F:/Projects/Cheatsheet/Sources/HTML - Frameset/F1-top.html" noresize="noresize" />
+        <noframe><body>Twoja Przeglądarka nie obsługuje ramek</body></noframe>
+           <frameset cols="20%, *, 20%" frameborder="1">
+              <frame src="F:/Projects/Cheatsheet/Sources/HTML - Frameset/F2-left20%.html" noresize="noresize" />
+              <frame src="F:/Projects/Cheatsheet/Sources/HTML - Frameset/F2-center60%.html" name="main" />
+              <frame src="F:/Projects/Cheatsheet/Sources/HTML - Frameset/F2-right20%.html" noresize="noresize" />
+              <noframe><body>Twoja przeglądarka nie obsługuje ramek</body></noframe>
+           </frameset>
+     </frameset>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <header align="center"><h2>To jest część centralna drugiego framesetu w której napiszę nieco więcej o tworzeniu owych ramek.</h2></header>
+    <body>
+        <p>Frameset powinien być zastosowany w pliku html, w którym znajduje się jedynie head a resztę kodu zamiast body i footera zajmuje właśnie ramka.<br />
+            Frameset ma tag otwierający i zamykający natomiast frame jest samozamykający.<br />
+            Kod tego framesetu (z objaśnieniem) to:<br />
+             <b>&lt;frameset rows=&quot;20%, *&quot;&gt;</b> - przy czym rows oznacza ramkę poziomą a cols pionową<br />
+             20% jest oznaczeniem wielkości elementu ramki a * oznacza dopasowanie reszty powierzchni do drugiego elementu,<br />
+             bez konieczności podawania dokładnej liczby procentowej.<br />
+             <b>&lt;frame src=&quot;<i>./ścieżkapliku</i>&quot; noresize=&quot;noresize&quot; /&gt;</b><br />
+             Noresize pozwala ustalić jasno granice ramki i nie daje użytkownikowi możliwości przesuwania granic ramki z poziomu przeglądarki<br />
+             <b>&lt;noframe&gt;&lt;body&gt;Twoja Przeglądarka nie obsługuje ramek&lt;/body&gt;&lt;/noframe&gt;</b><br />
+             Noframe służy do wstawiania tekstu alternatywnego w przypadku, gdy przeglądarka nie obsługuje framesetów<br />
+             <b>&lt;frameset cols=&quot;20%, *, 20%&quot; frameborder=&quot;1&quot;&gt;</b><br />
+             Elementy drugiej, wewnętrznej ramki to dwa boczne elementy i centralny, aby łatwiej je odróżnić dodałam 1px border.<br />
+             <b>&lt;frame src=&quot;<i>./ścieżkapliku</i>&quot; noresize=&quot;noresize&quot; /&gt;</b><br />
+             <b>&lt;frame src=&quot;<i>./ścieżkapliku</i>&quot; name=&quot;main&quot; /&gt;</b><br />
+             Main pomaga określić głowną kolumnę framesetu. <br />
+             <b>&lt;frame src=&quot;<i>./ścieżkapliku</i>&quot; noresize=&quot;noresize&quot; /&gt;</b></p>
+    </body>
+</html>
