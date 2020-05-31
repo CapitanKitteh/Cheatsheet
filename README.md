@@ -9,7 +9,7 @@ Status: _in progress_.
 
 **This project is bilingual which means some things are written in English or Polish, for example (from FAQhtml):**
 
-       <select name="animals">
+        <select name="animals">
       
          <option value="cat">Kot</option>
 
@@ -80,4 +80,4 @@ IssuesGIT
 
 Discord app - Blanka#5252
 
-Version: 1.4 from 31.05.2020
+Version: 1.5 from 31.05.2020
