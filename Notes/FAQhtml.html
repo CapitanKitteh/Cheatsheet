@@ -77,7 +77,7 @@
               <sub>text</sub>Subscript.
           14. Preformatted text w którym są napisane te definicje, zachowuje wszystko,
               bez konieczności użycia p, div, span, br, itd. = &lt;pre&gt; .
-          15. Cytat cite i blockquote
+          15. Cytat cite (może również służyć do przedstawienia tytułu książki autora) i blockquote
               <cite>Cytat A.Einsteina</cite>
                 <blockquote cite="źródło cytatu.pl">
                   Wiadomo, że taki a taki pomysł jest nie do zrealizowania.
@@ -94,16 +94,28 @@
                można ją dostosować poprzez width w %, px lub bez oznaczenia,
                dodatkowo można ustalać color, samozamykająca:
                <hr color="coral" width="50%"/>
-
+           19. Podgląd pliku html jako przykład plik w repozytorium na github: 
+               http://htmlpreview.github.io/?https://github.com/nazwaużytkownika/nazwarepo/blob/master/nazwapliku.format
+           20. Język strony opisuje się w otwierającym &lt;html lang=&apos;x&apos;&gt; lista języków do wpisania w miejsce x: <a href="https://www.w3schools.com/tags/ref_language_codes.asp" target="_blank">Źródło</a>
+               <!--Ściąga dla mnie: en-angielski, pl-polski, es-hiszpański, oc-oksytański, eo-esperanto, ru-rosyjski-->
+           21. Dodatkowe informacje 
+               <mark>To zdanie jest podkreślone z użyciem tagu mark</mark> 
+               <small>To zdanie jest w tagu small</small>
+               Słowo <del>tutaj</del> jest w tagu del (deleted)
+               Słowo <ins>dodane tutaj</ins> dodałam to poprzez tag ins (insertion)
+               Zacytuję krótko <q>treść z tagu q</q> 
+               <bdo dir="ltr">Ułożenie tekstu z bdo dir=&apos;ltr&apos; czyli left to right i na odwrót:</bdo>
+               <bdo dir="rtl">Ułożenie tekstu z bdo dir=&apos;rtl&apos; czyli right to left</bdo>
         </pre>
       </article><br /><br />
 
       <section id="link"> <!--Link-->
         <h3>Link</h3>
-        <a href="http://google.com" target="_blank">Google z target _blank</a><br />
-        <a href="##">Pusty z #nieistniejąceid lub "javascript:;" lub "##"</a> <br />
+        <a href="http://google.com" target="_blank">Google z target _blank</a><span>Otwiera się w nowej karcie</span><br />
+        <a href="http://google.com" target="_self">Google z target _self</a><span>Otwiera się w obecnej karcie (_parent i _top też)</span><br />
+        <a href="##">Pusty link</a><span>Utworzyć je można poprzez umieszczenie w href &apos;#nieistniejącegoid&apos;, &apos;##&apos; lub &apos;javascript:;&apos;</span><br />
         <a name="top" href="#bottom">Na dół strony</a><br />
-        <a name="bottom" href="#top">Do góry strony</a>
+        <a name="bottom" href="#top">Do góry strony</a><br />
 
       </section><br /><br />
 
@@ -307,6 +319,6 @@
 
    <footer>
      <p align="center"><a href="#top">Do góry strony</a></p>
-     <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.9.1 z dnia 1.06.2020r.</p>
+     <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.0 z dnia 08.06.2020r.</p>
    </footer>
 </html>
