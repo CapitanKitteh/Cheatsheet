@@ -38,6 +38,7 @@
          <a href="#dropdown">Drop-down</a><br />
          <a href="#button">Button</a><br />
          <a href="#comment">Comment</a><br />
+         <a href="#details">Summary, Details</a><br />
        </section>
 
       <article id="pre"> <!--Preformatted text-->
@@ -114,7 +115,7 @@
         <a href="http://google.com" target="_blank">Google z target _blank</a><span> Otwiera się w nowej karcie</span><br />
         <a href="http://google.com" target="_self">Google z target _self</a><span> Otwiera się w obecnej karcie (_parent i _top też)</span><br />
         <a href="##">Pusty link</a><span> Utworzyć je można poprzez umieszczenie w href &apos;#nieistniejącegoid&apos;, &apos;##&apos; lub &apos;javascript:;&apos;</span><br />
-        <a name="top" href="#bottom">Na dół strony</a><br />
+        <a name="top" href="#bottom">Na dół strony</a><span> Tworzymy je poprzez href=&quot;#nazwaid&quot;, która jest umieszczona w docelowym miejscu (w moim przypadku w każdym tagu section)</span><br />
         <a name="bottom" href="#top">Do góry strony</a><br /><br />
 
         <span>Navigation links z użyciem tagu nav, w tym przupadku są odnośnikami do stron zewnętrznych.<br />
@@ -346,11 +347,21 @@
               <!-- Przykładowy komentarz -->
       </section><br /><br />
 
+      <section id="details"> <!--Summary, details-->
+        <h3>Summary, details</h3>
+        <summary>Szczegóły, ten tutuł oznaczony jako summary, a element niżej details</summary>
+        <details>Można go wykorzystać na wiele sposobów<br />
+          Niemniej, żaden jeszcze nie przyszedł mi do głowy<br />
+          Może to być lista z informacjami o której godzinie jest otwarta kawiarnia<br />
+          Może to być lista lekarzy mających dyżur w szpitalu<br />
+        </details>
+      </section><br /><br />
+
     </main>
    </body>
 
    <footer>
      <p align="center"><a href="#top">Do góry strony</a></p>
-     <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.4 z dnia 09.06.2020r.</p>
+     <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.5 z dnia 09.06.2020r.</p>
    </footer>
 </html>
