@@ -293,7 +293,7 @@
       <section id="textarea"> <!--Text area-->
         <h3>Textarea</h3>
         <span>Cols = columns, rows.<br /><br />
-        <textarea cols="20" rows="4">
+        <textarea name="message" cols="20" rows="4">
         </textarea>
       </section><br /><br />
 
@@ -343,12 +343,40 @@
 
       <section id="dropdown"> <!--Drop-down(select)-->
         <h3>Lista wyboru Drop-down</h3>
-        <span>Wybierz dowolne zwierzątko </span><select name="animals">
+        <span>Można dodać użyty w pierwszym przykładzie samodzielny tag multiple aby wybrać więcej niż jedną opcję.<br />
+          Można dodać tag size=&quot;10&quot; pokazujący tylko 10 widocznych opcji jak w drugim przykładzie<br /></span>
+          <caption>Wybierz dowolne zwierzątka:</caption>
+        <select name="animals" multiple>
           <option value="cat">Kot</option>
           <option value="dog">Pies</option>
           <option value="seal">Foka</option>
           <option value="hamster">Chomik</option>
-        </select>
+        </select><br /><br />
+
+        <caption>Wybierz dowolnie:</caption>
+        <select name="cars" size="10">
+          <option value="cadillac">Cadillac</option>
+          <option value="fiat">Fiat</option>
+          <option value="bmw">BMW</option>
+          <option value="volkswagen">Volkswagen</option>
+          <option value="volvo">Volvo</option>
+          <option value="jeep">Jeep</option>
+          <option value="nissan">Nissan</option>
+          <option value="seat">Seat</option>
+          <option value="toyota">Toyota</option>
+          <option value="ford">Ford</option>
+          <option value="opel">Opel</option>
+          <option value="hyundai">Hyundai</option>
+        </select><br /><br />
+
+        <span>Klasyczny przykład drop-down</span><br />
+        <caption>Jaki lubisz sok?</caption>
+        <select>
+          <option value="applejuice">Jabłkowy</option>
+          <option value="orangejuice">Pomarańczowy</option>
+          <option value="grapejuice">Winogronowy</option>
+          <option value="none">Żaden</option>
+        </select><br />
 
       </section><br /><br />
 
