@@ -35,7 +35,7 @@
          <a href="#input">Form input</a><br />
          <a href="#checkbox">Form input - checkbox</a><br />
          <a href="#radio">Form input - radio</a><br />
-         <a href="#selectrollup">Select rollup</a><br />
+         <a href="#dropdown">Drop-down</a><br />
          <a href="#button">Button</a><br />
          <a href="#comment">Comment</a><br />
        </section>
@@ -111,11 +111,20 @@
 
       <section id="link"> <!--Link-->
         <h3>Link</h3>
-        <a href="http://google.com" target="_blank">Google z target _blank</a><span>Otwiera się w nowej karcie</span><br />
-        <a href="http://google.com" target="_self">Google z target _self</a><span>Otwiera się w obecnej karcie (_parent i _top też)</span><br />
-        <a href="##">Pusty link</a><span>Utworzyć je można poprzez umieszczenie w href &apos;#nieistniejącegoid&apos;, &apos;##&apos; lub &apos;javascript:;&apos;</span><br />
+        <a href="http://google.com" target="_blank">Google z target _blank</a><span> Otwiera się w nowej karcie</span><br />
+        <a href="http://google.com" target="_self">Google z target _self</a><span> Otwiera się w obecnej karcie (_parent i _top też)</span><br />
+        <a href="##">Pusty link</a><span> Utworzyć je można poprzez umieszczenie w href &apos;#nieistniejącegoid&apos;, &apos;##&apos; lub &apos;javascript:;&apos;</span><br />
         <a name="top" href="#bottom">Na dół strony</a><br />
-        <a name="bottom" href="#top">Do góry strony</a><br />
+        <a name="bottom" href="#top">Do góry strony</a><br /><br />
+
+        <span>Navigation links z użyciem tagu nav, w tym przupadku są odnośnikami do stron zewnętrznych.<br />
+        Jeśli chciałabym stworzyć nav bar zastosowałabym je jak w trzecim przykładzie z odniesieniem do id</span><br />
+        <nav>
+          <a href="http://google.com" target="_blank">Google</a> | 
+          <a href="http://google.com" target="_blank">Still Google</a> | 
+          <a href="#bottom">Could be NASA page but..</a> | 
+          <a href="https://nasa.gov" target="_blank">That ain&apos;t Google</a>
+        </nav>
 
       </section><br /><br />
 
@@ -214,9 +223,9 @@
           <img src="https://raw.githubusercontent.com/CapitanKitteh/Cheatsheet/master/Sources/HTML/bulwary.jpg" alt="Bulwary w Szczecinie" width="25%" height="30%" border="0">
         </a><br /><br />
 
-        <span>Zdjęcie w ramce z opisem, stworzone za pomocą tagu figure następnie img i figcaption</span><br />
+        <span>Zdjęcie w ramce z opisem, stworzone za pomocą tagu figure następnie img i figcaption, border 2px</span><br />
         <figure>
-          <img src="https://raw.githubusercontent.com/CapitanKitteh/Cheatsheet/master/Sources/HTML/odra.jpg" alt="Panorama nad Odrą">
+          <img src="https://raw.githubusercontent.com/CapitanKitteh/Cheatsheet/master/Sources/HTML/odra.jpg" alt="Panorama nad Odrą" width="60%" height="30%" border="2px">
           <figcaption>Panorama nad Odrą - wędkowanie latem 2019</figcaption>
         </figure>
       </section><br /><br />
@@ -315,8 +324,8 @@
 
       </section><br /><br />
 
-      <section id="selectrollup"> <!--Select rollup-->
-        <h3>Select rollup</h3>
+      <section id="dropdown"> <!--Drop-down(select)-->
+        <h3>Lista wyboru Drop-down</h3>
         <span>Wybierz dowolne zwierzątko </span><select name="animals">
           <option value="cat">Kot</option>
           <option value="dog">Pies</option>
@@ -342,6 +351,6 @@
 
    <footer>
      <p align="center"><a href="#top">Do góry strony</a></p>
-     <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.3 z dnia 09.06.2020r.</p>
+     <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.4 z dnia 09.06.2020r.</p>
    </footer>
 </html>
