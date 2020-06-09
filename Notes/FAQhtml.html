@@ -36,6 +36,7 @@
          <a href="#input">Form input</a><br />
          <a href="#checkbox">Form input - checkbox</a><br />
          <a href="#radio">Form input - radio</a><br />
+         <a href="#inputlist">Form input -list</a><br />
          <a href="#dropdown">Drop-down</a><br />
          <a href="#button">Button</a><br />
          <a href="#comment">Comment</a><br />
@@ -300,17 +301,50 @@
       <section id="input"> <!--Form input-->
         <h3>Form input</h3>
         <span>Metoda formularza get zapisuje dane w linku, można używać post dla prywatności<br />
+              jeśli name zostanie pominięty formularz nie będzie przesłany<br />
               action="mailto:" może być też "nazwapliku.php".<br />
               Można dodać też accept-charset="utf-8" oraz enctype:<br />
               enctype="text/plain" dla tekstu i enctype="multipart/form-data" dla różnych plików.</span>
           <form method="post" action="mailto:google.com" accept-charset="utf-8" enctype="multipart/form-data">
-             <input name="dane-logowania" placeholder="E-mail" class="lg-input" size="20"/><br />
              <input name="dane-logowania" placeholder="Login" class="sm-input" />
              <input name="dane-logowania" placeholder="Hasło" class="lg-input" type="password" /><br />
              <input name="dane-logowania" class="sm-input" value="Facebook" disabled="disabled" />
              <input name="ostrzeżenie" value="StayHome" readonly="readonly" /><br />
              <input name="plik" type="file" />
-             <input name="data" type="hidden" value="05.05.2020" class="lg-input" />
+             <input name="data" type="hidden" value="05.05.2020" class="lg-input" /><br />
+
+             <label for="favcolor">Wybierz swój ulubiony kolor:</label>
+             <input type="color" id="favcolor" name="favcolor"><br />
+             <label for="today">Zaznacz dowolną datę:</label>
+             <input type="date" id="today" name="today"><br />
+             <label for="datemax">Wybierz datę do 2020-06-09:</label>
+             <input type="date" id="datemax" name="datemax" max="2020-06-08"><br />
+             <label for="datemin">Wybierz datę po 2020-06-09:</label>
+             <input type="date" id="datemin" name="datemin" min="2020-06-09"><br />
+             <label for="dayandtime">Wybierz dowolną datę i godzinę:</label>
+             <input type="datetime-local" id="dayandtime" name="dayandtime"><br />
+             <label for="email">Podaj adres email:</label>
+             <input type="email" id="email" name="email"><br />
+             <label for="yearandmonth">Wybierz rok i miesiąc:</label>
+             <input type="month" id="yearandmonth" name="yearandmonth"><br />
+             <label for="quantity">Podaj liczbę między 10 a 100:</label> <!--quantity=ilość-->
+             <input type="number" id="quantity" name="quantity" min="10" max="100"><br />
+             <label for="plaintext">Wpisz swoje uwagi/pytania tutaj:</label>
+             <input type="text" id="plaintext" name="plaintext"><br />
+             <label for="vol">Głośność (między 0 a 50): (domyślnie jest 0-100)</label>
+             <input type="range" id="vol" name="vol" min="0" max="50"><br />
+             <label for="gosearch">Wyszukaj:</label>
+             <input type="search" id="gosearch" name="gosearch"><span>Przydałby się tu jakiś button do wykonania czynności</span><br />
+             <span>Dodatkowe tagi:<br />
+             required - wskazuje, że dany input musi być wypełniony aby formularz został przesłany<br />
+             maxlength - wskazuje maksymalną liczbę znaków/liter do wpisania<br />
+             size - wskazuje szerokość pola do wpisywania<br />
+             step - określa co ile ma przeskoczyć wskazywana dana (np. liczby z step=&quot;5&quot; będą z każdym kliknięciem ukazywać się następująco: 0, 5, 10, 15 ,20 itd.)<br />
+             <!--pattern?-->
+             </span><br />
+             <span><b>Aby przesłać formularz do celu określonego w form action wpisujemy:<br />
+             &lt;input type=&quot;submit&quot;&gt;</b></span>
+             
           </form>
 
       </section><br /><br />
@@ -320,11 +354,13 @@
         <span>Po dodaniu id i przy nazwie checkboxa label for (zamykającym normalnie), <br />
               da to ułatwienie w postaci zaznaczania checkboxa już z poziomu tekstu a nie tylko boxa.<br />
               W przeciwieństwie do radiobuttons w checkboxach mimo tego samego name można zaznaczać wiele wariantów.</span><br /><br />
-               <input name="obiekty" type="checkbox" value="obiekt1" id="Obiekt 1"><label for="Obiekt 1"/>Jeden</label><br />
-               <input name="obiekty" type="checkbox" value="obiekt2" id="Obiekt 2"><label for="Obiekt 2"/>Dwa</label><br />
-               <input name="obiekty" type="checkbox" value="obiekt3" id="Obiekt 3"><label for="Obiekt 3"/>Trzy</label><br />
-               <input name="obiekty" type="checkbox" value="obiekt4" id="Obiekt 4"><label for="Obiekt 4"/>Cztery</label><br />
-               <input name="też-obiekty" type="checkbox" value="innyobiekt5" id="Inny Obiekt 5"><label for="Inny Obiekt 5"/>Dziesięć</label><br />
+               <input name="obiekty" type="checkbox" value="obiekt1" id="Obiekt1"><label for="Obiekt1"/>Jeden</label><br />
+               <input name="obiekty" type="checkbox" value="obiekt2" id="Obiekt2"><label for="Obiekt2"/>Dwa</label><br />
+               <input name="obiekty" type="checkbox" value="obiekt3" id="Obiekt3"><label for="Obiekt3"/>Trzy</label><br />
+               <input name="obiekty" type="checkbox" value="obiekt4" id="Obiekt4"><label for="Obiekt4"/>Cztery</label><br />
+               <input name="też-obiekty" type="checkbox" value="innyobiekt5" id="InnyObiekt5"><label for="InnyObiekt5"/>Dziesięć</label><br />
+               <span>Zaznaczone samodzielnym tagiem checked</span><br />
+               <input name="obiekty" type="checkbox" value="obiekt6" id="Obiekt6" checked/><label for="Obiekt6">Sześć</label><br />
 
       </section><br /><br />
 
@@ -338,6 +374,23 @@
               <input name="przedmiot" type="radio" value="1" id="kluczyk"/><label for="kluczyk">Klucz do auta</label><br />
               <input name="rzecz" type="radio" value="2" id="zameczek"/><label for="zameczek">Zamek w Malborku</label><br />
               <input name="narzędzie" type="radio" value="3" id="drzwiczki"/><label for="drzwiczki">Drzwiczki od piekarnika</label><br />
+              <span>Zaznaczona samodzielnym tagiem checked</span><br />
+              <input name="lampka" type="radio" value="4" id="tertial" checked/><label for="tertial">Lampka z ikei</label><br />
+
+      </section><br /><br />
+
+      <section id="inputlist"> <!--Forn input, list-->
+        <h3>Form input list</h3>
+        <span>Możesz tu wpisać największe miasto europy a pokażą się możliwe odpowiedzi:</span>
+        <input list="europecities">
+        <datalist id="europecities">
+          <option value="Moskwa">
+          <option value="Rrzym">
+          <option value="Kijów">
+          <option value="Londyn">
+          <option value="Berlin">
+          <option value="Paryż">
+        </datalist>
 
       </section><br /><br />
 
@@ -411,12 +464,17 @@
          <span>Przykład zastosowania tagu code:</span><br />
          <code>(300x7)+(5x7)+2=?</code>
 
+      </section><br /><br />
+      
+      <section>
+        <h3>Ciekawe odnośniki</h3>
+        <a href="https://www.w3schools.com/tags/ref_urlencode.asp" target="_blank">Przetwarzanie treści na adres URL</a>
       </section>
     </main>
    </body>
 
    <footer>
      <p align="center"><a href="#top">Do góry strony</a></p>
-     <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.8 z dnia 09.06.2020r.</p>
+     <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.0 z dnia 09.06.2020r.</p>
    </footer>
 </html>
