@@ -38,7 +38,6 @@
          <a href="#radio">Form input - radio</a><br />
          <a href="#inputlist">Form input -list</a><br />
          <a href="#dropdown">Drop-down</a><br />
-         <a href="#button">Button</a><br />
          <a href="#comment">Comment</a><br />
          <a href="#details">Summary, Details</a><br />
          <a href="#others">Pozostałe informacje</a><br />
@@ -321,8 +320,8 @@
              <input type="date" id="datemax" name="datemax" max="2020-06-08"><br />
              <label for="datemin">Wybierz datę po 2020-06-09:</label>
              <input type="date" id="datemin" name="datemin" min="2020-06-09"><br />
-             <label for="dayandtime">Wybierz dowolną datę i godzinę:</label>
-             <input type="datetime-local" id="dayandtime" name="dayandtime"><br />
+             <label for="dayandtime">Wybierz dowolną datę i godzinę (jest tutaj autofocus, po załadowaniu/przeładowaniu strony jest zaznaczony):</label>
+             <input type="datetime-local" id="dayandtime" name="dayandtime" autofocus><br />
              <label for="email">Podaj adres email:</label>
              <input type="email" id="email" name="email"><br />
              <label for="yearandmonth">Wybierz rok i miesiąc:</label>
@@ -335,17 +334,38 @@
              <input type="range" id="vol" name="vol" min="0" max="50"><br />
              <label for="gosearch">Wyszukaj:</label>
              <input type="search" id="gosearch" name="gosearch"><span>Przydałby się tu jakiś button do wykonania czynności</span><br />
-             <label for="phone">Wprowadź numer telefonu (bez myśliników i spacji oraz numeru kierunkowego np.+48):</label>
+             <label for="phone">Wprowadź numer telefonu (bez myślników i spacji oraz numeru kierunkowego np.+48):</label>
              <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" maxlength="9"><br />
+             <label for="meeting">Wybierz godzinę (np. spotkania):</label>
+             <input type="time" id="meeting" name="meeting"><br />
+             <label for="webpage">Podaj adres dowolnej strony:</label>
+             <input type="url" id="webpage" name="webpage"><br />
+             <label for="vacation">Wybierz rok i tydzień, np tydzień w którym chcesz pojechać na wakacje:</label>
+             <input type="week" id="vacation" name="vacation"><br />
+              <label for="example">Przykładowy tekst, poprzez kliknięcie <b>Submit</b> zostanie przesłany na mailto:google.com<br />
+                Drugi przycisk opisany jako <b>Submit as Admin</b> prześle formularz do nieistniejącego (na potrzeby przykładu) pliku<br />
+                Trzeci przycisk <b>Submit as Multipart/form-data</b> wykorzystuje tag formenctype wskazujący jak ma być przetworzona treść podczas przesłania, tylko wtedy kiedy metodą jest POST (tak jak w całej sekcji input tej strony)<br />
+                Kolejne dwa odpowiadają za przesłanie z metodą post (tutaj zastosowaną) oraz w drugim przycisku z tagiem formmethod=&quot;get&quot;<br />
+                Następny wykorzystuje tag formtarget=&quot;_blank&quot; <b>Submit to a new window/tab</b><br />
+                Wszystko dotyczy tego samego pola tekstowego i jest zawarte w jednym tagu form:</label>
+              <input type="text" id="example" name="example"><br />
+             <span>Submity i możliwości:</span><br />
+              <input type="submit" value="Submit"> <!--można też użyć button type="submit"-->
+              <input type="submit" formaction="nazwapliku.format" value="Submit as Admin">
+              <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+              <input type="submit" value="Submit using POST">
+              <input type="submit" formmethod="get" value="Submit using GET">
+              <input type="submit" formtarget="_blank" value="Submit to a new window/tab"><br />
+             <label for="kasuj">Wyczyść wprowadzone dane:</label>
+             <input type="reset" id="kasuj"><br />
+             <input type="image" src="https://raw.githubusercontent.com/CapitanKitteh/Cheatsheet/master/Sources/HTML/finish.jpg" alt="Submit" width="50" height="30"><br />
              <span>Dodatkowe tagi:<br />
              required - wskazuje, że dany input musi być wypełniony aby formularz został przesłany<br />
              maxlength - wskazuje maksymalną liczbę znaków/liter do wpisania<br />
-             size - wskazuje szerokość pola do wpisywania<br />
+             size - wskazuje szerokość pola do wpisywania (domyśnie jest to 20) <br />
              step - określa co ile ma przeskoczyć wskazywana dana (np. liczby z step=&quot;5&quot; będą z każdym kliknięciem ukazywać się następująco: 0, 5, 10, 15 ,20 itd.)<br />
-             <!--pattern?-->
+             autocomplete=&quot;off&quot; - wyłącza dla wskazanego tagu autouzupełnianie
              </span><br />
-             <span><b>Aby przesłać formularz do celu określonego w form action wpisujemy:<br />
-             &lt;input type=&quot;submit&quot;&gt;</b></span>
              
           </form>
 
@@ -435,11 +455,6 @@
 
       </section><br /><br />
 
-      <section id="button"> <!--Button-->
-        <h3>Button<h3>
-        <button type="submit">Przycisk</button>
-      </section><br /><br />
-
       <section id="comment"> <!--Comment-->
         <h3>Comment</h3>
         <span>Komentarz wpisuje się &lt;!-- tekst komentarza --&gt;.<br /></span>
@@ -477,6 +492,6 @@
 
    <footer>
      <p align="center"><a href="#top">Do góry strony</a></p>
-     <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.1 z dnia 09.06.2020r.</p>
+     <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.2 z dnia 10.06.2020r.</p>
    </footer>
 </html>
