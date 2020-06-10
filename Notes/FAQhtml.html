@@ -41,6 +41,7 @@
          <a href="#comment">Comment</a><br />
          <a href="#details">Summary, Details</a><br />
          <a href="#others">Pozostałe informacje</a><br />
+         <a href="#reflinks">Reference links</a><br />
        </section>
 
       <article id="pre"> <!--Preformatted text-->
@@ -358,7 +359,8 @@
               <input type="submit" formtarget="_blank" value="Submit to a new window/tab"><br />
              <label for="kasuj">Wyczyść wprowadzone dane:</label>
              <input type="reset" id="kasuj"><br />
-             <input type="image" src="https://raw.githubusercontent.com/CapitanKitteh/Cheatsheet/master/Sources/HTML/finish.jpg" alt="Submit" width="50" height="30"><br />
+             <label for="finish">Zdjęcie jako przycisk Submit: </label>
+             <input type="image" src="https://raw.githubusercontent.com/CapitanKitteh/Cheatsheet/master/Sources/HTML/finish.jpg" alt="Submit" id="finish"  border="1px" width="50" height="30"><br />
              <span>Dodatkowe tagi:<br />
              required - wskazuje, że dany input musi być wypełniony aby formularz został przesłany<br />
              maxlength - wskazuje maksymalną liczbę znaków/liter do wpisania<br />
@@ -483,7 +485,7 @@
 
       </section><br /><br />
       
-      <section>
+      <section id="reflinks"> <!--Reference links-->
         <h3>Ciekawe odnośniki</h3>
         <a href="https://www.w3schools.com/tags/ref_urlencode.asp" target="_blank">Przetwarzanie treści na adres URL</a>
       </section>
@@ -492,6 +494,6 @@
 
    <footer>
      <p align="center"><a href="#top">Do góry strony</a></p>
-     <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.2 z dnia 10.06.2020r.</p>
+     <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.4 z dnia 10.06.2020r.</p>
    </footer>
 </html>
