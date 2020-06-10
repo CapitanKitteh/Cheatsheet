@@ -29,6 +29,7 @@
          <a href="#picture">Picture</a><br />
          <a href="#video">Video</a><br />
          <a href="#audio">Audio</a><br />
+         <a href="#iframe">Iframe</a><br />
          <a href="#description">Description list, term, definition</a><br />
          <a href="#fieldset">Fieldset</a><br />
          <a href="#frameset">Frameset</a><br />
@@ -267,6 +268,26 @@
 
       </section><br /><br />
 
+      <section id="iframe"> <!--iframe-->
+        <h3>Iframe</h3>
+        <span>Iframe może zostać wykorzystana jako miejsce docelowe odnośnika</span><br /> <!--czy to ma sens?-->
+        <iframe src="https://pl.wikipedia.org/wiki/NASA" width="60%" height="350"></iframe><br /><br />
+
+        <span>Iframe jako odnośnik działa następująco: link w iframe jest bazą, a dzięki oznaczeniu name w nim i href są połączone, przez co kliknięcie w odnośnik href wyświetla docelową stronę właśnie w iframe.</span><br />
+        <span><a href="https://pl.wikipedia.org/wiki/NASA" target="iframegoogle">Wiki: NASA</a></span><br />
+        <iframe src="https://pl.wikipedia.org" name="iframegoogle" width="40%" height="200"></iframe><br /><br />
+
+        <span>Iframe z youtube<br />
+        ?autoplay=0 (domyślnie) lub ?autoplay=1 ustala, czy przy po załadowaniu treść ma się odtwarzać automatycznie<br />
+        ?playlist=<i>kodfilmu</i>&amp;loop=1 zapętlają odtwarzanie<br />
+        ?controls=1 (prawdopodobnie domyślnie)<br />
+        <b>Każdy film posiadający prawa autorskie będzie niedostępny!</b><br />
+        pierwszy z width 75% i height 400, a drugi bez określonych wymiarów</span><br />
+         <iframe src="https://www.youtube.com/embed/YrvBTBmqVPE" width="75%" height="400"></iframe><br />
+         <iframe src="https://www.youtube.com/embed/Ssvu2yncgWU"></iframe><br />
+
+      </section><br /><br />
+
       <section id="description"> <!--Description list, term, definition-->
         <h3>Description list, term, definition</h3>
         <dl>Description list:
@@ -321,8 +342,8 @@
              <input type="date" id="datemax" name="datemax" max="2020-06-08"><br />
              <label for="datemin">Wybierz datę po 2020-06-09:</label>
              <input type="date" id="datemin" name="datemin" min="2020-06-09"><br />
-             <label for="dayandtime">Wybierz dowolną datę i godzinę (jest tutaj autofocus, po załadowaniu/przeładowaniu strony jest zaznaczony):</label>
-             <input type="datetime-local" id="dayandtime" name="dayandtime" autofocus><br />
+             <label for="dayandtime">Wybierz dowolną datę i godzinę (jest tutaj autofocus, po załadowaniu/przeładowaniu strony byłby zaznaczony, gdyby nie celowa literówka, aby strona ładowała się normalnie):</label>
+             <input type="datetime-local" id="dayandtime" name="dayandtime" autfocus><br />
              <label for="email">Podaj adres email:</label>
              <input type="email" id="email" name="email"><br />
              <label for="yearandmonth">Wybierz rok i miesiąc:</label>
@@ -481,7 +502,9 @@
          <span>Użycie tagu var i sub w przykładzie chemicznego wzoru tlenku srebra(I):</span><br />
          <var>Ag</var><sub>2</sub><var>O</var><br />
          <span>Przykład zastosowania tagu code:</span><br />
-         <code>(300x7)+(5x7)+2=?</code>
+         <code>(300x7)+(5x7)+2=?</code><br />
+         <span>Przykład użycia tagu object a zamiast src jest data, można wstawić pliki w różnym formacie, nie tylko zdjęcia, wideo i dźwięki</span><br />
+         <object width="25%" height="300px" data="F:/Projects/Cheatsheet/Sources/HTML/kotku.jpg"></object><br />
 
       </section><br /><br />
       
@@ -494,6 +517,6 @@
 
    <footer>
      <p align="center"><a href="#top">Do góry strony</a></p>
-     <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.4 z dnia 10.06.2020r.</p>
+     <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.0 z dnia 10.06.2020r.</p>
    </footer>
 </html>
