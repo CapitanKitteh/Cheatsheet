@@ -224,16 +224,18 @@
         <img border="1" src="https://raw.githubusercontent.com/CapitanKitteh/Cheatsheet/master/Sources/HTML/kotku.jpg"
         alt="Tutaj powinno znajdować się zdjęcie agresywnego przedstawiciela dzikich kotów" /><br /><br />
 
-        <span>Mapa obiektów w zdjęciu</span><br />
+        <span>Mapa obiektów w zdjęciu, zaznaczone są circle: pianki i M&AMP;M&apos;s, rect: ciastka, poly: popcorn</span><br />
         <img src="https://raw.githubusercontent.com/CapitanKitteh/Cheatsheet/master/Sources/HTML/snacks.jpg"
         alt="Przekąski" usemap="#workmap">
         <map name="workmap">
           <area shape="rect" coords="536, 235, 624, 350" alt="Cookies" 
           href="https://pl.wikipedia.org/wiki/Ciastko" target="_blank"/>
-          <area shape="circle" coords="442, 234, 121" alt="Marshmallows"
+          <area shape="circle" coords="442, 234, 79" alt="Marshmallows"
           href="https://pl.wikipedia.org/wiki/Krem_Marshmallow" target="_blank"/>
           <area shape="circle" coords="363, 83, 76" alt="M&M's"
           href="https://www.sweetestmenu.com/mm-chocolate-cookie-cake/" target="_blank"/>
+          <area shape="poly" coords="492, 4, 625, 2, 623, 218, 552, 212, 466, 108" alt="Popcorn"
+          href="https://pl.wikipedia.org/wiki/Popcorn" target="_blank"/>
         </map><br /><br />
 
         <span>Zdjęcie jako odnośnik (w tym przykładzie do google)</span><br />
@@ -274,7 +276,7 @@
 
         <span>Iframe jako odnośnik działa następująco: link w iframe jest bazą, a dzięki oznaczeniu name w nim i href są połączone, przez co kliknięcie w odnośnik href wyświetla docelową stronę właśnie w iframe.</span><br />
         <span><a href="https://pl.wikipedia.org/wiki/NASA" target="iframegoogle">Wiki: NASA</a></span><br />
-        <iframe src="https://pl.wikipedia.org" name="iframegoogle" width="40%" height="200"></iframe><br /><br />
+        <iframe src="https://pl.wikipedia.org/wiki/HTML" name="iframegoogle" width="40%" height="200"></iframe><br /><br />
 
         <span>Iframe z youtube<br />
         ?autoplay=0 (domyślnie) lub ?autoplay=1 ustala, czy przy po załadowaniu treść ma się odtwarzać automatycznie<br />
@@ -516,6 +518,6 @@
 
    <footer>
      <p align="center"><a href="#top">Do góry strony</a></p>
-     <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.1 z dnia 10.06.2020r.</p>
+     <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.2 z dnia 10.06.2020r.</p>
    </footer>
 </html>
