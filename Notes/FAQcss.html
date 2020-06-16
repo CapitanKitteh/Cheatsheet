@@ -1,0 +1,115 @@
+<!doctype html> 
+<html>
+  
+    <head>
+
+        <meta charset="UTF-8">
+        <title>FAQcss</title>
+        <meta name="description" content="Wszystko co dotychczas wiem o CSS">
+        <meta name="author" content="Blanka Witczak">
+        <meta name="viewport" content="width=device-width,initial-scale=1-0">
+        <meta name="keywords" content="css, style, kurs, programowanie">
+        <link rel="stylesheet" type="text/css" href="FAQcss.css" />
+
+    </head>
+    
+    <body>
+       
+        <header id="top">
+            <h2><b>Podsumowanie wiedzy o <i>CSS</i></b></h2>
+        </header>
+
+        <main>
+            <!--<p align="center"><a name="top" href="#bottom">Na dół strony</a></p>-->
+            <section id=main>
+              <h3>Do przetworzenia</h3>
+              <pre>
+                  nazwa rzeczy określanej {
+                      atrybut np background: wartość;
+                  }
+                  Kolor tła
+                  body {
+                      background: #000000; w vsc pojawia się panel ułatwiający wybór koloru, w takej wersji też: 
+                      background: rgb(0, 0, 0) skala do 255
+                  }
+                  dla estetyki warto pisać body > main > section > p
+                  odczytywane są od góry do dołu, więc jeśli masz określony w hr color na niebieski
+                  a linijkę niżej body > main > section > h3 kolor na zielony z białym tłem, odczyta na niebiesko
+                  jeśli zamienisz je miejscami, odczyta na zielono z białym tłem
+                  !important nadpisuje wszelkie reguły
+              </pre>
+              <p>przykład 1</p>
+              <div>przykład 2</div>
+              <span>przykład 3</span>
+            </section>
+
+            <section id=rules>
+                <pre>
+                    w head pod meta dodaj to
+                    link rel="stylesheet" type="text/css" href="FAQcss.css" /
+                @import z google fonts link a niżej
+                body {font-family: 'Dosis', sans-serif;}
+                body {background: #000000; color: rgb(0, 0, 0);}
+                h2 {color: #000;}
+                body > main > section > p {background: #fff;}
+                #nazwaid {border: 1px<!--width--> solid/dotted/dashed<!--style--> #000<!--color-->;}
+                    border-top: none <!--może być też bottom i side-->
+                margin: 0px;
+                margin: auto; centruje
+                jak zrobić z div span czyli block element into inline
+                h1 {display: inline;} albo inline-block wtedy możesz regulować height
+                #nazwaidartykułu lub sekcji {max-width: 33%; margin: auto;}
+                zdjęcie aktykułu 
+                div class="article-image" style="background:url(nazwazdj.format)"/div
+                class to jak id tyle ,że dla css łatwiej je przyjąć bo możesz mieć np kilka section z tym samym class ale id już nie bardzo
+                wtedy styl tych class będzie taki sam 
+                dla takiej klasy i zdjęcia reguła z kursu, a jeszcze, id oznaczamy # a class . 
+                <!--id i class po spacji dodają kolejne np id="jeden dwa" class="jeden dwa jeden-trzy" jeden-trzy to jeden element-->
+                .article-image {height:200px; width:100%; background-size:cover;}
+                do artykułu w html masz href Więcej aby jego zrobić w italicu możesz dać mu class i oznaczyć nastepująco
+                .nazwaclassy {font-style: italic;}
+                jeśli masz np 3 sekcje i jedna jest pic druga vid trzecia audio i ostylujesz je jako
+                audio na styleone
+                vid na styletwothree
+                pic na stylethreefour
+                wtedy możesz pisać .styleone tylko dla audio .stylethree dla vid i pic albo .stylethreefour dla vid i pic
+                zmiana podkreślenia w linkach
+                a {text-decoration: none;} albo line-through lub overline <!--strikethrough albo linia nad tekstem-->
+                możesz też napisać tak a {text-decoration: underline line-through overline;} dla pod/prze/nadkreślenia jednocześnie
+                letter-spacing: -2px/2px/20px odleglość liter od siebie
+                word-spacing: 2px;
+                text-indent: 20px odstęp akapitowy od strony
+                text-align: center; tego nie musisz tłumaczyć :) 
+                text-decoration-color: #000; linie przekreślające mają kolor czarny
+                jeśli mam w line kilka linii określających styl, css wybierze ostatnią
+                text-shadow: 2pxw prawo 5pxdół  5pxrozmycie(4-10 najlepiej 5 przy 50 już nie widać) #000 kolor
+                - zmienia kierunek, text-shadow: -2px w lewo -5px w górę 
+                box-shadow: 5px 5px 20px -1px #000 zajebisty naprzykład jako cień ramki ze zdjęciem
+                hover=najechanie kiedy najedziesz na link możesz zmienić jego romiar itd
+                a:hover {font-size: 40px;} dla przykładu
+                focus=kliknięcie np. w input czy textarea dodajemy tam class np .my-input
+                .my-input {display:block; width:30%; margin:20px; padding<!--ułożenie/położenie-->:10px 20px;}
+                .my-input:focus {background: #493726; color: #fff; outline: none;}
+                article albo cokolwiek co możesz kliknąć i nie jest odnośnikiem na działanie przytrzymania myszką ma active
+                article:active {opacity .4;} transparentność zmiejszy się kiedy przytrzymam element klikając
+                border-radius: 3px delikatnie zaokrągla rogi np ramki czy bordera
+                border radius rogi: 10px lewy górny, 20px prawy górny, 2px prawy dolny i 50px lewy dolny zgodnie z zegarem
+                border-top-left-radius pierwsza wartosć określi zakrzywienie a druga zakrzywienie do w tym przypadku lewej strony dodatkowo
+                wycięcie koła ze zdjęcie a w zasadzie zakrzywienie granic do kształtu koła
+                .article-image {height:200px; width;200px: border-radius:100%;}
+                z index- głębokość przenikalność, layer number
+                lifting effect article:hover {box/text-shadow: 5px 5px 20px rgba(0, 0, 0, .7);}
+                płynne przejście transition: all 1s; w tym przypadku transition: box-shadow 1s, background #000 może być
+                a nawet transition-delay: 2s;
+            </pre>
+            </section>
+
+        </main>
+
+    </body>
+
+    <footer>
+        <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.0 z dnia 16.06.2020r.</p>
+    </footer>
+</html>
