@@ -9,7 +9,7 @@
         <meta name="author" content="Blanka Witczak">
         <meta name="viewport" content="width=device-width,initial-scale=1-0">
         <meta name="keywords" content="css, style, kurs, programowanie">
-        <link rel="stylesheet" type="text/css" href="FAQcss.css" />
+        <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/CapitanKitteh/Cheatsheet/master/Sources/CSS/FAQcss.css" />
 
     </head>
     
@@ -21,6 +21,22 @@
 
         <main>
             <!--<p align="center"><a name="top" href="#bottom">Na dół strony</a></p>-->
+            <section>x - spis treści</section>
+            <section>x - Intro, info o css</section>
+            <section>x - podstawy</section>
+            <section>x kolejne elementy</section>
+            <section>x kolejne elementy</section>
+            <section>x kolejne elementy</section>
+            <section>x kolejne elementy</section>
+            <section>x kolejne elementy</section>
+            <section>x kolejne elementy</section>
+            <section>x kolejne elementy</section>
+            <section>x kolejne elementy</section>
+            <section>x kolejne elementy</section>
+            <section>x kolejne elementy</section>
+            <section>x inne</section>
+
+
             <section id=main>
               <h3>Do przetworzenia</h3>
               <pre>
@@ -104,12 +120,55 @@
             </pre>
             </section>
 
+            <section id="plkurs">
+                <p style="color:green;">to jest css inline ważniejszy, bardziej priorytetowy niż w pliku CSS</p>
+                <p>możesz pisać css w html wpisując lukę której ma nie czytać (a'la komentarz)
+                    <![CDATA[*/
+                    treść css
+                    /*]]>
+                </p>
+                <p>id gdy na stronie jest jeden taki element a class gdy elementów jest wiele, np id tytułu i class pojęć</p>
+                <p>hrefy, 
+                    a:link {color:green;} przed jakąkolwiek akcją
+                    a:visited {color:yellow;} po kliknięciu
+                    a:hover {color:black;} najechanie
+                    a:active {color:red;} przytrzymanie
+                </p>
+                <p>text-decoration blink miga i nie jest super zalecany do użytku, inherit = dziedziczenie wartości</p>
+                <p>text-transform: capitalize; - pirwsza litera każdego słowa we wskazanym zdaniu będzie duża,
+                    lowercase; - małe litery niezależnie od tekstu pierwotnego
+                    uppercase; - wszystkie duże litery
+                    text-align: center; - wiadomo
+                    font-size: 30px; a potem line-height: 140% (z 30px)
+                    text-indent (wgniecenie/wcięcie): 20px; odstęp akapitowy
+                    word-spacing: 30px/1em (1em=1xfontsize określony wcześniej?)
+                    white-space: nowrap; ciągnie tekst na długość tak jak piszesz w kodzie bez br i enterów, możesz też mu dać pre :D
+                </p>
+                <p>font safe list: arial, arial black, comic sans ms, courier new, georgia, impact, times new roman (domyślna), trebuchet ms, verdana</p>
+                <p>italic, albo force italic czyli oblique (pochylenie niezaleźnie czy czcionka ma je w zestawie?)</p>
+                <p>font-variant: small-caps; capslock na treść z zachowaniem wielkich liter</p>
+                <div>ciekawostka: typetester strona</div>
+                <p>background-color: black; 
+                    background-image: url ('nazwapliku.format');
+                    background-repeat: no-repeat ;  albo repeat-x powtarza się poziomo adekwatnie do tego repeat-y w pionie
+                    zakładając, że jest teraz jedno zdjęcie w rogu a mamy jakiś tekst, poza zdjęciem i pod tekstem tło będzie czarne
+                    background-position: center; 
+                    backgroud-attachment: fixed; (scrollujesz stroną a tło jest nadal na środku)
+                    background-position: 50% 50% od lewej i od góry w zależności od zawartości strony
+                </p>
+                <p>border-style: coś; dla każdej strony zamiast określania top, bottom i left,right
+                    border-style:coś1 coś2; coś1 dla góry i dołu, coś2 dla lewej i prawej strony
+                    border-style: góra prawa dół lewa kolejność wartości
+                </p>
+                <p>tabelki to samo co z resztą plus td możesz stylizować dowolnie do tego padding zamiast cellpadding</p>
+                <p></p>
+            </section>
         </main>
 
     </body>
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.0 z dnia 16.06.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.1 z dnia 17.06.2020r.</p>
     </footer>
 </html>
