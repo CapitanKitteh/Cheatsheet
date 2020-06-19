@@ -1,3 +1,34 @@
+* {
+    padding: 0;
+}
+
 body {
-    background-color: #492c13
+    background-color: #f1b891
+    /*background-attachment: fixed; dla nieruchomego zdjęcia */ 
+}
+
+#kontener {
+    margin: 0 auto;
+}
+
+#gorny-panel {
+    position: relative;
+    margin: 15px;
+    background-image: url('F:/Projects/Cheatsheet/Sources/Exercises/HTML-CSS/gorny-panel.jpg'); 
+    width: cover;
+    height: 200px;
+}
+
+.dziadku {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    border: 0;
+}
+
+.dziadku2 {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    border: 0;
 }
