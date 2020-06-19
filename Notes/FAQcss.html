@@ -172,6 +172,73 @@
                 <p>opacity: 0.1-1;
                     filter: alpha(opacity=60) tutaj 0-100
                 </p>
+                <p>box model:
+                    div.tekst {
+                        background-color: gray;
+                        padding: 50px; <!--padding left: 50px, right 50px, bottom -->
+                        text-align: justify;
+                        margin: 40px;
+                        border: 3px solid black;
+                        width:200px; 
+                    }
+                    div#opakowaniebox {
+                        width: 386px; <!--200px + 50x + 50px + 3px + 3px + 40px + 40px-->
+                        border: 1px dotted green;
+                    }
+                </p>
+                <p>float znasz a jeśli obok zdjęcia/tekstu masz tekst i chcesz dodać treść już poza floatem piszesz:
+                    <p style="clear: reight/left/both;">nowy tekst poza float</p>
+                    <p>dwa bloczki divove: jeden określony wyżej drugi identyczny
+                        div#kontener {
+                            width: 776px;
+                        }
+                        nastepny tekst pod nim aby nie uciekał dalej za drugą ramkę przy rozszerzaniu w kolejnym divie z style="clear: both;"
+                    </p>
+                </p>
+                <p>position np spanu domyślna jest static czyli jedno po drugim inline
+                    możesz ustalić relative dostosowując: top bottom right left
+                    pamiętaj, że pozycjonując np top 50px zawartość spanu zejdzie o 50px w dół a miejsce nad nim będzie "zarezerwowane" i puste, więc trochę dupnie
+                    natomiast unikniesz rezerwowania miejsca wpisując position absolute, dodatkowo jeśli masz tekst czy coś co najedzie na zawartość spanu, będzie się nawarstwiać, tzn tekst najedzie na tekst . dzięki absolute nie będzie już pustych miejsca
+                    w przypadku bottom 0px będzie treść na dole i niezależnie od zmieniania rozmiaru okna będzie się tam trzymał,
+                    natomiast w przypadku scrollowanej strony utknie w tym miejscu a żeby zrobić go responsywnego możemy ustalić jego miejsce na dole strony niezaleznie od rozmiaru okna i scrollowania wpisujemy fixed
+                    przykład position fixed i bottom 0px:
+                    div.menu_dolne {
+                        position: fixed;
+                        width: 100%;
+                        height: 20px;
+                        background-color: gray;
+                        bottom: 0px;
+                    }
+                    <div class="menu_dolne">treść menu dolnego</div>
+                    margines z obu stron dopasowany np do nagłówka strony (określonego np width na 300px) z tłem:
+                    margin-left: auto;
+                    margin-right: auto;
+                    dopasowanie relatywno-absolutne, tekst z nagłówka znajduje się w klasie określającej nagłówek, klasa jest okreslona pozycją relatywną a span treść jest określona absolutem względem relatywnego nagłówka
+                    w innej sytuacji, kiedy nie ma nagłówka i absolute nie jest relatywny, będzie się odnosil do całego widocznego okna przeglądarki
+                </p>
+                <p>Z index i warswty:
+                    .kwadracik {
+                        position: absolute;
+                        left: 0px;
+                        width: 100px;
+                        height: 100px;
+                    }
+                    <div class="kwadracik" style="background-color:green;" top: 0px; z-index: 1;> </div>
+                    <div class="kwadracik" style="background-color:yellow;" top: 20px; z-index: 2;> </div>
+                    <div class="kwadracik" style="background-color:red;" top: 40px; z-index: 3;> </div>
+                    jeżeli mamy jeszcze tekst na warstwie domyślnej 0? to kolory miałyby -1, -2 i -3 wyglądając tak samo ale z tekstem na wierzchu
+                </p>
+                <p> to czego potrzebujesz do książki!
+                    .tekst {
+                        width: 300px; <!--o to to-->
+                        background-color: red;
+                        overflow: visible(pokaż mimo przepełnienia - jako przykład był dodany height na 300px i tekst leciał dalej a tło było 300x300)
+                        overflow hidden ukrywa to co wyszło poza określony width i height tekst
+                        overflow auto doda slider w przypadku przepełnienia
+                        overflow scroll dodaje slider zawsze, nieaktywny gdy tekstu jest za mało i w dodatku na dole boczny też
+                    }
+                    <div class="tekst">w choinkę duzo tekstu</div>
+                </p>
             </section>
         </main>
 
@@ -179,6 +246,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.2 z dnia 17.06.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.3 z dnia 19.06.2020r.</p>
     </footer>
 </html>
