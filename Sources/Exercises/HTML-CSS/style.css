@@ -19,16 +19,28 @@ body {
     height: 200px;
 }
 
-.dziadku {
+.book {
     position: absolute;
-    left: 40px;
-    top: 20px;
+    left: 20px;
+    top: 0px;
     border: 0;
+    opacity: 80%;
+    width: 30%;
+    height: 200px;
 }
 
-.dziadku2 {
+#kontakt_box {
     position: absolute;
     right: 40px;
-    top: 20px;
-    border: 0;
+    top: 25px;
+    color: white;
+}
+
+a.email {
+    text-decoration: none;
+    color: rgb(255, 174, 0);
+}
+
+a.email:hover {
+    color: rgb(255, 94, 0);
 }
