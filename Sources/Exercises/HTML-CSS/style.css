@@ -19,16 +19,6 @@ body {
     height: 200px;
 }
 
-.book {
-    position: absolute;
-    left: 20px;
-    top: 0px;
-    border: 0;
-    opacity: 80%;
-    width: 30%;
-    height: 200px;
-}
-
 #kontakt_box {
     position: absolute;
     right: 40px;
@@ -43,4 +33,36 @@ a.email {
 
 a.email:hover {
     color: rgb(255, 94, 0);
+}
+
+a.navbar {
+    text-decoration: none;
+}
+
+a.navbar:hover {
+    color: red;
+} /*fix this tomorrow*/
+
+#navlinks {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+#menu li {
+    list-style-type: none;
+    float: left;
+}
+
+#menu li a {
+    background-color: rgb(167, 140, 126);
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+}
+
+span.navigate {
+    display: inline-block;
+    margin-top: 10px;
 }
