@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
 * {
     padding: 0;
 }
@@ -7,13 +10,15 @@ body {
     /*background-attachment: fixed; dla nieruchomego zdjęcia */ 
 }
 
+/*Poczatek gornego panelu*/
+
 #kontener {
     margin: 0 auto;
 }
 
 #gorny-panel {
     position: relative;
-    margin: 15px;
+    margin: 5px;
     background-image: url('F:/Projects/Cheatsheet/Sources/Exercises/HTML-CSS/gorny-panel.jpg'); 
     width: cover;
     height: 200px;
@@ -39,14 +44,8 @@ a.navbar {
     text-decoration: none;
 }
 
-a.navbar:hover {
-    color: red;
-} /*fix this tomorrow*/
-
 #navlinks {
-    position: absolute;
-    left: 15px;
-    bottom: 15px;
+    top: 150px;
 }
 
 #menu li {
@@ -62,7 +61,58 @@ a.navbar:hover {
     padding: 5px 10px;
 }
 
+/*Koniec gornego panelu*/
+
 span.navigate {
     display: inline-block;
-    margin-top: 10px;
+}
+
+span.navigate:hover {
+    color: rgb(88, 84, 15);
+}
+
+li.o_mnie {
+    background-image: url('F:/Projects/Cheatsheet/Sources/Exercises/HTML-CSS/tlomenudrop.jpg');
+    height: 50px;
+    width: 200px;
+    border: 1px solid rgb(5, 5, 49);
+    border-radius: 2px 20px 2px 20px;
+}
+
+#srodkowe_menu li.projekty {
+    background-image: url('F:/Projects/Cheatsheet/Sources/Exercises/HTML-CSS/tlomenudrop.jpg');
+    height: 50px;
+    width: 300px;
+    border: 1px solid rgb(5, 5, 49);
+    border-radius: 20px 2px 20px 2px;
+}
+
+#srodkowe_menu li.polecane {
+    background-image: url('F:/Projects/Cheatsheet/Sources/Exercises/HTML-CSS/tlomenudrop.jpg');
+    height: 50px;
+    width: 300px;
+    border: 1px solid rgb(5, 5, 49);
+    border-radius: 2px 20px 2px 20px;
+}
+
+#srodkowe_menu li.czytaj {
+    background-image: url('F:/Projects/Cheatsheet/Sources/Exercises/HTML-CSS/tlomenudrop.jpg');
+    height: 50px;
+    width: 300px;
+    border: 1px solid rgb(5, 5, 49);
+    border-radius: 20px 2px 20px 2px;
+}
+
+#srodkowe_menu li {
+    list-style-type: none;
+}
+
+#srodkowe_menu a {
+    text-decoration: none;
+}
+
+span.innernavbar {
+    color: rgb(88, 148, 204);
+    font-size: 25px;
+    font-family: Sriracha, sans-serif;
 }
