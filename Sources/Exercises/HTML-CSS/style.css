@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap'); /*menu*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap'); /*text*/
 
 * {
     padding: 0;
 }
 
 body {
-    background-color: #f1b891
+    background-color: #0c073b
     /*background-attachment: fixed; dla nieruchomego zdjęcia */ 
 }
 
-/*Poczatek gornego panelu*/
+/*Początek górnego panelu*/
 
 #kontener {
     margin: 0 auto;
@@ -40,6 +40,10 @@ a.email:hover {
     color: rgb(255, 94, 0);
 }
 
+/*Koniec górnego panelu*/
+
+/*Menu i dropdown*/
+
 a.navbar {
     text-decoration: none;
 }
@@ -54,14 +58,12 @@ a.navbar {
 }
 
 #menu li a {
-    background-color: rgb(167, 140, 126);
+    background-color: rgb(120, 129, 129);
     font-size: 35px;
     font-weight: bold;
     color: rgb(0, 0, 0);
     padding: 5px 10px;
 }
-
-/*Koniec gornego panelu*/
 
 span.navigate {
     display: inline-block;
@@ -70,6 +72,8 @@ span.navigate {
 span.navigate:hover {
     color: rgb(88, 84, 15);
 }
+
+/*Koniec menu i początek dropdown*/
 
 li.o_mnie {
     background-image: url('F:/Projects/Cheatsheet/Sources/Exercises/HTML-CSS/tlomenudrop.jpg');
@@ -116,3 +120,6 @@ span.innernavbar {
     font-size: 25px;
     font-family: Sriracha, sans-serif;
 }
+
+
+/*Przerwane do ukończenia notatki, ten kurs ma 11 lat i nie jest superaktualny, więc spóbuję stworzyć stronę samodzielnie po zrobieniu notatki*/
