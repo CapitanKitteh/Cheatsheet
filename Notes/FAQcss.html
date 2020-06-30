@@ -365,7 +365,55 @@
                 </p>
                 <p>outline borders
                     outline jest jak objechanie markerem jak ramką dookoła tekstu, nie zmienia się jego szerokość najeżdża na "padding" ale jest outline
-                    
+                    outline-style, color, width, offset 
+                    style: dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden zupełnie jak w borderstyle
+                    width zazwyczaj thin 1px medium 3px i thick 5px albo normalnie w px itd
+                    color standardowo a dodatkowo invert 
+                    color dodaje tylko d outline a sam border może być domyślnie czarny, chyba że w border-color ustalimy inaczej
+                    offset: border black outline 1px solid red i outline-offset: 15px oddzieli outline od bordera na określoną odległość
+                </p>
+                <p>text
+                    text-align left, right, center albo justify
+                    vertical-align top, middle, bottom
+                    direction: rtl, ltr  (to samo co w html bdo dir="rtl")
+                    unicode-bidi: override, normal, embed, isolate, isolate-override, plaintext, inherit <!--co to?-->
+                    text decoration none - usuwa podkreślenia z linków
+                    overline, line-through, underline
+                    text-transform uppercase i lowercase zmieniają kazde litery na duże lub małe a capitalize każdą pierwszą robi dużą
+                    text-indent - wcięcie akapitowe, odstęp określany w px
+                    letter-spacing - odstęp od liter dopuszczalny -x w px
+                    line-height 0.8 albo 1.8 dla przykładu
+                    word-spacing w px dopuszczalny -x
+                    white-space nwm? nowrap, normal, pre, pre-line, pre-wrap, inherit <!--?-->
+                    text shadow xpx w prawo xpx w dół xpx blur color, dopuszczalne -x w prawo i w górę i chyba też blur
+                    text-overflow clip, elipsis, string, inherit <!--?-->
+                </p>
+                <p>Fonts
+                    jeśli nazwa jest wieloczłonowa piszesz ją w "Times New Roman"
+                    w przypadku kilku wygląda to tak: "Lucida Console", Courier, monospace
+                    serif jest ozdobniejszy, sans-serif jest prosty zwykle używany a monospace ma każdą literkę zajmującą tyle samo miejsca, nieważne czy to z czy i
+                    style: normal, italic, oblique podobne do italic ale mniej wspierane
+                    font weight: normal, bold albo w liczbach np. 300
+                    font-variant: normal, small-caps wszystkie małe litery będą powiększone ale będa mniejsze niż duże litery
+                    font-size default is 16px=1em
+                    w px lub em np 30px lub 1.875em, 14px lub 0.875em
+                    <code>
+                         pozwoli zachować taki sam rozmiar w każdej przeglądarce ale czy jest konieczne?
+                         body {
+                         font-size: 100%;
+                         }
+                    </code>
+                    określać size można też poprzez viewport 
+                    Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+                    shortcut:
+                    <code>
+                        p.b {
+                            font: italic small-caps bold 12px/30px Georgia, serif;
+                          }
+                    </code>
+                </p>
+                <p>Links
+                    <!--koniec na dziś-->
                 </p>
             </section>
         </main>
@@ -374,6 +422,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.5 z dnia 30.06.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.6 z dnia 30.06.2020r.</p>
     </footer>
 </html>
