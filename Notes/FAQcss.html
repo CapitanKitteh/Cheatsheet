@@ -243,7 +243,130 @@
             </section>
 
             <section id="plkurs2">
-                <p>W htmlu są tagi a w css selektory, </p>
+                <p>W htmlu są tagi a w css selektory, id oznaczone jest # a classy . <br />
+                 background i jego selektory: color, image, repeat, attachment, position
+                 color określany nazwą, rgb lub hex # 
+                 dodatkowo po określeniu tła można dodać opacity 0.0-1.0 1 to pełne krycie a 0.0 całkowita transparentność, może to np. w przypadku diva zmienić również transparentność tekstu!
+                 image url("źródłopliku.format"); 
+                 repeat-y repeat-x no-repeat 
+                 background-position: right top; określa konkretnie gdzie ma się znajdować tło
+                 attachment fixed oznacza, że tło nie będzie scrollowac razem ze stroną a scroll oczywiście to oznacza 
+                 <code> Przykładowy kod: <br />
+                    body {
+                        background-color: #ffffff;
+                        background-image: url("img_tree.png");
+                        background-repeat: no-repeat;
+                        background-position: right top;
+                      }
+
+                      Skrócony kod:
+                      body {
+                        background: #ffffff url("img_tree.png") no-repeat right top;
+                      }
+                 </code>
+                </p>
+                <p>Borders:
+                    dotted - kropkowana
+                    dashed - kreskowana jak z ogłoszeń do wycięcia
+                    solid - zwykła 
+                    double - podwójna
+                    groove - 3D zależna od koloru, prosta
+                    ridge - krawędziowa, progowa? zależna od koloru 3D
+                    inset - piękna, wklęsła zależna od koloru i 3D
+                    outset - jak button trochę zlaeżna od koloru i 3D
+                    none - logiczne
+                    hidden - też
+                    mixed w kolejności: top right bottom left
+                    żaden atrybut nie będzie działał na border dopóki nie zostanie określony właśnie border-style
+                    border-width najlepiej określać w px ale można napisać po prostu medium czy thick
+                    określa też wedle kolejności i ilości 
+                    5px dotyczy wszystkich 
+                    5px 20px 5 dla top i bottom a 20 dla right i left
+                    5px 10px 15px 30px 5 top 10 right 15 bottom i 30 left 
+                    to samo dotyczy kolorów bordera
+                    bardziej specyficznie można uzyć atrybutów:
+                     border-top-style, border-right-style, border-bottom-style, border-left-style
+                     skrót:
+                     <code>
+                         długi:
+                         border-width 5px
+                         border-style (required) solid
+                         border-color red
+                         krótki:
+                         p {
+                            border: 5px solid red;
+                          }
+                     </code>
+                </p>
+                <p>margines
+                    można oczywiście określić dla wszystkich ale i każdego z osobna, 
+                    margin-left, margin-right, margin-top, margin-bottom
+                    auto - przeglądarka dopasowuje
+                    length - w px i innych jednostkach
+                    % - width from element
+                    inherit - dziecziczony of parent element
+                    -x np -50% jest dozwolone
+                    top right bottom left, i shortcut działają tutaj też
+                    <code>
+                        wyjaśnienie inherit:
+                        div {
+                            border: 1px solid red;
+                            margin-left: 100px;
+                          }
+                          
+                          p.ex1 {
+                            margin-left: inherit;
+                          }
+                    </code>
+                    Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+                    This does not happen on left and right margins! Only top and bottom margins!
+                    h1 margin: 0 0 50px 0
+                    h2 margin: 20px 0 0 0 <!--sprawdź w css-->
+                </p>
+                <p>padding zasada wskazówek zegara top right bottom left działa, 
+                    length - px itd
+                    %
+                    inherit
+                    -x niedozwolone
+                    shortcut możliwy
+                    tak samo określanie każdego z osobna
+                    <code>
+                        Here, the div element is given a width of 300px. However, the actual width of the div element will be 350px (300px + 25px of left padding + 25px of right padding):
+
+                            div {
+                              width: 300px;
+                              padding: 25px;
+                            }
+                    </code>
+                    To keep the width at 300px, no matter the amount of padding, you can use the box-sizing property. This causes the element to maintain its width; if you increase the padding, the available content space will decrease.
+                    <code>
+                        Use the box-sizing property to keep the width at 300px, no matter the amount of padding:
+
+                         div {
+                         width: 300px;
+                         padding: 25px;
+                         box-sizing: border-box;
+                         }
+                    </code>
+                </p>
+                <p>heigth width
+                    auto - default
+                    px itd albo %
+                    inherit
+                    max-width może być ustalana tak samo, ale pamiętaj, że w przypadku np divu i max width większej niż najmniejszy rozmiar okna przelądarki automatycznie włączy się poziomy scroll
+                </p>
+                <p>box model
+                     Content - The content of the box, where text and images appear
+                     Padding - Clears an area around the content. The padding is transparent
+                     Border - A border that goes around the padding and content
+                     Margin - Clears an area outside the border. The margin is transparent
+                     Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. 
+                     To calculate the full size of an element, you must also add padding, borders and margins.
+                </p>
+                <p>outline borders
+                    outline jest jak objechanie markerem jak ramką dookoła tekstu, nie zmienia się jego szerokość najeżdża na "padding" ale jest outline
+                    
+                </p>
             </section>
         </main>
 
@@ -251,6 +374,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.4 z dnia 26.06.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.5 z dnia 30.06.2020r.</p>
     </footer>
 </html>
