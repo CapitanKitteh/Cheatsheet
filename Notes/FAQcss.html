@@ -413,7 +413,106 @@
                     </code>
                 </p>
                 <p>Links
-                    <!--koniec na dziś-->
+                    normalnie można je obrabiać + ich czynności:
+                    a:link - normalny, nieodwiedzony 
+                    a:hover - najechany 
+                    a:active - kliknięty (i ew przytrzymany)
+                    a:visited - użyty / odwiedzony
+                    sprawdź: 
+                    <code>
+                        a:link, a:visited {
+                            background-color: #f44336;
+                            color: white;
+                            padding: 14px 25px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                          }
+                          
+                          a:hover, a:active {
+                            background-color: red;
+                          }
+                    </code>
+                </p>
+                <p>Lists
+                    ul {
+                        list-style-image: url('sqpurple.gif');
+                      }
+                      zdjęcie jako checkmark?marker
+                      list-style-position: outside albo inside
+                      tzn. np jeśli li będzie miał border to domyślnie czyli outside kropka marker li będzie poza porderem
+                      remove default settings:
+                      ul {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                      }
+                      shortcut:
+                      ul {
+                        list-style: square inside url("sqpurple.gif");
+                      }
+                      popularne w menu
+                      li {
+                        display: inline;
+                      }
+                </p>
+                <p>tables
+                    border jeśli jest wyznaczony dla table, th i td lub więcej niż jednego elementu blisko siebie no wiesz, to możesz zrobić border-collapse: collapse i połączyć taki niepotrzebny podwójny border w jeden
+                    text-align i vertical align 
+                    th {
+                        text-align: left;
+                      }
+                      tr:hover {background-color: #f5f5f5;} na hover zmienia tło
+                      th, td {
+                        border-bottom: 1px solid #ddd;
+                      } jak horizontal rules
+                      zebra stripes:
+                      tr:nth-child(even) {background-color: #f2f2f2;}
+                      For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
+                      kiedy tabela jest duża i chcesz scroll poxiomy w tym przykładzie :
+                      <div style="overflow-x:auto;"> table </div>
+
+                </p>
+                <p>display
+                    an inline element with display: block; is not allowed to have other block elements inside it.
+                </p>
+                <p>max-width
+                    width określa konkretną szerokość, max-width dostosowuje responsywność do ekrany i maxymalnie do ustalonej szerokości. zalecane przy responsywnych rzeczach i mobilkach
+                </p>
+                <p>position
+                    static, relative, fixed, absolute, sticky
+                    static jest normalna w sumie nie zmienia nic i nie nadaje nic szczególnego
+                    relative jest na swoim miejscu i ustawiany poprzez right/left top/bottom od własnej pozycji do relatywnej w której ma się znajdować w dodatku nie rusza się gdy scrollujemy
+                    fixed nie rezerwuje sobie miejsca i jest również oznaczany jak relatywny co do pozycji, z tym, że rusza się ciągle kiedy scrollujemy. jest, przyczepiony jest relative to viewport a nie it's own position like a relative
+                    absolute będzie relatywny względem położonego wyżej relative a jeśli takiego nie będzie, zamiast relative uzna body i zachowa się jak fixed 
+                    sticky A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+                    tzn. na stronie masz menu które jest na górze strony, scrollując na dół ono jedzie z tobą, a dodatkowo, gdyby to była reklama położona na dole strony przed scrollowaniem, podczas przewijania w dół zachowałaby się jak relatywna ale gdy zniknie z viewport juz zachowa sie jak fixed. fajne 
+                    Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
+                    div.sticky {
+                        position: -webkit-sticky; /* Safari */
+                        position: sticky;
+                        top: 0;
+                        background-color: green;
+                        border: 2px solid #4CAF50;
+                      }
+                      Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.
+                      umieszczanie tekstu na zdjęciu: zdjęcie w div jako relative, div tekstu jako absolute i gotowe
+                </p>
+                <p>overflow (scroll)
+                    odpowiada za decyzję, czy zawartość ma być clipowana czy nie. jeśli nie i np tebtbox będzie 20x20px a text większy i overflow: visible to text wyjedzie poza box.
+                    hidden ukryje text wystający nie dodając scrolla, po prostu utnie
+                    scroll it clipps text and adds scroll dodaje też poziomy nawet jeśli go nie potrzeba dlatego lepiej używac auto
+                    auto dodaje scroll tylko wtedy, gdy jest konieczny
+                    In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
+                    div {
+                        overflow-x: hidden; /* Hide horizontal scrollbar */
+                        overflow-y: scroll; /* Add vertical scrollbar */
+                      }   opcja alternatywna dla auto
+                </p>
+                <p>float
+                    opływanie elementów
+                    left, right, none (default), inherit
+                    
                 </p>
             </section>
         </main>
@@ -422,6 +521,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.6 z dnia 30.06.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.7 z dnia 01.07.2020r.</p>
     </footer>
 </html>
