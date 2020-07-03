@@ -704,11 +704,451 @@
                 </p>
                 <p>navbar
                     vertical pionowy
+                    ul {
+                      list-style-type: none;
+                      margin: 0;
+                      padding: 0;
+                      width: 200px;
+                      background-color: #f1f1f1;
+                    }
+                  
                     li a {
-                        display: block;
-                        width: 60px;
-                      }
-                      <!-- koniec na dziś :)-->
+                      display: block;
+                      color: #000;
+                      padding: 8px 16px;
+                      text-decoration: none;
+                    }
+                    
+                    /* Change the link color on hover */
+                    li a:hover {
+                      background-color: #555;
+                      color: white;
+                    }
+                    
+                    pionowy stały
+                    ul {
+                      list-style-type: none;
+                      margin: 0;
+                      padding: 0;
+                      width: 25%;
+                      background-color: #f1f1f1;
+                      height: 100%; /* Full height */
+                      position: fixed; /* Make it stick, even on scroll */
+                      overflow: auto; /* Enable scrolling if the sidenav has too much content */
+                    }
+
+                    poziomy
+                    li {
+                      display: inline;
+                    }
+                    
+                    inny sposób z float
+                    li {
+                      float: left;
+                    }
+                    
+                    a {
+                      display: block;
+                      padding: 8px;
+                      background-color: #dddddd;
+                    }
+
+
+                    Add an "active" class to the current link to let the user know which page he/she is on:
+                    .active {
+                      background-color: #4CAF50;
+                    }
+
+                    navbar stoi niezależnie od scrolla na top lub bottom :
+                    ul {
+                      position: fixed;
+                      top: 0; <!--albo bottom: 0px;-->
+                      width: 100%;
+                    }
+                    Note: Fixed position might not work properly on mobile devices.
+
+                    sticky option to upper one
+                    ul {
+                      position: -webkit-sticky; /* Safari */
+                      position: sticky;
+                      top: 0;
+                    }
+                    Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example above). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
+
+                    dropdown navbar
+                    https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar
+                </p>
+                <p>dropdown navbar
+                  <style>
+                    .dropdown {
+                      position: relative;
+                      display: inline-block;
+                    }
+                    
+                    .dropdown-content {
+                      display: none;
+                      position: absolute;
+                      background-color: #f9f9f9;
+                      min-width: 160px;
+                      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                      padding: 12px 16px;
+                      z-index: 1;
+                    }
+                    
+                    .dropdown:hover .dropdown-content {
+                      display: block;
+                    }
+                    </style>
+                    
+                    <div class="dropdown">
+                      <span>Mouse over me</span>
+                      <div class="dropdown-content">
+                        <p>Hello World!</p>
+                      </div>
+                    </div>
+                    HTML) Use any element to open the dropdown content, e.g. a <span>, or a <button> element.
+
+                      Use a container element (like <div>) to create the dropdown content and add whatever you want inside of it.
+                      
+                      Wrap a <div> element around the elements to position the dropdown content correctly with CSS.
+                      
+                      CSS) The .dropdown class uses position:relative, which is needed when we want the dropdown content to be placed right below the dropdown button (using position:absolute).
+                      
+                      The .dropdown-content class holds the actual dropdown content. It is hidden by default, and will be displayed on hover (see below). Note the min-width is set to 160px. Feel free to change this. Tip: If you want the width of the dropdown content to be as wide as the dropdown button, set the width to 100% (and overflow:auto to enable scroll on small screens).
+                      
+                      Instead of using a border, we have used the CSS box-shadow property to make the dropdown menu look like a "card".
+                      
+                      The :hover selector is used to show the dropdown menu when the user moves the mouse over the dropdown button.
+
+                      dropdown menu example:
+                      <style>
+                        /* Style The Dropdown Button */
+                        .dropbtn {
+                          background-color: #4CAF50;
+                          color: white;
+                          padding: 16px;
+                          font-size: 16px;
+                          border: none;
+                          cursor: pointer;
+                        }
+                        
+                        /* The container <div> - needed to position the dropdown content */
+                        .dropdown {
+                          position: relative;
+                          display: inline-block;
+                        }
+                        
+                        /* Dropdown Content (Hidden by Default) */
+                        .dropdown-content {
+                          display: none;
+                          position: absolute;
+                          background-color: #f9f9f9;
+                          min-width: 160px;
+                          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                          z-index: 1;
+                        }
+                        
+                        /* Links inside the dropdown */
+                        .dropdown-content a {
+                          color: black;
+                          padding: 12px 16px;
+                          text-decoration: none;
+                          display: block;
+                        }
+                        
+                        /* Change color of dropdown links on hover */
+                        .dropdown-content a:hover {background-color: #f1f1f1}
+                        
+                        /* Show the dropdown menu on hover */
+                        .dropdown:hover .dropdown-content {
+                          display: block;
+                        }
+                        
+                        /* Change the background color of the dropdown button when the dropdown content is shown */
+                        .dropdown:hover .dropbtn {
+                          background-color: #3e8e41;
+                        }
+                        </style>
+                        
+                        <div class="dropdown">
+                          <button class="dropbtn">Dropdown</button>
+                          <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                          </div>
+                        </div>
+
+                        dodatkowo align dropdownu 
+
+                        .dropdown-content {
+                          right: 0;
+                        }
+
+                dropdown image 
+                https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_image
+                </p>
+                <p>Image gallery
+                  css :
+                  <style>
+                    div.gallery {
+                      margin: 5px;
+                      border: 1px solid #ccc;
+                      float: left;
+                      width: 180px;
+                    }
+                    
+                    div.gallery:hover {
+                      border: 1px solid #777;
+                    }
+                    
+                    div.gallery img {
+                      width: 100%;
+                      height: auto;
+                    }
+                    
+                    div.desc {
+                      padding: 15px;
+                      text-align: center;
+                    }
+                    </style>
+
+                  zdjęcia:
+                  <div class="gallery">
+                    <a target="_blank" href="img_5terre.jpg">
+                      <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                  </div>
+                  
+                  <div class="gallery">
+                    <a target="_blank" href="img_forest.jpg">
+                      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                  </div>
+                </p>
+                <p>Image sprites
+                  We want to use the sprite image ("img_navsprites.gif") to create a navigation list.
+                  We will use an HTML list, because it can be a link and also supports a background image:
+                  css :
+                  #navlist {
+                    position: relative;
+                  }
+                  
+                  #navlist li {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    position: absolute;
+                    top: 0;
+                  }
+                  
+                  #navlist li, #navlist a {
+                    height: 44px;
+                    display: block;
+                  }
+                  
+                  #home {
+                    left: 0px;
+                    width: 46px;
+                    background: url('img_navsprites.gif') 0 0;
+                  }
+                  
+                  #prev {
+                    left: 63px;
+                    width: 43px;
+                    background: url('img_navsprites.gif') -47px 0;
+                  }
+                  
+                  #next {
+                    left: 129px;
+                    width: 43px;
+                    background: url('img_navsprites.gif') -91px 0;
+                  }
+                  zdjęcia ma w sobie trzy ikonki, domku i strzałek, a image sprites pozwala określić jakiej cześci obrazka używamy.
+                   Example explained:
+
+                   #navlist {position:relative;} - position is set to relative to allow absolute positioning inside it
+                   #navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} - margin and padding are set to 0, list-style is removed, and all list items are absolute positioned
+                   #navlist li, #navlist a {height:44px;display:block;} - the height of all the images are 44px
+                   Now start to position and style for each specific part:
+
+                   #home {left:0px;width:46px;} - Positioned all the way to the left, and the width of the image is 46px
+                   #home {background:url(img_navsprites.gif) 0 0;} - Defines the background image and its position (left 0px, top 0px)
+                   #prev {left:63px;width:43px;} - Positioned 63px to the right (#home width 46px + some extra space between items), and the width is 43px.
+                   #prev {background:url('img_navsprites.gif') -47px 0;} - Defines the background image 47px to the right (#home width 46px + 1px line divider)
+                   #next {left:129px;width:43px;}- Positioned 129px to the right (start of #prev is 63px + #prev width 43px + extra space), and the width is 43px.
+                   #next {background:url('img_navsprites.gif') -91px 0;} - Defines the background image 91px to the right (#home width 46px + 1px line divider + #prev width 43px + 1px line divider )
+                </p>
+                <p>attribute selctors
+                  The [attribute] selector is used to select elements with a specified attribute.
+                  The following example selects all <a> elements with a target attribute:
+                  Example:
+                  a[target] {
+                    background-color: yellow;
+                  }
+                  The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word.
+
+                  The following example selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower":
+                  [title~="flower"] {
+                    border: 5px solid yellow;
+                  }
+                  The [attribute|="value"] selector is used to select elements with the specified attribute starting with the specified value.
+
+                  The following example selects all elements with a class attribute value that begins with "top":
+
+                  Note: The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text"! 
+                  [class|="top"] {
+                    background: yellow;
+                  }
+                  The [attribute^="value"] selector is used to select elements whose attribute value begins with a specified value.
+
+                  The following example selects all elements with a class attribute value that begins with "top":
+
+                  Note: The value does not have to be a whole word! 
+
+                  Example
+                   [class^="top"] {
+                    background: yellow;
+                    }
+
+                    The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified value.
+
+                     The following example selects all elements with a class attribute value that ends with "test":
+
+                     Note: The value does not have to be a whole word!  
+
+                     Example
+                     [class$="test"] {
+                      background: yellow;
+                     }
+                     The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value.
+
+                     The following example selects all elements with a class attribute value that contains "te":
+                     
+                     Note: The value does not have to be a whole word! 
+
+                  przykłady :
+                  input[type="text"] {
+                    width: 150px;
+                    display: block;
+                    margin-bottom: 10px;
+                    background-color: yellow;
+                  }
+                  
+                  input[type="button"] {
+                    width: 120px;
+                    margin-left: 35px;
+                    display: block;
+                  }
+
+                  skrót:
+                   [attribute]	[target]	Selects all elements with a target attribute
+                   [attribute=value]	[target=_blank]	Selects all elements with target="_blank"
+                   [attribute~=value]	[title~=flower]	Selects all elements with a title attribute containing the word "flower"
+                   [attribute|=value]	[lang|=en]	Selects all elements with a lang attribute value starting with "en"
+                   [attribute^=value]	a[href^="https"]	Selects every <a> element whose href attribute value begins with "https"
+                   [attribute$=value]	a[href$=".pdf"]	Selects every <a> element whose href attribute value ends with ".pdf"
+                   [attribute*=value]	a[href*="w3schools"]	Selects every <a> element whose href attribute value contains the substring "w3schools"
+                </p>
+                <p>css input forms :D 
+                  input[type=text] - will only select text fields
+                  input[type=password] - will only select password fields
+                  input[type=number] - will only select number fields itd
+                  Use the padding property to add space inside the text field.
+                  Tip: When you have many inputs after each other, you might also want to add some margin, to add more space outside of them
+                  przykład zastosowania [nawiasów w css]
+                  input[type=text] {
+                    border: 2px solid red;
+                    border-radius: 4px;
+                  }
+                  :focus czyli kliknięte gotowe do wpisywania
+                  input[type=text]:focus {
+                    background-color: lightblue;
+                  }
+                  If you want an icon inside the input, use the background-image property and position it with the background-position property. Also notice that we add a large left padding to reserve the space of the icon
+                  In this example we use the CSS transition property to animate the width of the search input when it gets focus. You will learn more about the transition property later, in our CSS Transitions chapter.
+                  input[type=text] {
+                    transition: width 0.4s ease-in-out;
+                  }
+                  
+                  input[type=text]:focus {
+                    width: 100%;
+                  }
+                  Tip: Use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner)
+                  na button warto dodać, to samo na linki i zdjęcia wszystkie klikane elementy :
+                  cursor: pointer;
+                </p>
+                <p>counters <!--nie rozumiem tego-->
+                  To work with CSS counters we will use the following properties:
+                  counter-reset - Creates or resets a counter
+                  counter-increment - Increments a counter value
+                  content - Inserts generated content
+                  counter() or counters() function - Adds the value of a counter to an element
+                  The following example creates a counter for the page (in the body selector), then increments the counter value for each <h2> element and adds "Section <value of the counter>:" to the beginning of each <h2> element:
+
+                    Example
+                    body {
+                      counter-reset: section;
+                    }
+                    
+                    h2::before {
+                      counter-increment: section;
+                      content: "Section " counter(section) ": ";
+                    }
+                    https://www.w3schools.com/css/css_counters.asp
+                </p>
+                <p>website layout
+                  We will create a 3-column layout, and change it to a 1-column layout on smaller screens:
+                  Example
+                  /* Create three equal columns that floats next to each other */
+                  .column {
+                    float: left;
+                    width: 33.33%;
+                  }
+
+                  /* Clear floats after the columns */
+                  .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                  }
+
+                  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+                  @media screen and (max-width: 600px) {
+                    .column {
+                      width: 100%;
+                    }
+                  }
+                  Tip: Do you wonder how the @media rule works? Read more about it in our CSS Media Queries chapter.
+                  .footer {
+                    background-color: #F1F1F1;
+                    text-align: center;
+                    padding: 10px;
+                  }
+                </p>
+                <p>units
+                  not much responsive :
+                  cm, mm, in, px, pt, pc
+                  in = 96px/2.54cm
+                  points 1/72 z in 
+                  picas 1pc = 12pt
+                  responsive :
+                  em which is 16px 2em is 2x actual font size
+                  ex relative to x-height of current font (rarely used)
+                  ch relative to the width of the 0
+                  rem relative to font-size of root element 
+                  vw relative to 1% width of viewport 
+                  vh relative to 1% height of viewport
+                  vmin relative to 1% of viewport smaller dimension
+                  vmax relative to 1% of viewport larger dimension 
+                  % relative to parent element 
+                  Tip: The em and rem units are practical in creating perfectly scalable layout!
+                 * Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
+                </p>
+                <p>specificity
+                  x<!--przerwa-->
                 </p>
             </section>
         </main>
@@ -717,6 +1157,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.8 z dnia 01.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.9 z dnia 03.07.2020r.</p>
     </footer>
 </html>
