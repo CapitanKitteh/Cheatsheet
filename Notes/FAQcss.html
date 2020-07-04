@@ -50,25 +50,51 @@
             &lt;link rel="stylesheet" type="text/css" href="nazwapliku.css" /&gt;
           </pre>
         </section><br /><br />
+        
+        <section id="34">
+          <h3>Kolory</h3>
+          <!--opisz rgb rgba hls hlsa itd-->
+        </section><br /><br />
 
         <section id="2">
-          <h3>Title</h3>
+          <h3>Text - fonts</h3>
+          Dołączamy czcionki np. z Google Fonts:
+          Po wybraniu czcionki zaznaczam style, które mnie intesują, następnie jeśli będę umieszczać reguły css w pliku html wybieram link, jeśli będę umieszczać wszystko w osobnym pliku css wybieram @import, dodatkowo ukazuje się informacja jak opisać czcionkę. 
         </section><br /><br />
 
         <section id="3">
-          <h3>Title</h3>
+          <h3>Text - decoration</h3>
+          {text-decoration: none;}
+          możesz też napisać tak a {text-decoration: underline line-through overline;} dla pod/prze/nadkreślenia jednocześnie
+          letter-spacing: -2px/2px/20px odleglość liter od siebie
+          word-spacing: 2px;
+          text-indent: 20px odstęp akapitowy od strony
+          text-align: center; tego nie musisz tłumaczyć :) 
+          text-decoration-color: #000; linie przekreślające mają kolor czarny
+          text-shadow: 2pxw prawo 5pxdół  5pxrozmycie(4-10 najlepiej 5 przy 50 już nie widać) #000 kolor
+          - zmienia kierunek, text-shadow: -2px w lewo -5px w górę 
         </section><br /><br />
 
         <section id="4">
-          <h3>Title</h3>
+          <h3>Actions</h3>
+          :hover, active, focus itd
+          article:active {opacity .4;} transparentność zmiejszy się kiedy przytrzymam element klikając
+          lifting effect article:hover {box/text-shadow: 5px 5px 20px rgba(0, 0, 0, .7);}
+          płynne przejście transition: all 1s; w tym przypadku transition: box-shadow 1s, background #000 może być
+          a nawet transition-delay: 2s;
         </section><br /><br />
 
         <section id="5">
-          <h3>Title</h3>
+          <h3>Border radius</h3>
+          border radius rogi: 10px lewy górny, 20px prawy górny, 2px prawy dolny i 50px lewy dolny zgodnie z zegarem
+          border-top-left-radius pierwsza wartosć określi zakrzywienie a druga zakrzywienie do w tym przypadku lewej strony dodatkowo
+          wycięcie koła ze zdjęcie a w zasadzie zakrzywienie granic do kształtu koła
+          .article-image {height:200px; width;200px: border-radius:100%;}
         </section><br /><br />
 
         <section id="6">
-          <h3>Title</h3>
+          <h3>Z-index</h3>
+          z index- głębokość przenikalność, layer number
         </section><br /><br />
 
         <section id="7">
@@ -179,16 +205,18 @@
           <h3>Title</h3>
         </section><br /><br />
 
-        <section id="34">
-          <h3>Title</h3>
-        </section><br /><br />
-
         <section id="35">
-          <h3>Title</h3>
+          <h3>Zdjęcia</h3>
+          Zdjęcie w div backgroung
+          <pre><code>
+            &lt;div class="article-image" style="background:url(nazwazdj.format)"&gt;&lt;/div&gt;
+          </code></pre>
         </section><br /><br />
 
         <section id="36">
-          <h3>Title</h3>
+          <h3>Jeszcze nie wiem gdzie to dać:</h3>
+          TEXT - div na span czyli clock element na inline element :
+          display: inline albo inline-block wtedy możesz regulować height
         </section><br /><br />
 
         <section id="37">
