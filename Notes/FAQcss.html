@@ -1147,8 +1147,404 @@
                   Tip: The em and rem units are practical in creating perfectly scalable layout!
                  * Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
                 </p>
-                <p>specificity
-                  x<!--przerwa-->
+                <p>icons
+                  ikony można umieścić jak external plik w head 
+                  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                  <!--czy mogę go umieścić w external css jak font family?-->
+                  For those looking to self host the web font, some additional setup is necessary. Host the icon font in a location, for example https://example.com/material-icons.woff and add the following CSS rule:
+                   @font-face {
+                   font-family: 'Material Icons';
+                   font-style: normal;
+                   font-weight: 400;
+                   src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+                   src: local('Material Icons'),
+                   local('MaterialIcons-Regular'),
+                   url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+                   url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+                   url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+                   }
+
+                   In addition, the CSS rules for rendering the icon will need to be declared to render the font properly. These rules are normally served as part of the Google Web Font stylesheet, but will need to be included manually in your projects when self-hosting the font:
+                     .material-icons {
+                     font-family: 'Material Icons';
+                     font-weight: normal;
+                     font-style: normal;
+                     font-size: 24px;  /* Preferred icon size */
+                     display: inline-block;
+                     line-height: 1;
+                     text-transform: none;
+                     letter-spacing: normal;
+                     word-wrap: normal;
+                     white-space: nowrap;
+                     direction: ltr;
+                     
+                     /* Support for all WebKit browsers. */
+                     -webkit-font-smoothing: antialiased;
+                     /* Support for Safari and Chrome. */
+                     text-rendering: optimizeLegibility;
+
+                     /* Support for Firefox. */
+                     -moz-osx-font-smoothing: grayscale;
+
+                     /* Support for IE. */
+                     font-feature-settings: 'liga';
+                     }
+
+                     wprowadzenie ikony, i lub span class zazwyczaj i najlepiej .material-icons i zamiast tekstu nazwa ikony 
+                     <i class="material-icons">face</i> opcjonalnie
+                     <i class="material-icons">&#xE87C;</i> numerycznie dla nie wspierających nazw przeglądarek
+
+                     zalecane ustawienia resizingu i dark/ligh mode 
+                     /* Rules for sizing the icon. */
+                     .material-icons.md-18 { font-size: 18px; }
+                     .material-icons.md-24 { font-size: 24px; }
+                     .material-icons.md-36 { font-size: 36px; }
+                     .material-icons.md-48 { font-size: 48px; }
+                      
+                     /* Rules for using icons as black on a light background. */
+                     .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+                     .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+                     
+                     /* Rules for using icons as white on a dark background. */
+                     .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+                     .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+                     przykład 18px :
+                     <i class="material-icons md-18">face</i>
+                     .material-icons.md-18 { font-size: 18px; }
+
+                     To set a custom icon color, define a CSS rule specifying the desired color for the font:
+                      
+                     .material-icons.orange600 { color: #FB8C00; }
+                     and then use the class when referring to the icon:
+                     <i class="material-icons orange600">face</i>
+
+                     <!--
+                     schowaj to w klikany pokazujący się opis
+                     PNGs suitable for Android are available from the material icons library. These come in all the supported screen densities so they should look good on any device.
+
+                     The icons are also available in the material design icons git repository in the same combination of colors and sizes named as follows:
+
+                     */drawable-{{density}}/ic_{{name}}_{{color}}_{{size}}dp.png
+                     A density-independent VectorDrawable is provided which is supported from Android Lollipop and later:
+
+                     */drawable-anydpi-v21/ic_{{name}}_black_24dp.xml
+                     The Vector Drawable is currently only available as a black 24dp icon. This is for compatibility with our most standard icon size. To render the icon in a different color, use drawable tinting available on Android Lollipop.
+
+                     When using the Vector Drawable, it may not be necessary to include the xxxhdpi density PNG since it is unlikely a device supporting that screen density does not support Vector Drawables.-->
+
+                     <!--IOS
+                     Material icons also work well within iOS apps. In both the material icons library and git repository, these icons are packaged up in Xcode imagesets which will work easily with Xcode Asset Catalogs (xcassets). These imagesets can be added to any Xcode Asset Catalogs by dragging them into Xcode on to the asset catalog or by copying the folder into the xcasset folder.
+                     link do repo https://github.com/google/material-design-icons/tree/master/iconfont -->
+                     https://material.io/resources/icons/?style=baseline
+                </p>
+                <!--podobno advanced sie tutaj zaczyna-->
+                <p>border-radius 
+                  kolejność okreslania top left, top right, bottom right, bottom left.
+                </p>
+                <p>border-image 
+                  używanie zdjęcia jako border wymaga ustalenia bordera, jego src jako zdjęcia oraz: 
+                  gdzie uciąć zdjęcie i czy je powtarzać czy rozciągnąć
+                   border-image	A shorthand property for setting all the border-image-* properties
+                   border-image-source	Specifies the path to the image to be used as a border
+                   border-image-slice	Specifies how to slice the border image
+                   border-image-width	Specifies the widths of the border image
+                   border-image-outset	Specifies the amount by which the border image area extends beyond the border box
+                   border-image-repeat	Specifies whether the border image should be repeated, rounded or stretched
+                </p>
+                <p>multiple backgrounds 
+                  i guess it's the z-index 
+                  The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.
+                  background-image: url(img_flwr.gif), url(paper.gif); flower będzie on top of paper 
+                  ustawienia obu po przecinach :
+                  #example1 {
+                    background-image: url(img_flwr.gif), url(paper.gif);
+                    background-position: right bottom, left top;
+                    background-repeat: no-repeat, repeat;
+                  }
+                  shortcut, ale w tym przypadku nie polecam bo można sie pogubić 
+                  #example1 {
+                    background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+                  }
+
+                  The CSS background-size property allows you to specify the size of background images.
+                  The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.
+                  The contain keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.
+                  The cover keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). As such, some parts of the background image may not be visible in the background positioning area. 
+                  
+
+                  Now we want to have a background image on a website that covers the entire browser window at all times.
+
+                  The requirements are as follows:
+                   Fill the entire page with the image (no white space)
+                   Scale image as needed
+                   Center image on page
+                   Do not cause scrollbars
+                   The following example shows how to do it; Use the <html> element (the <html> element is always at least the height of the browser window). Then set a fixed and centered background on it. Then adjust its size with the background-size property:
+                     html {
+                     background: url(img_man.jpg) no-repeat center fixed;
+                     background-size: cover;
+                     }
+
+                   <!--tego nie rozumiem:-->
+                   You could also use different background properties on a <div> to create a hero image (a large image with text), and place it where you want.
+
+                   Example
+                   .hero-image {
+                   background: url(img_man.jpg) no-repeat center;  
+                   background-size: cover;
+                   height: 500px;
+                   position: relative;
+                   }
+
+                     The CSS background-origin property specifies where the background image is positioned.
+                     The property takes three different values:
+                     border-box - the background image starts from the upper left corner of the border
+                     padding-box - (default) the background image starts from the upper left corner of the padding edge
+                     content-box - the background image starts from the upper left corner of the content
+
+                     The CSS background-clip property specifies the painting area of the background.
+
+                     The property takes three different values:
+                     
+                     border-box - (default) the background is painted to the outside edge of the border
+                     padding-box - the background is painted to the outside edge of the padding
+                     content-box - the background is painted within the content box
+                </p>
+                <p>gradient colors
+                  CSS defines two types of gradients:
+                  Linear Gradients (goes down/up/left/right/diagonally)
+                  Radial Gradients (defined by their center)
+
+                  To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect.
+                  Syntax
+                  background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+                  Linear Gradient - Top to Bottom (this is default)
+                  The following example shows a linear gradient that starts at the top. It starts red, transitioning to yellow:
+                  #grad {
+                  background-image: linear-gradient(red, yellow);
+                  }
+
+                  drugi przykład 
+
+                  Linear Gradient - Left to Right
+                  The following example shows a linear gradient that starts from the left. It starts red, transitioning to yellow:
+                  #grad {
+                    background-image: linear-gradient(to right, red , yellow);
+                  }
+
+                  trzeci przykład 
+
+                  Linear Gradient - Diagonal
+                  You can make a gradient diagonally by specifying both the horizontal and vertical starting positions.
+                  The following example shows a linear gradient that starts at top left (and goes to bottom right). It starts red, transitioning to yellow:
+                  #grad {
+                    background-image: linear-gradient(to bottom right, red, yellow);
+                  }
+
+                  If you want more control over the direction of the gradient, you can define an angle, instead of the predefined directions (to bottom, to top, to right, to left, to bottom right, etc.).
+                  background-image: linear-gradient(angle, color-stop1, color-stop2);
+                  #grad {
+                    background-image: linear-gradient(-90deg, red, yellow);
+                  }
+                  
+                  więcej niż 2 kolory 
+                  #grad {
+                    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+                  }
+
+
+                  transparentność
+                  The following example shows a linear gradient that starts from the left. It starts fully transparent, transitioning to full color red:
+                  #grad {
+                    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+                  }
+
+
+                  powtarzanie
+                  #grad {
+                    background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+                  }
+
+                  RADIAL GRADIENT 
+
+                  A radial gradient is defined by its center.
+                  To create a radial gradient you must also define at least two color stops.
+                  background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+
+                  Radial Gradient - Differently Spaced Color Stops
+                  #grad {
+                    background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+                  }
+
+                  The shape parameter defines the shape. It can take the value circle or ellipse. The default value is ellipse.
+                  #grad {
+                    background-image: radial-gradient(circle, red, yellow, green);
+                  }
+
+                  The size parameter defines the size of the gradient. It can take four values:
+                   closest-side
+                   farthest-side
+                   closest-corner
+                   farthest-corner
+                  przykłady :
+                  #grad1 {
+                    background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+                  }
+                  
+                  #grad2 {
+                    background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
+                  }
+
+                  #grad {
+                    background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+                  }
+                </p>
+                <p>shadow effect
+                 juz to masz, 
+                 The following example shows a red neon glow shadow:
+                 h1 {
+                  text-shadow: 0 0 3px #FF0000;
+                }
+                z minusami idą w lewo i w górę a bez -x idą w prawo i górę
+                multiple shadows
+                h1 {
+                  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+                }
+
+
+                You can also use the text-shadow property to create a plain border around some text (without shadows):
+                h1 {
+                  color: yellow;
+                  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                }
+
+                wszystko tak samo ale nie text tylko box shadow :
+                div {
+                  box-shadow: 10px 10px;
+                }
+
+
+                You can also use the box-shadow property to create paper-like cards: bardzo fajny efekt
+                div.card {
+                  width: 250px;
+                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                  text-align: center;
+                }
+                </p>
+                <p>text effects
+                  overflow kończacy się uciętym tekstem i drugi z (...)
+                  p.test1 {
+                    white-space: nowrap;
+                    width: 200px;
+                    border: 1px solid #000000;
+                    overflow: hidden;
+                    text-overflow: clip;
+                  }
+                  
+                  p.test2 {
+                    white-space: nowrap;
+                    width: 200px;
+                    border: 1px solid #000000;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                  }
+
+                  The following example shows how you can display the overflowed content when hovering over the element:
+                  div.test:hover {
+                    overflow: visible;
+                  }
+
+
+                  długa linia tekstu która dla estetyki nie będzie wymgaała br może zostać podzielona tym: 
+                  p {
+                    word-wrap: break-word;
+                  }
+
+                  zawartość np małego okienka będzie dzielona na 1. nowa linia z wyrazem i 2. nowa linia dzieląc wyraz dowolnie np 
+                  1.zawartość
+                  tekstu
+                  2.zawart 
+                  ość te 
+                  kstu 
+
+                  p.test1 {
+                    word-break: keep-all;
+                  }
+                  
+                  p.test2 {
+                    word-break: break-all;
+                  }
+
+
+                  <!--nie rozumiem czemu to ma służyć:-->
+                  p.test1 {
+                    writing-mode: horizontal-tb;
+                  }
+                  
+                  span.test2 {
+                    writing-mode: vertical-rl;
+                  }
+                  
+                  p.test2 {
+                    writing-mode: vertical-rl;
+                  }
+
+
+                  <!--tego też za bardzo nie rozumiem, nie lepiej użyć linku z google fonts jeśli nie używam własnego fontu?-->
+                  In the @font-face rule; first define a name for the font (e.g. myFirstFont) and then point to the font file.
+                  Tip: Always use lowercase letters for the font URL. Uppercase letters can give unexpected results in IE.
+                  To use the font for an HTML element, refer to the name of the font (myFirstFont) through the font-family property:
+                  @font-face {
+                    font-family: myFirstFont;
+                    src: url(sansation_light.woff);
+                  }
+                  
+                  div {
+                    font-family: myFirstFont;
+                  }
+
+                  pogrubienie:
+                  @font-face {
+                    font-family: myFirstFont;
+                    src: url(sansation_bold.woff);
+                    font-weight: bold;
+                  }
+                  The file "sansation_bold.woff" is another font file, that contains the bold characters for the Sansation font.
+                  Browsers will use this whenever a piece of text with the font-family "myFirstFont" should render as bold.
+                  This way you can have many @font-face rules for the same font.
+
+
+                   SPIS Z TABELI 
+                   font-family	name	Required. Defines a name for the font
+                   src	URL	Required. Defines the URL of the font file
+                   font-stretch	normal
+                   condensed
+                   ultra-condensed
+                   extra-condensed
+                   semi-condensed
+                   expanded
+                   semi-expanded
+                   extra-expanded
+                   ultra-expanded	Optional. Defines how the font should be stretched. Default is "normal"
+                   font-style	normal
+                   italic
+                   oblique	Optional. Defines how the font should be styled. Default is "normal"
+                   font-weight	normal
+                   bold
+                   100
+                   200
+                   300
+                   400
+                   500
+                   600
+                   700
+                   800
+                   900	Optional. Defines the boldness of the font. Default is "normal"
+                   unicode-range	unicode-range	Optional. Defines the range of UNICODE characters the font supports. Default is "U+0-10FFFF"
+                </p>
+                <p>2D transormation
+                  <!--przerwa-->
                 </p>
             </section>
         </main>
@@ -1157,6 +1553,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 1.9 z dnia 03.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.0 z dnia 04.07.2020r.</p>
     </footer>
 </html>
