@@ -19,1540 +19,198 @@
             <h2><b>Podsumowanie wiedzy o <i>CSS</i></b></h2>
         </header>
 
-        <main>
-            <!--<p align="center"><a name="top" href="#bottom">Na dół strony</a></p>-->
-            <section>x - spis treści</section>
-            <section>x - Intro, info o css</section>
-            <section>x - podstawy</section>
-            <section>x kolejne elementy</section>
-            <section>x kolejne elementy</section>
-            <section>x kolejne elementy</section>
-            <section>x kolejne elementy</section>
-            <section>x kolejne elementy</section>
-            <section>x kolejne elementy</section>
-            <section>x kolejne elementy</section>
-            <section>x kolejne elementy</section>
-            <section>x kolejne elementy</section>
-            <section>x kolejne elementy</section>
-            <section>x inne</section>
-
-
-            <section id=main>
-              <h3>Do przetworzenia</h3>
-              <pre>
-                  nazwa rzeczy określanej {
-                      atrybut np background: wartość;
-                  }
-                  Kolor tła
-                  body {
-                      background: #000000; w vsc pojawia się panel ułatwiający wybór koloru, w takej wersji też: 
-                      background: rgb(0, 0, 0) skala do 255
-                  }
-                  dla estetyki warto pisać body > main > section > p
-                  odczytywane są od góry do dołu, więc jeśli masz określony w hr color na niebieski
-                  a linijkę niżej body > main > section > h3 kolor na zielony z białym tłem, odczyta na niebiesko
-                  jeśli zamienisz je miejscami, odczyta na zielono z białym tłem
-                  !important nadpisuje wszelkie reguły
-              </pre>
-              <p>przykład 1</p>
-              <div>przykład 2</div>
-              <span>przykład 3</span>
-            </section>
-
-            <section id=rules>
-                <pre>
-                    w head pod meta dodaj to
-                    link rel="stylesheet" type="text/css" href="FAQcss.css" /
-                @import z google fonts link a niżej
-                body {font-family: 'Dosis', sans-serif;}
-                body {background-color: #000000; color: rgb(0, 0, 0);}
-                body z background .jpg możesz backgroung-repeat: repeat-x /repeat-y;
-                h2 {color: #000;}
-                body > main > section > p {background: #fff;}
-                #nazwaid {border: 1px<!--width--> solid/dotted/dashed<!--style--> #000<!--color-->;}
-                    border-top: none <!--może być też bottom i side-->
-                margin: 0px;
-                margin: auto; centruje
-                jak zrobić z div span czyli block element into inline
-                h1 {display: inline;} albo inline-block wtedy możesz regulować height
-                #nazwaidartykułu lub sekcji {max-width: 33%; margin: auto;}
-                zdjęcie aktykułu 
-                div class="article-image" style="background:url(nazwazdj.format)"/div
-                class to jak id tyle ,że dla css łatwiej je przyjąć bo możesz mieć np kilka section z tym samym class ale id już nie bardzo
-                wtedy styl tych class będzie taki sam 
-                dla takiej klasy i zdjęcia reguła z kursu, a jeszcze, id oznaczamy # a class . 
-                <!--id i class po spacji dodają kolejne np id="jeden dwa" class="jeden dwa jeden-trzy" jeden-trzy to jeden element-->
-                .article-image {height:200px; width:100%; background-size:cover;}
-                do artykułu w html masz href Więcej aby jego zrobić w italicu możesz dać mu class i oznaczyć nastepująco
-                .nazwaclassy {font-style: italic;}
-                jeśli masz np 3 sekcje i jedna jest pic druga vid trzecia audio i ostylujesz je jako
-                audio na styleone
-                vid na styletwothree
-                pic na stylethreefour
-                wtedy możesz pisać .styleone tylko dla audio .stylethree dla vid i pic albo .stylethreefour dla vid i pic
-                zmiana podkreślenia w linkach
-                a {text-decoration: none;} albo line-through lub overline <!--strikethrough albo linia nad tekstem-->
-                możesz też napisać tak a {text-decoration: underline line-through overline;} dla pod/prze/nadkreślenia jednocześnie
-                letter-spacing: -2px/2px/20px odleglość liter od siebie
-                word-spacing: 2px;
-                text-indent: 20px odstęp akapitowy od strony
-                text-align: center; tego nie musisz tłumaczyć :) 
-                text-decoration-color: #000; linie przekreślające mają kolor czarny
-                jeśli mam w line kilka linii określających styl, css wybierze ostatnią
-                text-shadow: 2pxw prawo 5pxdół  5pxrozmycie(4-10 najlepiej 5 przy 50 już nie widać) #000 kolor
-                - zmienia kierunek, text-shadow: -2px w lewo -5px w górę 
-                box-shadow: 5px 5px 20px -1px #000 zajebisty naprzykład jako cień ramki ze zdjęciem
-                hover=najechanie kiedy najedziesz na link możesz zmienić jego romiar itd
-                a:hover {font-size: 40px;} dla przykładu
-                focus=kliknięcie np. w input czy textarea dodajemy tam class np .my-input
-                .my-input {display:block; width:30%; margin:20px; padding<!--ułożenie/położenie-->:10px 20px;}
-                .my-input:focus {background: #493726; color: #fff; outline: none;}
-                article albo cokolwiek co możesz kliknąć i nie jest odnośnikiem na działanie przytrzymania myszką ma active
-                article:active {opacity .4;} transparentność zmiejszy się kiedy przytrzymam element klikając
-                border-radius: 3px delikatnie zaokrągla rogi np ramki czy bordera
-                border radius rogi: 10px lewy górny, 20px prawy górny, 2px prawy dolny i 50px lewy dolny zgodnie z zegarem
-                border-top-left-radius pierwsza wartosć określi zakrzywienie a druga zakrzywienie do w tym przypadku lewej strony dodatkowo
-                wycięcie koła ze zdjęcie a w zasadzie zakrzywienie granic do kształtu koła
-                .article-image {height:200px; width;200px: border-radius:100%;}
-                z index- głębokość przenikalność, layer number
-                lifting effect article:hover {box/text-shadow: 5px 5px 20px rgba(0, 0, 0, .7);}
-                płynne przejście transition: all 1s; w tym przypadku transition: box-shadow 1s, background #000 może być
-                a nawet transition-delay: 2s;
-            </pre>
-            </section>
-
-            <section id="plkurs">
-                <p style="color:green;">to jest css inline ważniejszy, bardziej priorytetowy niż w pliku CSS</p>
-                <p>możesz pisać css w html wpisując lukę której ma nie czytać (a'la komentarz)
-                    <![CDATA[*/
-                    treść css
-                    /*]]>
-                </p>
-                <p>id gdy na stronie jest jeden taki element a class gdy elementów jest wiele, np id tytułu i class pojęć</p>
-                <p>hrefy, 
-                    a:link {color:green;} przed jakąkolwiek akcją
-                    a:visited {color:yellow;} po kliknięciu
-                    a:hover {color:black;} najechanie
-                    a:active {color:red;} przytrzymanie
-                </p>
-                <p>text-decoration blink miga i nie jest super zalecany do użytku, inherit = dziedziczenie wartości</p>
-                <p>text-transform: capitalize; - pirwsza litera każdego słowa we wskazanym zdaniu będzie duża,
-                    lowercase; - małe litery niezależnie od tekstu pierwotnego
-                    uppercase; - wszystkie duże litery
-                    text-align: center; - wiadomo
-                    font-size: 30px; a potem line-height: 140% (z 30px)
-                    text-indent (wgniecenie/wcięcie): 20px; odstęp akapitowy
-                    word-spacing: 30px/1em (1em=1xfontsize określony wcześniej?)
-                    white-space: nowrap; ciągnie tekst na długość tak jak piszesz w kodzie bez br i enterów, możesz też mu dać pre :D
-                </p>
-                <p>font safe list: arial, arial black, comic sans ms, courier new, georgia, impact, times new roman (domyślna), trebuchet ms, verdana</p>
-                <p>italic, albo force italic czyli oblique (pochylenie niezaleźnie czy czcionka ma je w zestawie?)</p>
-                <p>font-variant: small-caps; capslock na treść z zachowaniem wielkich liter</p>
-                <div>ciekawostka: typetester strona</div>
-                <p>background-color: black; 
-                    background-image: url ('nazwapliku.format');
-                    background-repeat: no-repeat ;  albo repeat-x powtarza się poziomo adekwatnie do tego repeat-y w pionie
-                    zakładając, że jest teraz jedno zdjęcie w rogu a mamy jakiś tekst, poza zdjęciem i pod tekstem tło będzie czarne
-                    background-position: center; 
-                    backgroud-attachment: fixed; (scrollujesz stroną a tło jest nadal na środku)
-                    background-position: 50% 50% od lewej i od góry w zależności od zawartości strony
-                </p>
-                <p>border-style: coś; dla każdej strony zamiast określania top, bottom i left,right
-                    border-style:coś1 coś2; coś1 dla góry i dołu, coś2 dla lewej i prawej strony
-                    border-style: góra prawa dół lewa kolejność wartości
-                </p>
-                <p>tabelki to samo co z resztą plus td możesz stylizować dowolnie do tego padding zamiast cellpadding</p>
-                <p>vertical-align = vertical-align</p>
-                <p>to oczym mówił D w faqgit
-                    list-style-type: none; 
-                    list-style-position: inside albo outside ( ładne oddzielenie kropek od tekstu lub przeplatanie)
-                    list style-type (do ol) decimal liczbowe, lower-alpha upper-alpha lower i upper-roman 
-                    list-style-image: url('zdjecie.format');
-                </p>
-                <p>cursor: help; działa tak jak tekst w ramce po najechaniu ale od razu</p>
-                <p>opacity: 0.1-1;
-                    filter: alpha(opacity=60) tutaj 0-100
-                </p>
-                <p>box model:
-                    div.tekst {
-                        background-color: gray;
-                        padding: 50px; <!--padding left: 50px, right 50px, bottom -->
-                        text-align: justify;
-                        margin: 40px;
-                        border: 3px solid black;
-                        width:200px; 
-                    }
-                    div#opakowaniebox {
-                        width: 386px; <!--200px + 50x + 50px + 3px + 3px + 40px + 40px-->
-                        border: 1px dotted green;
-                    }
-                </p>
-                <p>float znasz a jeśli obok zdjęcia/tekstu masz tekst i chcesz dodać treść już poza floatem piszesz:
-                    <p style="clear: reight/left/both;">nowy tekst poza float</p>
-                    <p>dwa bloczki divove: jeden określony wyżej drugi identyczny
-                        div#kontener {
-                            width: 776px;
-                        }
-                        nastepny tekst pod nim aby nie uciekał dalej za drugą ramkę przy rozszerzaniu w kolejnym divie z style="clear: both;"
-                    </p>
-                </p>
-                <p>position np spanu domyślna jest static czyli jedno po drugim inline
-                    możesz ustalić relative dostosowując: top bottom right left
-                    pamiętaj, że pozycjonując np top 50px zawartość spanu zejdzie o 50px w dół a miejsce nad nim będzie "zarezerwowane" i puste, więc trochę dupnie
-                    natomiast unikniesz rezerwowania miejsca wpisując position absolute, dodatkowo jeśli masz tekst czy coś co najedzie na zawartość spanu, będzie się nawarstwiać, tzn tekst najedzie na tekst . dzięki absolute nie będzie już pustych miejsca
-                    w przypadku bottom 0px będzie treść na dole i niezależnie od zmieniania rozmiaru okna będzie się tam trzymał,
-                    natomiast w przypadku scrollowanej strony utknie w tym miejscu a żeby zrobić go responsywnego możemy ustalić jego miejsce na dole strony niezaleznie od rozmiaru okna i scrollowania wpisujemy fixed
-                    przykład position fixed i bottom 0px:
-                    div.menu_dolne {
-                        position: fixed;
-                        width: 100%;
-                        height: 20px;
-                        background-color: gray;
-                        bottom: 0px;
-                    }
-                    <div class="menu_dolne">treść menu dolnego</div>
-                    margines z obu stron dopasowany np do nagłówka strony (określonego np width na 300px) z tłem:
-                    margin-left: auto;
-                    margin-right: auto;
-                    dopasowanie relatywno-absolutne, tekst z nagłówka znajduje się w klasie określającej nagłówek, klasa jest okreslona pozycją relatywną a span treść jest określona absolutem względem relatywnego nagłówka
-                    w innej sytuacji, kiedy nie ma nagłówka i absolute nie jest relatywny, będzie się odnosil do całego widocznego okna przeglądarki
-                </p>
-                <p>Z index i warswty:
-                    .kwadracik {
-                        position: absolute;
-                        left: 0px;
-                        width: 100px;
-                        height: 100px;
-                    }
-                    <div class="kwadracik" style="background-color:green;" top: 0px; z-index: 1;> </div>
-                    <div class="kwadracik" style="background-color:yellow;" top: 20px; z-index: 2;> </div>
-                    <div class="kwadracik" style="background-color:red;" top: 40px; z-index: 3;> </div>
-                    jeżeli mamy jeszcze tekst na warstwie domyślnej 0? to kolory miałyby -1, -2 i -3 wyglądając tak samo ale z tekstem na wierzchu
-                </p>
-                <p> to czego potrzebujesz do książki!
-                    .tekst {
-                        width: 300px; <!--o to to-->
-                        background-color: red;
-                        overflow: visible(pokaż mimo przepełnienia - jako przykład był dodany height na 300px i tekst leciał dalej a tło było 300x300)
-                        overflow hidden ukrywa to co wyszło poza określony width i height tekst
-                        overflow auto doda slider w przypadku przepełnienia
-                        overflow scroll dodaje slider zawsze, nieaktywny gdy tekstu jest za mało i w dodatku na dole boczny też
-                    }
-                    <div class="tekst">w choinkę duzo tekstu</div>
-                </p>
-            </section>
-
-            <section id="plkurs2">
-                <p>W htmlu są tagi a w css selektory, id oznaczone jest # a classy . <br />
-                 background i jego selektory: color, image, repeat, attachment, position
-                 color określany nazwą, rgb lub hex # 
-                 dodatkowo po określeniu tła można dodać opacity 0.0-1.0 1 to pełne krycie a 0.0 całkowita transparentność, może to np. w przypadku diva zmienić również transparentność tekstu!
-                 image url("źródłopliku.format"); 
-                 repeat-y repeat-x no-repeat 
-                 background-position: right top; określa konkretnie gdzie ma się znajdować tło
-                 attachment fixed oznacza, że tło nie będzie scrollowac razem ze stroną a scroll oczywiście to oznacza 
-                 <code> Przykładowy kod: <br />
-                    body {
-                        background-color: #ffffff;
-                        background-image: url("img_tree.png");
-                        background-repeat: no-repeat;
-                        background-position: right top;
-                      }
-
-                      Skrócony kod:
-                      body {
-                        background: #ffffff url("img_tree.png") no-repeat right top;
-                      }
-                 </code>
-                </p>
-                <p>Borders:
-                    dotted - kropkowana
-                    dashed - kreskowana jak z ogłoszeń do wycięcia
-                    solid - zwykła 
-                    double - podwójna
-                    groove - 3D zależna od koloru, prosta
-                    ridge - krawędziowa, progowa? zależna od koloru 3D
-                    inset - piękna, wklęsła zależna od koloru i 3D
-                    outset - jak button trochę zlaeżna od koloru i 3D
-                    none - logiczne
-                    hidden - też
-                    mixed w kolejności: top right bottom left
-                    żaden atrybut nie będzie działał na border dopóki nie zostanie określony właśnie border-style
-                    border-width najlepiej określać w px ale można napisać po prostu medium czy thick
-                    określa też wedle kolejności i ilości 
-                    5px dotyczy wszystkich 
-                    5px 20px 5 dla top i bottom a 20 dla right i left
-                    5px 10px 15px 30px 5 top 10 right 15 bottom i 30 left 
-                    to samo dotyczy kolorów bordera
-                    bardziej specyficznie można uzyć atrybutów:
-                     border-top-style, border-right-style, border-bottom-style, border-left-style
-                     skrót:
-                     <code>
-                         długi:
-                         border-width 5px
-                         border-style (required) solid
-                         border-color red
-                         krótki:
-                         p {
-                            border: 5px solid red;
-                          }
-                     </code>
-                </p>
-                <p>margines
-                    można oczywiście określić dla wszystkich ale i każdego z osobna, 
-                    margin-left, margin-right, margin-top, margin-bottom
-                    auto - przeglądarka dopasowuje
-                    length - w px i innych jednostkach
-                    % - width from element
-                    inherit - dziecziczony of parent element
-                    -x np -50% jest dozwolone
-                    top right bottom left, i shortcut działają tutaj też
-                    <code>
-                        wyjaśnienie inherit:
-                        div {
-                            border: 1px solid red;
-                            margin-left: 100px;
-                          }
-                          
-                          p.ex1 {
-                            margin-left: inherit;
-                          }
-                    </code>
-                    Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
-                    This does not happen on left and right margins! Only top and bottom margins!
-                    h1 margin: 0 0 50px 0
-                    h2 margin: 20px 0 0 0 <!--sprawdź w css-->
-                </p>
-                <p>padding zasada wskazówek zegara top right bottom left działa, 
-                    length - px itd
-                    %
-                    inherit
-                    -x niedozwolone
-                    shortcut możliwy
-                    tak samo określanie każdego z osobna
-                    <code>
-                        Here, the div element is given a width of 300px. However, the actual width of the div element will be 350px (300px + 25px of left padding + 25px of right padding):
-
-                            div {
-                              width: 300px;
-                              padding: 25px;
-                            }
-                    </code>
-                    To keep the width at 300px, no matter the amount of padding, you can use the box-sizing property. This causes the element to maintain its width; if you increase the padding, the available content space will decrease.
-                    <code>
-                        Use the box-sizing property to keep the width at 300px, no matter the amount of padding:
-
-                         div {
-                         width: 300px;
-                         padding: 25px;
-                         box-sizing: border-box;
-                         }
-                    </code>
-                </p>
-                <p>heigth width
-                    auto - default
-                    px itd albo %
-                    inherit
-                    max-width może być ustalana tak samo, ale pamiętaj, że w przypadku np divu i max width większej niż najmniejszy rozmiar okna przelądarki automatycznie włączy się poziomy scroll
-                </p>
-                <p>box model
-                     Content - The content of the box, where text and images appear
-                     Padding - Clears an area around the content. The padding is transparent
-                     Border - A border that goes around the padding and content
-                     Margin - Clears an area outside the border. The margin is transparent
-                     Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. 
-                     To calculate the full size of an element, you must also add padding, borders and margins.
-                </p>
-                <p>outline borders
-                    outline jest jak objechanie markerem jak ramką dookoła tekstu, nie zmienia się jego szerokość najeżdża na "padding" ale jest outline
-                    outline-style, color, width, offset 
-                    style: dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden zupełnie jak w borderstyle
-                    width zazwyczaj thin 1px medium 3px i thick 5px albo normalnie w px itd
-                    color standardowo a dodatkowo invert 
-                    color dodaje tylko d outline a sam border może być domyślnie czarny, chyba że w border-color ustalimy inaczej
-                    offset: border black outline 1px solid red i outline-offset: 15px oddzieli outline od bordera na określoną odległość
-                </p>
-                <p>text
-                    text-align left, right, center albo justify
-                    vertical-align top, middle, bottom
-                    direction: rtl, ltr  (to samo co w html bdo dir="rtl")
-                    unicode-bidi: override, normal, embed, isolate, isolate-override, plaintext, inherit <!--co to?-->
-                    text decoration none - usuwa podkreślenia z linków
-                    overline, line-through, underline
-                    text-transform uppercase i lowercase zmieniają kazde litery na duże lub małe a capitalize każdą pierwszą robi dużą
-                    text-indent - wcięcie akapitowe, odstęp określany w px
-                    letter-spacing - odstęp od liter dopuszczalny -x w px
-                    line-height 0.8 albo 1.8 dla przykładu
-                    word-spacing w px dopuszczalny -x
-                    white-space nwm? nowrap, normal, pre, pre-line, pre-wrap, inherit <!--?-->
-                    text shadow xpx w prawo xpx w dół xpx blur color, dopuszczalne -x w prawo i w górę i chyba też blur
-                    text-overflow clip, elipsis, string, inherit <!--?-->
-                </p>
-                <p>Fonts
-                    jeśli nazwa jest wieloczłonowa piszesz ją w "Times New Roman"
-                    w przypadku kilku wygląda to tak: "Lucida Console", Courier, monospace
-                    serif jest ozdobniejszy, sans-serif jest prosty zwykle używany a monospace ma każdą literkę zajmującą tyle samo miejsca, nieważne czy to z czy i
-                    style: normal, italic, oblique podobne do italic ale mniej wspierane
-                    font weight: normal, bold albo w liczbach np. 300
-                    font-variant: normal, small-caps wszystkie małe litery będą powiększone ale będa mniejsze niż duże litery
-                    font-size default is 16px=1em
-                    w px lub em np 30px lub 1.875em, 14px lub 0.875em
-                    <code>
-                         pozwoli zachować taki sam rozmiar w każdej przeglądarce ale czy jest konieczne?
-                         body {
-                         font-size: 100%;
-                         }
-                    </code>
-                    określać size można też poprzez viewport 
-                    Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
-                    shortcut:
-                    <code>
-                        p.b {
-                            font: italic small-caps bold 12px/30px Georgia, serif;
-                          }
-                    </code>
-                </p>
-                <p>Links
-                    normalnie można je obrabiać + ich czynności:
-                    a:link - normalny, nieodwiedzony 
-                    a:hover - najechany 
-                    a:active - kliknięty (i ew przytrzymany)
-                    a:visited - użyty / odwiedzony
-                    sprawdź: 
-                    <code>
-                        a:link, a:visited {
-                            background-color: #f44336;
-                            color: white;
-                            padding: 14px 25px;
-                            text-align: center;
-                            text-decoration: none;
-                            display: inline-block;
-                          }
-                          
-                          a:hover, a:active {
-                            background-color: red;
-                          }
-                    </code>
-                </p>
-                <p>Lists
-                    ul {
-                        list-style-image: url('sqpurple.gif');
-                      }
-                      zdjęcie jako checkmark?marker
-                      list-style-position: outside albo inside
-                      tzn. np jeśli li będzie miał border to domyślnie czyli outside kropka marker li będzie poza porderem
-                      remove default settings:
-                      ul {
-                        list-style-type: none;
-                        margin: 0;
-                        padding: 0;
-                      }
-                      shortcut:
-                      ul {
-                        list-style: square inside url("sqpurple.gif");
-                      }
-                      popularne w menu
-                      li {
-                        display: inline;
-                      }
-                </p>
-                <p>tables
-                    border jeśli jest wyznaczony dla table, th i td lub więcej niż jednego elementu blisko siebie no wiesz, to możesz zrobić border-collapse: collapse i połączyć taki niepotrzebny podwójny border w jeden
-                    text-align i vertical align 
-                    th {
-                        text-align: left;
-                      }
-                      tr:hover {background-color: #f5f5f5;} na hover zmienia tło
-                      th, td {
-                        border-bottom: 1px solid #ddd;
-                      } jak horizontal rules
-                      zebra stripes:
-                      tr:nth-child(even) {background-color: #f2f2f2;}
-                      For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
-                      kiedy tabela jest duża i chcesz scroll poxiomy w tym przykładzie :
-                      <div style="overflow-x:auto;"> table </div>
-
-                </p>
-                <p>display
-                    an inline element with display: block; is not allowed to have other block elements inside it.
-                </p>
-                <p>max-width
-                    width określa konkretną szerokość, max-width dostosowuje responsywność do ekrany i maxymalnie do ustalonej szerokości. zalecane przy responsywnych rzeczach i mobilkach
-                </p>
-                <p>position
-                    static, relative, fixed, absolute, sticky
-                    static jest normalna w sumie nie zmienia nic i nie nadaje nic szczególnego
-                    relative jest na swoim miejscu i ustawiany poprzez right/left top/bottom od własnej pozycji do relatywnej w której ma się znajdować w dodatku nie rusza się gdy scrollujemy
-                    fixed nie rezerwuje sobie miejsca i jest również oznaczany jak relatywny co do pozycji, z tym, że rusza się ciągle kiedy scrollujemy. jest, przyczepiony jest relative to viewport a nie it's own position like a relative
-                    absolute będzie relatywny względem położonego wyżej relative a jeśli takiego nie będzie, zamiast relative uzna body i zachowa się jak fixed 
-                    sticky A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
-                    tzn. na stronie masz menu które jest na górze strony, scrollując na dół ono jedzie z tobą, a dodatkowo, gdyby to była reklama położona na dole strony przed scrollowaniem, podczas przewijania w dół zachowałaby się jak relatywna ale gdy zniknie z viewport juz zachowa sie jak fixed. fajne 
-                    Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
-                    div.sticky {
-                        position: -webkit-sticky; /* Safari */
-                        position: sticky;
-                        top: 0;
-                        background-color: green;
-                        border: 2px solid #4CAF50;
-                      }
-                      Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.
-                      umieszczanie tekstu na zdjęciu: zdjęcie w div jako relative, div tekstu jako absolute i gotowe
-                </p>
-                <p>overflow (scroll)
-                    odpowiada za decyzję, czy zawartość ma być clipowana czy nie. jeśli nie i np tebtbox będzie 20x20px a text większy i overflow: visible to text wyjedzie poza box.
-                    hidden ukryje text wystający nie dodając scrolla, po prostu utnie
-                    scroll it clipps text and adds scroll dodaje też poziomy nawet jeśli go nie potrzeba dlatego lepiej używac auto
-                    auto dodaje scroll tylko wtedy, gdy jest konieczny
-                    In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
-                    div {
-                        overflow-x: hidden; /* Hide horizontal scrollbar */
-                        overflow-y: scroll; /* Add vertical scrollbar */
-                      }   opcja alternatywna dla auto
-                </p>
-                <p>float
-                    opływanie elementów
-                    left, right, none (default), inherit
-                    clear decyduje gdzie nie może być lub może float
-                    none (default) zezwala na float po obu stronach
-                    left nic nie może być na float po lewej
-                    right nic nie może być na float po prawejj
-                    both po lewej i prawej nie są dozwolone floaty
-                    inherit wiadomo
-                    The most common way to use the clear property is after you have used a float property on an element.
-                    When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. 
-                    Your floated element will continue to float, but the cleared element will appear below it on the web page.
-                    The following example clears the float to the left. Means that no floating elements are allowed on the left side (of the div):
-                    div {
-                        clear: left;
-                      }
-
-                      boxy
-
-                      * {
-                        box-sizing: border-box;
-                      }
-                      
-                      .box {
-                        float: left;
-                        width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
-                        padding: 50px; /* if you want space between the images */
-                      }
-                </p>
-                <p>block inline
-                 Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
-
-                 Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
-
-                 Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements. 
-                </p>
-                <p>align i vertical-align
-                    .center {
-                        margin: auto;
-                        width: 50%;
-                        border: 3px solid green;
-                        padding: 10px;
-                      }
-                      Note: Center aligning has no effect if the width property is not set (or set to 100%).
-                      img {
-                        display: block;
-                        margin-left: auto;
-                        margin-right: auto;
-                        width: 40%;
-                      }
-
-
-                     left and right align using positioning
-                     .right {
-                        position: absolute;
-                        right: 0px;
-                        width: 300px;
-                        border: 3px solid #73AD21;
-                        padding: 10px;
-                      }
-                      Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
-                      left and right align using float and clearfix if needed
-                      .right {
-                        float: right;
-                        width: 300px;
-                        border: 3px solid #73AD21;
-                        padding: 10px;
-                      }
-                      Note: If an element is taller than the element containing it, and it is floated, it will overflow outside of its container. 
-                      .clearfix {
-                        overflow: auto;
-                      }
-                      left align using padding
-                      .center {
-                        padding: 70px 0;
-                        border: 3px solid green;
-                      }
-                      center via padding and txt align
-                      .center {
-                        padding: 70px 0;
-                        border: 3px solid green;
-                        text-align: center;
-                      }
-                      center vertically via line-height
-                      .center {
-                        line-height: 200px;
-                        height: 200px;
-                        border: 3px solid green;
-                        text-align: center;
-                      }
-                      
-                      /* If the text has multiple lines, add the following: */
-                      .center p {
-                        line-height: 1.5;
-                        display: inline-block;
-                        vertical-align: middle;
-                      }
-                      center vertically via position and transform
-                      .center {
-                        height: 200px;
-                        position: relative;
-                        border: 3px solid green;
-                      }
-                      
-                      .center p {
-                        margin: 0;
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                      }
-                      flexbox center vertically
-                      .center {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: 200px;
-                        border: 3px solid green;
-                      }
-                </p>
-                <p>combinators
-                    wzkazuje relację między selektorami
-                    spacja oznacza descendant selector
-                    > oznacza child selector
-                    + oznacza adjacent sibling selector
-                    ~general sibling selecotrr
-                    np div i p
-                    div p - descentant wszystkie p w div 
-                    div > p - child element
-                    div + p - The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element.
-
-                    Sibling elements must have the same parent element, and "adjacent" means "immediately following".
-                    
-                    The following example selects all p elements that are placed immediately after div elements
-                    div ~ p - 
-                        element element	div p	Selects all p elements inside div elements
-                        element>element	div > p	Selects all p elements where the parent is a div element
-                        element+element	div + p	Selects all p elements that are placed immediately after div elements
-                        element1~element2 p ~ ul Selects every ul element that are preceded by a p element
-                </p>
-                <p>pseudo-classe
-                    For example, it can be used to:
-                     Style an element when a user mouses over it
-                     Style visited and unvisited links differently
-                     Style an element when it gets focus
-                     selector:pseudo-class {
-                        property: value;
-                      }
-                      Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective! a:active MUST come after a:hover in the CSS definition in order to be effective! Pseudo-class names are not case-sensitive.
-                      pojawia się p po najechaniu na div
-                      p {
-                        display: none;
-                        background-color: yellow;
-                        padding: 20px;
-                      }
-                      
-                      div:hover p {
-                        display: block;
-                      }
-                      The :first-child pseudo-class matches a specified element that is the first child of another element.
-                      wyłapie na niebiesko pierwszy i w p
-                      p i:first-child {
-                        color: blue;
-                      }
-                      The :lang pseudo-class allows you to define special rules for different languages.
-                       In the example below, :lang defines the quotation marks for <q> elements with lang="no":
-                        q:lang(no) {
-                            quotes: "~" "~";
-                          }
-                      pSome text <q lang="no">A quote in a paragraph</q> Some text.p
-                      wszystkie pseudo elementy i pseudo classy :
-                      https://www.w3schools.com/css/css_pseudo_classes.asp
-                      A CSS pseudo-element is used to style specified parts of an element.
-                      For example, it can be used to:
-                      Style the first letter, or line, of an element
-                      Insert content before, or after, the content of an element
-                      zmiana wyglądu pierwszej lini tekstu w p :
-                      p::first-line {
-                        color: #ff0000;
-                        font-variant: small-caps;
-                      }
-                      Note: The ::first-line pseudo-element can only be applied to block-level elements. it can be used with:
-                      font properties, color properties, background properties, word-spacing, letter-spacing, text-decoration, vertical-align, text-transform, line-height, clear
-                </p>
-                <p> opacity 
-                    img {
-                        opacity: 0.5;
-                      }
-                      
-                      img:hover {
-                        opacity: 1.0;
-                      }
-                </p>
-                <p>navbar
-                    vertical pionowy
-                    ul {
-                      list-style-type: none;
-                      margin: 0;
-                      padding: 0;
-                      width: 200px;
-                      background-color: #f1f1f1;
-                    }
-                  
-                    li a {
-                      display: block;
-                      color: #000;
-                      padding: 8px 16px;
-                      text-decoration: none;
-                    }
-                    
-                    /* Change the link color on hover */
-                    li a:hover {
-                      background-color: #555;
-                      color: white;
-                    }
-                    
-                    pionowy stały
-                    ul {
-                      list-style-type: none;
-                      margin: 0;
-                      padding: 0;
-                      width: 25%;
-                      background-color: #f1f1f1;
-                      height: 100%; /* Full height */
-                      position: fixed; /* Make it stick, even on scroll */
-                      overflow: auto; /* Enable scrolling if the sidenav has too much content */
-                    }
-
-                    poziomy
-                    li {
-                      display: inline;
-                    }
-                    
-                    inny sposób z float
-                    li {
-                      float: left;
-                    }
-                    
-                    a {
-                      display: block;
-                      padding: 8px;
-                      background-color: #dddddd;
-                    }
-
-
-                    Add an "active" class to the current link to let the user know which page he/she is on:
-                    .active {
-                      background-color: #4CAF50;
-                    }
-
-                    navbar stoi niezależnie od scrolla na top lub bottom :
-                    ul {
-                      position: fixed;
-                      top: 0; <!--albo bottom: 0px;-->
-                      width: 100%;
-                    }
-                    Note: Fixed position might not work properly on mobile devices.
-
-                    sticky option to upper one
-                    ul {
-                      position: -webkit-sticky; /* Safari */
-                      position: sticky;
-                      top: 0;
-                    }
-                    Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example above). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
-
-                    dropdown navbar
-                    https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar
-                </p>
-                <p>dropdown navbar
-                  <style>
-                    .dropdown {
-                      position: relative;
-                      display: inline-block;
-                    }
-                    
-                    .dropdown-content {
-                      display: none;
-                      position: absolute;
-                      background-color: #f9f9f9;
-                      min-width: 160px;
-                      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                      padding: 12px 16px;
-                      z-index: 1;
-                    }
-                    
-                    .dropdown:hover .dropdown-content {
-                      display: block;
-                    }
-                    </style>
-                    
-                    <div class="dropdown">
-                      <span>Mouse over me</span>
-                      <div class="dropdown-content">
-                        <p>Hello World!</p>
-                      </div>
-                    </div>
-                    HTML) Use any element to open the dropdown content, e.g. a <span>, or a <button> element.
-
-                      Use a container element (like <div>) to create the dropdown content and add whatever you want inside of it.
-                      
-                      Wrap a <div> element around the elements to position the dropdown content correctly with CSS.
-                      
-                      CSS) The .dropdown class uses position:relative, which is needed when we want the dropdown content to be placed right below the dropdown button (using position:absolute).
-                      
-                      The .dropdown-content class holds the actual dropdown content. It is hidden by default, and will be displayed on hover (see below). Note the min-width is set to 160px. Feel free to change this. Tip: If you want the width of the dropdown content to be as wide as the dropdown button, set the width to 100% (and overflow:auto to enable scroll on small screens).
-                      
-                      Instead of using a border, we have used the CSS box-shadow property to make the dropdown menu look like a "card".
-                      
-                      The :hover selector is used to show the dropdown menu when the user moves the mouse over the dropdown button.
-
-                      dropdown menu example:
-                      <style>
-                        /* Style The Dropdown Button */
-                        .dropbtn {
-                          background-color: #4CAF50;
-                          color: white;
-                          padding: 16px;
-                          font-size: 16px;
-                          border: none;
-                          cursor: pointer;
-                        }
-                        
-                        /* The container <div> - needed to position the dropdown content */
-                        .dropdown {
-                          position: relative;
-                          display: inline-block;
-                        }
-                        
-                        /* Dropdown Content (Hidden by Default) */
-                        .dropdown-content {
-                          display: none;
-                          position: absolute;
-                          background-color: #f9f9f9;
-                          min-width: 160px;
-                          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                          z-index: 1;
-                        }
-                        
-                        /* Links inside the dropdown */
-                        .dropdown-content a {
-                          color: black;
-                          padding: 12px 16px;
-                          text-decoration: none;
-                          display: block;
-                        }
-                        
-                        /* Change color of dropdown links on hover */
-                        .dropdown-content a:hover {background-color: #f1f1f1}
-                        
-                        /* Show the dropdown menu on hover */
-                        .dropdown:hover .dropdown-content {
-                          display: block;
-                        }
-                        
-                        /* Change the background color of the dropdown button when the dropdown content is shown */
-                        .dropdown:hover .dropbtn {
-                          background-color: #3e8e41;
-                        }
-                        </style>
-                        
-                        <div class="dropdown">
-                          <button class="dropbtn">Dropdown</button>
-                          <div class="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
-                          </div>
-                        </div>
-
-                        dodatkowo align dropdownu 
-
-                        .dropdown-content {
-                          right: 0;
-                        }
-
-                dropdown image 
-                https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_image
-                </p>
-                <p>Image gallery
-                  css :
-                  <style>
-                    div.gallery {
-                      margin: 5px;
-                      border: 1px solid #ccc;
-                      float: left;
-                      width: 180px;
-                    }
-                    
-                    div.gallery:hover {
-                      border: 1px solid #777;
-                    }
-                    
-                    div.gallery img {
-                      width: 100%;
-                      height: auto;
-                    }
-                    
-                    div.desc {
-                      padding: 15px;
-                      text-align: center;
-                    }
-                    </style>
-
-                  zdjęcia:
-                  <div class="gallery">
-                    <a target="_blank" href="img_5terre.jpg">
-                      <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-                    </a>
-                    <div class="desc">Add a description of the image here</div>
-                  </div>
-                  
-                  <div class="gallery">
-                    <a target="_blank" href="img_forest.jpg">
-                      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-                    </a>
-                    <div class="desc">Add a description of the image here</div>
-                  </div>
-                </p>
-                <p>Image sprites
-                  We want to use the sprite image ("img_navsprites.gif") to create a navigation list.
-                  We will use an HTML list, because it can be a link and also supports a background image:
-                  css :
-                  #navlist {
-                    position: relative;
-                  }
-                  
-                  #navlist li {
-                    margin: 0;
-                    padding: 0;
-                    list-style: none;
-                    position: absolute;
-                    top: 0;
-                  }
-                  
-                  #navlist li, #navlist a {
-                    height: 44px;
-                    display: block;
-                  }
-                  
-                  #home {
-                    left: 0px;
-                    width: 46px;
-                    background: url('img_navsprites.gif') 0 0;
-                  }
-                  
-                  #prev {
-                    left: 63px;
-                    width: 43px;
-                    background: url('img_navsprites.gif') -47px 0;
-                  }
-                  
-                  #next {
-                    left: 129px;
-                    width: 43px;
-                    background: url('img_navsprites.gif') -91px 0;
-                  }
-                  zdjęcia ma w sobie trzy ikonki, domku i strzałek, a image sprites pozwala określić jakiej cześci obrazka używamy.
-                   Example explained:
-
-                   #navlist {position:relative;} - position is set to relative to allow absolute positioning inside it
-                   #navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} - margin and padding are set to 0, list-style is removed, and all list items are absolute positioned
-                   #navlist li, #navlist a {height:44px;display:block;} - the height of all the images are 44px
-                   Now start to position and style for each specific part:
-
-                   #home {left:0px;width:46px;} - Positioned all the way to the left, and the width of the image is 46px
-                   #home {background:url(img_navsprites.gif) 0 0;} - Defines the background image and its position (left 0px, top 0px)
-                   #prev {left:63px;width:43px;} - Positioned 63px to the right (#home width 46px + some extra space between items), and the width is 43px.
-                   #prev {background:url('img_navsprites.gif') -47px 0;} - Defines the background image 47px to the right (#home width 46px + 1px line divider)
-                   #next {left:129px;width:43px;}- Positioned 129px to the right (start of #prev is 63px + #prev width 43px + extra space), and the width is 43px.
-                   #next {background:url('img_navsprites.gif') -91px 0;} - Defines the background image 91px to the right (#home width 46px + 1px line divider + #prev width 43px + 1px line divider )
-                </p>
-                <p>attribute selctors
-                  The [attribute] selector is used to select elements with a specified attribute.
-                  The following example selects all <a> elements with a target attribute:
-                  Example:
-                  a[target] {
-                    background-color: yellow;
-                  }
-                  The [attribute~="value"] selector is used to select elements with an attribute value containing a specified word.
-
-                  The following example selects all elements with a title attribute that contains a space-separated list of words, one of which is "flower":
-                  [title~="flower"] {
-                    border: 5px solid yellow;
-                  }
-                  The [attribute|="value"] selector is used to select elements with the specified attribute starting with the specified value.
-
-                  The following example selects all elements with a class attribute value that begins with "top":
-
-                  Note: The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like class="top-text"! 
-                  [class|="top"] {
-                    background: yellow;
-                  }
-                  The [attribute^="value"] selector is used to select elements whose attribute value begins with a specified value.
-
-                  The following example selects all elements with a class attribute value that begins with "top":
-
-                  Note: The value does not have to be a whole word! 
-
-                  Example
-                   [class^="top"] {
-                    background: yellow;
-                    }
-
-                    The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified value.
-
-                     The following example selects all elements with a class attribute value that ends with "test":
-
-                     Note: The value does not have to be a whole word!  
-
-                     Example
-                     [class$="test"] {
-                      background: yellow;
-                     }
-                     The [attribute*="value"] selector is used to select elements whose attribute value contains a specified value.
-
-                     The following example selects all elements with a class attribute value that contains "te":
-                     
-                     Note: The value does not have to be a whole word! 
-
-                  przykłady :
-                  input[type="text"] {
-                    width: 150px;
-                    display: block;
-                    margin-bottom: 10px;
-                    background-color: yellow;
-                  }
-                  
-                  input[type="button"] {
-                    width: 120px;
-                    margin-left: 35px;
-                    display: block;
-                  }
-
-                  skrót:
-                   [attribute]	[target]	Selects all elements with a target attribute
-                   [attribute=value]	[target=_blank]	Selects all elements with target="_blank"
-                   [attribute~=value]	[title~=flower]	Selects all elements with a title attribute containing the word "flower"
-                   [attribute|=value]	[lang|=en]	Selects all elements with a lang attribute value starting with "en"
-                   [attribute^=value]	a[href^="https"]	Selects every <a> element whose href attribute value begins with "https"
-                   [attribute$=value]	a[href$=".pdf"]	Selects every <a> element whose href attribute value ends with ".pdf"
-                   [attribute*=value]	a[href*="w3schools"]	Selects every <a> element whose href attribute value contains the substring "w3schools"
-                </p>
-                <p>css input forms :D 
-                  input[type=text] - will only select text fields
-                  input[type=password] - will only select password fields
-                  input[type=number] - will only select number fields itd
-                  Use the padding property to add space inside the text field.
-                  Tip: When you have many inputs after each other, you might also want to add some margin, to add more space outside of them
-                  przykład zastosowania [nawiasów w css]
-                  input[type=text] {
-                    border: 2px solid red;
-                    border-radius: 4px;
-                  }
-                  :focus czyli kliknięte gotowe do wpisywania
-                  input[type=text]:focus {
-                    background-color: lightblue;
-                  }
-                  If you want an icon inside the input, use the background-image property and position it with the background-position property. Also notice that we add a large left padding to reserve the space of the icon
-                  In this example we use the CSS transition property to animate the width of the search input when it gets focus. You will learn more about the transition property later, in our CSS Transitions chapter.
-                  input[type=text] {
-                    transition: width 0.4s ease-in-out;
-                  }
-                  
-                  input[type=text]:focus {
-                    width: 100%;
-                  }
-                  Tip: Use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner)
-                  na button warto dodać, to samo na linki i zdjęcia wszystkie klikane elementy :
-                  cursor: pointer;
-                </p>
-                <p>counters <!--nie rozumiem tego-->
-                  To work with CSS counters we will use the following properties:
-                  counter-reset - Creates or resets a counter
-                  counter-increment - Increments a counter value
-                  content - Inserts generated content
-                  counter() or counters() function - Adds the value of a counter to an element
-                  The following example creates a counter for the page (in the body selector), then increments the counter value for each <h2> element and adds "Section <value of the counter>:" to the beginning of each <h2> element:
-
-                    Example
-                    body {
-                      counter-reset: section;
-                    }
-                    
-                    h2::before {
-                      counter-increment: section;
-                      content: "Section " counter(section) ": ";
-                    }
-                    https://www.w3schools.com/css/css_counters.asp
-                </p>
-                <p>website layout
-                  We will create a 3-column layout, and change it to a 1-column layout on smaller screens:
-                  Example
-                  /* Create three equal columns that floats next to each other */
-                  .column {
-                    float: left;
-                    width: 33.33%;
-                  }
-
-                  /* Clear floats after the columns */
-                  .row:after {
-                    content: "";
-                    display: table;
-                    clear: both;
-                  }
-
-                  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-                  @media screen and (max-width: 600px) {
-                    .column {
-                      width: 100%;
-                    }
-                  }
-                  Tip: Do you wonder how the @media rule works? Read more about it in our CSS Media Queries chapter.
-                  .footer {
-                    background-color: #F1F1F1;
-                    text-align: center;
-                    padding: 10px;
-                  }
-                </p>
-                <p>units
-                  not much responsive :
-                  cm, mm, in, px, pt, pc
-                  in = 96px/2.54cm
-                  points 1/72 z in 
-                  picas 1pc = 12pt
-                  responsive :
-                  em which is 16px 2em is 2x actual font size
-                  ex relative to x-height of current font (rarely used)
-                  ch relative to the width of the 0
-                  rem relative to font-size of root element 
-                  vw relative to 1% width of viewport 
-                  vh relative to 1% height of viewport
-                  vmin relative to 1% of viewport smaller dimension
-                  vmax relative to 1% of viewport larger dimension 
-                  % relative to parent element 
-                  Tip: The em and rem units are practical in creating perfectly scalable layout!
-                 * Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
-                </p>
-                <p>icons
-                  ikony można umieścić jak external plik w head 
-                  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-                  <!--czy mogę go umieścić w external css jak font family?-->
-                  For those looking to self host the web font, some additional setup is necessary. Host the icon font in a location, for example https://example.com/material-icons.woff and add the following CSS rule:
-                   @font-face {
-                   font-family: 'Material Icons';
-                   font-style: normal;
-                   font-weight: 400;
-                   src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-                   src: local('Material Icons'),
-                   local('MaterialIcons-Regular'),
-                   url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-                   url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-                   url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-                   }
-
-                   In addition, the CSS rules for rendering the icon will need to be declared to render the font properly. These rules are normally served as part of the Google Web Font stylesheet, but will need to be included manually in your projects when self-hosting the font:
-                     .material-icons {
-                     font-family: 'Material Icons';
-                     font-weight: normal;
-                     font-style: normal;
-                     font-size: 24px;  /* Preferred icon size */
-                     display: inline-block;
-                     line-height: 1;
-                     text-transform: none;
-                     letter-spacing: normal;
-                     word-wrap: normal;
-                     white-space: nowrap;
-                     direction: ltr;
-                     
-                     /* Support for all WebKit browsers. */
-                     -webkit-font-smoothing: antialiased;
-                     /* Support for Safari and Chrome. */
-                     text-rendering: optimizeLegibility;
-
-                     /* Support for Firefox. */
-                     -moz-osx-font-smoothing: grayscale;
-
-                     /* Support for IE. */
-                     font-feature-settings: 'liga';
-                     }
-
-                     wprowadzenie ikony, i lub span class zazwyczaj i najlepiej .material-icons i zamiast tekstu nazwa ikony 
-                     <i class="material-icons">face</i> opcjonalnie
-                     <i class="material-icons">&#xE87C;</i> numerycznie dla nie wspierających nazw przeglądarek
-
-                     zalecane ustawienia resizingu i dark/ligh mode 
-                     /* Rules for sizing the icon. */
-                     .material-icons.md-18 { font-size: 18px; }
-                     .material-icons.md-24 { font-size: 24px; }
-                     .material-icons.md-36 { font-size: 36px; }
-                     .material-icons.md-48 { font-size: 48px; }
-                      
-                     /* Rules for using icons as black on a light background. */
-                     .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-                     .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-                     
-                     /* Rules for using icons as white on a dark background. */
-                     .material-icons.md-light { color: rgba(255, 255, 255, 1); }
-                     .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-
-                     przykład 18px :
-                     <i class="material-icons md-18">face</i>
-                     .material-icons.md-18 { font-size: 18px; }
-
-                     To set a custom icon color, define a CSS rule specifying the desired color for the font:
-                      
-                     .material-icons.orange600 { color: #FB8C00; }
-                     and then use the class when referring to the icon:
-                     <i class="material-icons orange600">face</i>
-
-                     <!--
-                     schowaj to w klikany pokazujący się opis
-                     PNGs suitable for Android are available from the material icons library. These come in all the supported screen densities so they should look good on any device.
-
-                     The icons are also available in the material design icons git repository in the same combination of colors and sizes named as follows:
-
-                     */drawable-{{density}}/ic_{{name}}_{{color}}_{{size}}dp.png
-                     A density-independent VectorDrawable is provided which is supported from Android Lollipop and later:
-
-                     */drawable-anydpi-v21/ic_{{name}}_black_24dp.xml
-                     The Vector Drawable is currently only available as a black 24dp icon. This is for compatibility with our most standard icon size. To render the icon in a different color, use drawable tinting available on Android Lollipop.
-
-                     When using the Vector Drawable, it may not be necessary to include the xxxhdpi density PNG since it is unlikely a device supporting that screen density does not support Vector Drawables.-->
-
-                     <!--IOS
-                     Material icons also work well within iOS apps. In both the material icons library and git repository, these icons are packaged up in Xcode imagesets which will work easily with Xcode Asset Catalogs (xcassets). These imagesets can be added to any Xcode Asset Catalogs by dragging them into Xcode on to the asset catalog or by copying the folder into the xcasset folder.
-                     link do repo https://github.com/google/material-design-icons/tree/master/iconfont -->
-                     https://material.io/resources/icons/?style=baseline
-                </p>
-                <!--podobno advanced sie tutaj zaczyna-->
-                <p>border-radius 
-                  kolejność okreslania top left, top right, bottom right, bottom left.
-                </p>
-                <p>border-image 
-                  używanie zdjęcia jako border wymaga ustalenia bordera, jego src jako zdjęcia oraz: 
-                  gdzie uciąć zdjęcie i czy je powtarzać czy rozciągnąć
-                   border-image	A shorthand property for setting all the border-image-* properties
-                   border-image-source	Specifies the path to the image to be used as a border
-                   border-image-slice	Specifies how to slice the border image
-                   border-image-width	Specifies the widths of the border image
-                   border-image-outset	Specifies the amount by which the border image area extends beyond the border box
-                   border-image-repeat	Specifies whether the border image should be repeated, rounded or stretched
-                </p>
-                <p>multiple backgrounds 
-                  i guess it's the z-index 
-                  The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.
-                  background-image: url(img_flwr.gif), url(paper.gif); flower będzie on top of paper 
-                  ustawienia obu po przecinach :
-                  #example1 {
-                    background-image: url(img_flwr.gif), url(paper.gif);
-                    background-position: right bottom, left top;
-                    background-repeat: no-repeat, repeat;
-                  }
-                  shortcut, ale w tym przypadku nie polecam bo można sie pogubić 
-                  #example1 {
-                    background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
-                  }
-
-                  The CSS background-size property allows you to specify the size of background images.
-                  The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.
-                  The contain keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.
-                  The cover keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). As such, some parts of the background image may not be visible in the background positioning area. 
-                  
-
-                  Now we want to have a background image on a website that covers the entire browser window at all times.
-
-                  The requirements are as follows:
-                   Fill the entire page with the image (no white space)
-                   Scale image as needed
-                   Center image on page
-                   Do not cause scrollbars
-                   The following example shows how to do it; Use the <html> element (the <html> element is always at least the height of the browser window). Then set a fixed and centered background on it. Then adjust its size with the background-size property:
-                     html {
-                     background: url(img_man.jpg) no-repeat center fixed;
-                     background-size: cover;
-                     }
-
-                   <!--tego nie rozumiem:-->
-                   You could also use different background properties on a <div> to create a hero image (a large image with text), and place it where you want.
-
-                   Example
-                   .hero-image {
-                   background: url(img_man.jpg) no-repeat center;  
-                   background-size: cover;
-                   height: 500px;
-                   position: relative;
-                   }
-
-                     The CSS background-origin property specifies where the background image is positioned.
-                     The property takes three different values:
-                     border-box - the background image starts from the upper left corner of the border
-                     padding-box - (default) the background image starts from the upper left corner of the padding edge
-                     content-box - the background image starts from the upper left corner of the content
-
-                     The CSS background-clip property specifies the painting area of the background.
-
-                     The property takes three different values:
-                     
-                     border-box - (default) the background is painted to the outside edge of the border
-                     padding-box - the background is painted to the outside edge of the padding
-                     content-box - the background is painted within the content box
-                </p>
-                <p>gradient colors
-                  CSS defines two types of gradients:
-                  Linear Gradients (goes down/up/left/right/diagonally)
-                  Radial Gradients (defined by their center)
-
-                  To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect.
-                  Syntax
-                  background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
-                  Linear Gradient - Top to Bottom (this is default)
-                  The following example shows a linear gradient that starts at the top. It starts red, transitioning to yellow:
-                  #grad {
-                  background-image: linear-gradient(red, yellow);
-                  }
-
-                  drugi przykład 
-
-                  Linear Gradient - Left to Right
-                  The following example shows a linear gradient that starts from the left. It starts red, transitioning to yellow:
-                  #grad {
-                    background-image: linear-gradient(to right, red , yellow);
-                  }
-
-                  trzeci przykład 
-
-                  Linear Gradient - Diagonal
-                  You can make a gradient diagonally by specifying both the horizontal and vertical starting positions.
-                  The following example shows a linear gradient that starts at top left (and goes to bottom right). It starts red, transitioning to yellow:
-                  #grad {
-                    background-image: linear-gradient(to bottom right, red, yellow);
-                  }
-
-                  If you want more control over the direction of the gradient, you can define an angle, instead of the predefined directions (to bottom, to top, to right, to left, to bottom right, etc.).
-                  background-image: linear-gradient(angle, color-stop1, color-stop2);
-                  #grad {
-                    background-image: linear-gradient(-90deg, red, yellow);
-                  }
-                  
-                  więcej niż 2 kolory 
-                  #grad {
-                    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
-                  }
-
-
-                  transparentność
-                  The following example shows a linear gradient that starts from the left. It starts fully transparent, transitioning to full color red:
-                  #grad {
-                    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
-                  }
-
-
-                  powtarzanie
-                  #grad {
-                    background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
-                  }
-
-                  RADIAL GRADIENT 
-
-                  A radial gradient is defined by its center.
-                  To create a radial gradient you must also define at least two color stops.
-                  background-image: radial-gradient(shape size at position, start-color, ..., last-color);
-
-                  Radial Gradient - Differently Spaced Color Stops
-                  #grad {
-                    background-image: radial-gradient(red 5%, yellow 15%, green 60%);
-                  }
-
-                  The shape parameter defines the shape. It can take the value circle or ellipse. The default value is ellipse.
-                  #grad {
-                    background-image: radial-gradient(circle, red, yellow, green);
-                  }
-
-                  The size parameter defines the size of the gradient. It can take four values:
-                   closest-side
-                   farthest-side
-                   closest-corner
-                   farthest-corner
-                  przykłady :
-                  #grad1 {
-                    background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
-                  }
-                  
-                  #grad2 {
-                    background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
-                  }
-
-                  #grad {
-                    background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
-                  }
-                </p>
-                <p>shadow effect
-                 juz to masz, 
-                 The following example shows a red neon glow shadow:
-                 h1 {
-                  text-shadow: 0 0 3px #FF0000;
-                }
-                z minusami idą w lewo i w górę a bez -x idą w prawo i górę
-                multiple shadows
-                h1 {
-                  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
-                }
-
-
-                You can also use the text-shadow property to create a plain border around some text (without shadows):
-                h1 {
-                  color: yellow;
-                  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-                }
-
-                wszystko tak samo ale nie text tylko box shadow :
-                div {
-                  box-shadow: 10px 10px;
-                }
-
-
-                You can also use the box-shadow property to create paper-like cards: bardzo fajny efekt
-                div.card {
-                  width: 250px;
-                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                  text-align: center;
-                }
-                </p>
-                <p>text effects
-                  overflow kończacy się uciętym tekstem i drugi z (...)
-                  p.test1 {
-                    white-space: nowrap;
-                    width: 200px;
-                    border: 1px solid #000000;
-                    overflow: hidden;
-                    text-overflow: clip;
-                  }
-                  
-                  p.test2 {
-                    white-space: nowrap;
-                    width: 200px;
-                    border: 1px solid #000000;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                  }
-
-                  The following example shows how you can display the overflowed content when hovering over the element:
-                  div.test:hover {
-                    overflow: visible;
-                  }
-
-
-                  długa linia tekstu która dla estetyki nie będzie wymgaała br może zostać podzielona tym: 
-                  p {
-                    word-wrap: break-word;
-                  }
-
-                  zawartość np małego okienka będzie dzielona na 1. nowa linia z wyrazem i 2. nowa linia dzieląc wyraz dowolnie np 
-                  1.zawartość
-                  tekstu
-                  2.zawart 
-                  ość te 
-                  kstu 
-
-                  p.test1 {
-                    word-break: keep-all;
-                  }
-                  
-                  p.test2 {
-                    word-break: break-all;
-                  }
-
-
-                  <!--nie rozumiem czemu to ma służyć:-->
-                  p.test1 {
-                    writing-mode: horizontal-tb;
-                  }
-                  
-                  span.test2 {
-                    writing-mode: vertical-rl;
-                  }
-                  
-                  p.test2 {
-                    writing-mode: vertical-rl;
-                  }
-
-
-                  <!--tego też za bardzo nie rozumiem, nie lepiej użyć linku z google fonts jeśli nie używam własnego fontu?-->
-                  In the @font-face rule; first define a name for the font (e.g. myFirstFont) and then point to the font file.
-                  Tip: Always use lowercase letters for the font URL. Uppercase letters can give unexpected results in IE.
-                  To use the font for an HTML element, refer to the name of the font (myFirstFont) through the font-family property:
-                  @font-face {
-                    font-family: myFirstFont;
-                    src: url(sansation_light.woff);
-                  }
-                  
-                  div {
-                    font-family: myFirstFont;
-                  }
-
-                  pogrubienie:
-                  @font-face {
-                    font-family: myFirstFont;
-                    src: url(sansation_bold.woff);
-                    font-weight: bold;
-                  }
-                  The file "sansation_bold.woff" is another font file, that contains the bold characters for the Sansation font.
-                  Browsers will use this whenever a piece of text with the font-family "myFirstFont" should render as bold.
-                  This way you can have many @font-face rules for the same font.
-
-
-                   SPIS Z TABELI 
-                   font-family	name	Required. Defines a name for the font
-                   src	URL	Required. Defines the URL of the font file
-                   font-stretch	normal
-                   condensed
-                   ultra-condensed
-                   extra-condensed
-                   semi-condensed
-                   expanded
-                   semi-expanded
-                   extra-expanded
-                   ultra-expanded	Optional. Defines how the font should be stretched. Default is "normal"
-                   font-style	normal
-                   italic
-                   oblique	Optional. Defines how the font should be styled. Default is "normal"
-                   font-weight	normal
-                   bold
-                   100
-                   200
-                   300
-                   400
-                   500
-                   600
-                   700
-                   800
-                   900	Optional. Defines the boldness of the font. Default is "normal"
-                   unicode-range	unicode-range	Optional. Defines the range of UNICODE characters the font supports. Default is "U+0-10FFFF"
-                </p>
-                <p>2D transormation
-                  <!--przerwa-->
-                </p>
-            </section>
-        </main>
+        <section id="tableofcontents">
+          <a href="#1">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+          <a href="#nazwa">Tytuł sekcji</a><br />
+
+          <a href="#nazwa">Tytuł sekcji</a><br />
+        </section>
+
+        <section id="1">
+          <h3>Informacje ogólne</h3>
+          <pre>
+            Syntax:
+            nazwaselektora {
+              atrybut: wartość;
+            }
+            Nazwa selektora to nazwa tagu/elementu, dla id oznaczanego &quot;#&quot; a dla class &quot;.&quot; 
+            Kaskadowość oznacza odczytywanie reguł od góry do dołu, więc można gdzieś umieścić informację, o szarym kolorze tła dla nagłowka a w dowolnym miejscu niżej określić to kolor czerwony dla tła nagłówka i czerwony będzie wyświetlany.
+            nadpisać można wszelkie zasady stosując &quot;!important&quot;
+            Umieszczanie osobnego pliku css w pliku html: 
+            &lt;link rel="stylesheet" type="text/css" href="nazwapliku.css" /&gt;
+          </pre>
+        </section><br /><br />
+
+        <section id="2">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="3">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="4">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="5">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="6">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="7">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="8">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="9">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="10">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="11">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="12">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="13">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="14">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="15">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="16">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="17">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="18">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="19">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="20">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="21">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="22">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="23">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="24">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="25">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="26">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="27">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="28">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="29">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="30">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="31">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="32">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="33">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="34">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="35">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="36">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="37">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="38">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="39">
+          <h3>Title</h3>
+        </section><br /><br />
+
+        <section id="40">
+          <h3>Title</h3>
+        </section><br /><br />
 
     </body>
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.0 z dnia 04.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.1 z dnia 04.07.2020r.</p>
     </footer>
 </html>
