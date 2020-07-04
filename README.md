@@ -7,7 +7,7 @@ Status: _in progress_.
 
 ## About this project
 
-**This project is bilingual which means some things are written in English or Polish, for example (from FAQhtml):**
+**This project is bilingual which means some things are written in English and Polish, for example (from FAQhtml):**
 
         <select name="animals">
       
@@ -52,6 +52,8 @@ I'd like this project to become more professional at some point, and I'll try to
 
 * HTML
 
+* CSS will appear below once it's ready 
+
 -----
 
 ## Features
@@ -84,10 +86,12 @@ Find more in:
 
 + Discord group - Szkoła Programisty
 
++ w3schools.com
+
 -----
 
 ## Contact
 
 Discord app - Blanka#5252
 
-Version: 1.6 from 2.06.2020
+Version: 1.7 from 4.07.2020
