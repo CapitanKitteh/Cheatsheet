@@ -78,7 +78,8 @@
               atrybut: wartość;
             }
             Nazwa selektora to nazwa tagu/elementu, dla id oznaczanego &quot;#&quot; a dla class &quot;.&quot; 
-            Kaskadowość oznacza odczytywanie reguł od góry do dołu, więc można gdzieś umieścić informację, o szarym kolorze tła dla nagłowka a w dowolnym miejscu niżej określić to kolor czerwony dla tła nagłówka i czerwony będzie wyświetlany.
+            Kaskadowość oznacza odczytywanie reguł od góry do dołu, więc można gdzieś umieścić informację, o szarym kolorze tła dla nagłowka
+            a w dowolnym miejscu niżej określić to kolor czerwony dla tła nagłówka i  to czerwony będzie wyświetlany.
             nadpisać można wszelkie zasady stosując &quot;!important&quot;
             Umieszczanie osobnego pliku css w pliku html: 
             &lt;link rel="stylesheet" type="text/css" href="nazwapliku.css" /&gt;
@@ -89,31 +90,23 @@
         </section><br /><br />
 
         <section id="size-units">
-          <h3>size and units</h3>
-          heigth width
-            auto - default
-            px itd albo %
+          <h3>Size and units</h3>
+          <pre>Height - wysokość i width - szerokość określa sie za pomocą:
+            auto - domyślne, 
+            Nieresponsywne (nie dostosowujące się do rozmiaru okna przeglądarki):
+            cm, mm, in (=96px/2,54cm), pt (point=1/72in), pc (picas 1=12pt)
+            Responsywne:
+            em (current font size, default is 16px which is 1em)
+            vw relative to 1% of viewport width
+            vh relative to 1% of viewport height 
+            vmin relative to 1% viewport smaller dimension
+            vmax relative to 1% viewport larger dimension 
+            % relative to parent element 
             inherit
-            max-width może być ustalana tak samo, ale pamiętaj, że w przypadku np divu i max width większej niż najmniejszy rozmiar okna przelądarki automatycznie włączy się poziomy scroll
-            width określa konkretną szerokość, max-width dostosowuje responsywność do ekrany i maxymalnie do ustalonej szerokości. zalecane przy responsywnych rzeczach i mobilkach
-            units
-          not much responsive :
-          cm, mm, in, px, pt, pc
-          in = 96px/2.54cm
-          points 1/72 z in 
-          picas 1pc = 12pt
-          responsive :
-          em which is 16px 2em is 2x actual font size
-          ex relative to x-height of current font (rarely used)
-          ch relative to the width of the 0
-          rem relative to font-size of root element 
-          vw relative to 1% width of viewport 
-          vh relative to 1% height of viewport
-          vmin relative to 1% of viewport smaller dimension
-          vmax relative to 1% of viewport larger dimension 
-          % relative to parent element 
-          Tip: The em and rem units are practical in creating perfectly scalable layout!
-         * Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm.
+            Viewport to rozmiar okna przeglądarki, jeśli ma 50cm szerokości jego 1vw=0.5cm 
+
+            <!--max-width określa maksymalną szerokość dostosowując do ekranu, tzn. width określa konkretną szerokość wyświetlaną tak samo w przeglądarkach mobilnych jak i komputerowych,
+            max width natomiast określa największą możliwą szerokość i na mniejszych ekrany wyświetli poziomy scroll albo się dostosuje do ekranu-->
         </section><br /><br />
 
         <section id="attr-selectors">
@@ -1650,6 +1643,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.3 z dnia 05.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.4 z dnia 05.07.2020r.</p>
     </footer>
 </html>
