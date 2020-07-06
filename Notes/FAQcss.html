@@ -80,7 +80,7 @@
             }
             Nazwa selektora to nazwa tagu/elementu, dla id oznaczanego &quot;#&quot; a dla class &quot;.&quot; 
             Kaskadowość oznacza odczytywanie reguł od góry do dołu, więc można gdzieś umieścić informację, o szarym kolorze tła dla nagłowka
-            a w dowolnym miejscu niżej określić to kolor czerwony dla tła nagłówka i  to czerwony będzie wyświetlany.
+            a w dowolnym miejscu niżej określić to kolor czerwony dla tła nagłówka i to czerwony będzie wyświetlany.
             nadpisać można wszelkie zasady stosując &quot;!important&quot;
             Umieszczanie osobnego pliku css w pliku html: 
             &lt;link rel="stylesheet" type="text/css" href="nazwapliku.css" /&gt;
@@ -164,27 +164,56 @@
 
         <section id="combinators">
           <h3>Combinators</h3>
-          Są to łączniki wskazujące na relację między selektorami
-          Przykłady:
+          Są to łączniki wskazujące na relację między selektorami<br />
+          Przykłady:<br />
+          1. Każdy span w class=&quot;quots&quot; :<br />
+          Każdy inny span poza określoną klasą nie będzie brany pod uwagę
+          <pre><code>
+            .quots span {
+              color: #00283;
+            }
+          </code></pre>
+          2. Jedynie li bezpośrednio znajdujące się po ol będą ostylowane, w tym przypadku listy w liście, durga lista ul również posiadająca li nie będzie brana pod uwagę :
+          <pre><code>
+            ol > li {
+              color: #000283;
+            }
+          </code></pre>
+          <!--źródło przykładu:
+          <ol>Lusta zakupów
+            <li>Pomidorki
+              <ul>
+                <li>Cherry</li>
+                <li>Śliwkowe</li>
+              </ul>
+            </li>
+            <li>Makaron</li>
+            <li>Borówki</li>
+          </ol>-->
+          3. Tylko element w tym przypadku div tuż po h3 będzie ostylowany, jeśli coś znajduje się pomiędzy nimi, reguła przestanie działać :
+          <pre><code>
+            h3.testy + div {
+              color: #000283;
+            }
+          </code></pre>
+          <!--źródło przykładu:
+          <h3 class="testy">Testowy nagłówek</h3>
+          <div>Testowy div</div>
+          <p>Testowy paragraf</p>
+          <div>Testowy div</div>-->
+          4. Przykład taki sam jednak łącznik będzie dotyczył każdego div niezależnie od tego, czy coś się znajduje między nim a h3 :
+          <pre><code>
+            h3.testy ~ div {
+              color: #000283;
+            }
+          </code></pre>
+          <!--źródło przykładu:
+          <h3 class="testy">Testowy nagłówek</h3>
+          <p>Testowy paragraf</p>
+          <div>Testowy div</div>
+          <p>Testowy paragraf</p>
+          <div>Testowy div</div>-->
           
-            wzkazuje relację między selektorami
-            spacja oznacza descendant selector
-            > oznacza child selector
-            + oznacza adjacent sibling selector
-            ~general sibling selecotrr
-            np div i p
-            div p - descentant wszystkie p w div 
-            div > p - child element
-            div + p - The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element.
-
-            Sibling elements must have the same parent element, and "adjacent" means "immediately following".
-            
-            The following example selects all p elements that are placed immediately after div elements
-            div ~ p - 
-                element element	div p	Selects all p elements inside div elements
-                element>element	div > p	Selects all p elements where the parent is a div element
-                element+element	div + p	Selects all p elements that are placed immediately after div elements
-                element1~element2 p ~ ul Selects every ul element that are preceded by a p element
         </section><br /><br />
         
         <section id="colors">
@@ -1697,6 +1726,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.7 z dnia 06.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.8 z dnia 06.07.2020r.</p>
     </footer>
 </html>
