@@ -90,7 +90,7 @@
           </pre>
         </section><br /><br />
 
-        <section id="size-units">
+        <section id="size-units"> 
           <h3>Size and units</h3>
           <pre>Height - wysokość i width - szerokość określa się za pomocą:
             auto - domyślne, 
@@ -163,8 +163,10 @@
         </section><br /><br />
 
         <section id="combinators">
-          <h3>combinators - łączniki</h3>
-          combinators
+          <h3>Combinators</h3>
+          Są to łączniki wskazujące na relację między selektorami
+          Przykłady:
+          
             wzkazuje relację między selektorami
             spacja oznacza descendant selector
             > oznacza child selector
@@ -187,7 +189,43 @@
         
         <section id="colors">
           <h3>Kolory</h3>
-          <!--opisz rgb rgba hls hlsa itd-->
+          Kolory można określać przy pomocy wartości rgb, hex, hsl a również rgba i hsla <br />
+          Dla wszystkich przykładów został użyty ten sam kolor, w przypadku rgba i hsla transparentny w 50%.<br />
+          1. Kolory określane za pomocą wartości rgb (red, green, blue) 0-255: 
+          <pre><code>
+            p {
+              background color: rgb(0, 2, 131) 
+            }
+          </code></pre>
+          2. Kolory określane za pomocą wartości rgba (red, green, blue, alpha) 0-255, alpha 0.0 - transparentny 1.0 - pełny kolor :
+          <pre><code>
+            p {
+              background-color: rgba(0, 2, 131, 0.5)
+            }
+          </code></pre>
+          3. Kolory określane za pomocą wartości hex (#000000-#ffffff w czym 2 pierwsze to red, dwa kolejne green a dwa ostatnie blue [#rrggbb]) :
+          <pre><code>
+            p {
+              background-color: #000283;
+            }
+          </code></pre>
+          Kolor czarny: #000000, kolor biały: #ffffff, kolor szary i jego odcienie są często tworzone z powtarzających się wartości, np. #c4c4c4 czy #1f1f1f<br />
+          4. Kolory określane za pomocą wartości hsl (hue, saturation, lightness) 
+          Hue - odcień/kolor 0-360 przy czym 0 - czerwony 120 - zielony a 240 - niebieski <br />
+          Saturation - skala szarości 0% - odcien szary, 100% to pełny kolor <br />
+          Lightness - skala jasności koloru 0% - czarny, 25% - ciemny odcień danego koloru, 50% - pełny kolor, 75% - jasny odcień danego koloru, 100% biel <br />
+          <pre><code>
+            p {
+              background-color: hsl(239, 100%, 26%);
+            }
+          </code></pre>
+          5. Kolory określane za pomocą wartości hsla (hue, saturation, lightness, alpha) alpha 0.0 - transparentny 1.0 - pełny kolor :
+          <pre><code>
+            p {
+              background-color: hsla(239, 100%, 26%, 0.5)
+            }
+          </code></pre>
+
         </section><br /><br />
 
         <section id="gradient">
@@ -1624,6 +1662,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.5 z dnia 05.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.6 z dnia 06.07.2020r.</p>
     </footer>
 </html>
