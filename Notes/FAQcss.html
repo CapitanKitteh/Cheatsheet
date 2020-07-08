@@ -549,36 +549,78 @@
             }
             100% i 1em to normal
           </code></pre>
-          8. direction: 
-
-
-          <style>
-            p.test {
-              line-height: 1em;
+          8. direction: ltr (default), rtl, initial, inherit - określa do której krawędzi tekst jest dorównany<br />
+          8.1 left to right - przyrównanie do lewej krawędzi
+          <pre><code>
+            p {
+              direction: ltr;
             }
-          </style>
-          <p class="test">Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w lini. Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w lini. Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w lini. Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w lini. Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w lini.</p>
-          <p class="test">Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie pierwszym.
-            Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie.
-            Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie.
-            Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie.
-            Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie.
-            Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie.
-          </p>
+          </code></pre>
+          8.2 right to left - przyrównanie do prawej krawędzi
+          <pre><code>
+            p {
+              direction: rtl;
+            }
+          </code></pre>
+          9. text-overflow: clip, ellipsis, string, initial, inherit - określa co się dzieje z tekstem wychodzącym poza widoczne pole <br />
+          W przykładach overflow: hidden ukrywa wszystko co wychodzi poza okno przeglądarki <br />
+          9.1 clip ucina tekst
+          <pre><code>
+            p {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: clip;
+            }
+          </code></pre>
+          9.2 ellipsis ucina tekst zostawiając (...)
+          <pre><code>
+            p {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          </code></pre>
+          10 text-shadow: none, h-shadow, v-shadow, blur-radius, color, initial, inherit <br />
+          10.1 Cień można określić w następujący sposób:
+          Pierwsza wartość to przesunięcie cienia względem tekstu w poziomie w przykładzie wynosi 2px <br />
+          Druga wartość to przesunięcie w pionie również 2px <br />
+          Trzecia wartość to kolor w tym przypadku #000283 <br />
+          Przykład średnio czytelny
+          <pre><code>
+            p {
+              text-shadow: 2px 2px #000283;
+            }
+            Dodam trzecią wartość, czyli blur-radius o wartości 5px 
+            p {
+              text-shadow: 2px 2px 5px #000283;
+            }
+          </code></pre> 
+          10.2 Przykład na białym kolorze tekstu:
+          <pre><code>
+            p {
+              color: white;
+              text-shadow: 2px 2px 5px #000000
+            }
+          </code></pre>
+          10.3 Przykład efektu neon w kolorze mięty: 
+          <pre><code>
+            p {
+              text-shadow: 0px 0px 5px #03f7f7;
+            }
+          </code></pre>
+          10.4 Podwójny kolor neonu:
+          <pre><code>
+            p {
+              text-shadow: 0px 0px 5px #ff643d, 0px 0px 5px #8671ff; 
+            }
+          </code></pre>
+          10.5 Dopuszczalne są także wartości ujemne:
+          <pre><code>
+            p {
+              text-shadow: -5px -5px 5px #000283;
+            }
+          </code></pre>
 
-          text-shadow: 2pxw prawo 5pxdół  5pxrozmycie(4-10 najlepiej 5 przy 50 już nie widać) #000 kolor
-          - zmienia kierunek, text-shadow: -2px w lewo -5px w górę 
-
-          TEXT - div na span czyli clock element na inline element :
-          display: inline albo inline-block wtedy możesz regulować height
-          direction: rtl, ltr  (to samo co w html bdo dir="rtl")
-          unicode-bidi: override, normal, embed, isolate, isolate-override, plaintext, inherit <!--co to?-->
-          text shadow xpx w prawo xpx w dół xpx blur color, dopuszczalne -x w prawo i w górę i chyba też blur
-          text-overflow clip, elipsis, string, inherit <!--?-->
-          an inline element with display: block; is not allowed to have other block elements inside it.
-          Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
-          Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
-          Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements. 
         </section><br /><br />
 
         <section id="txteff">
@@ -1807,6 +1849,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.2 z dnia 08.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.3 z dnia 08.07.2020r.</p>
     </footer>
 </html>
