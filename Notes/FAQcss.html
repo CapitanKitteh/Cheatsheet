@@ -386,8 +386,9 @@
         <section id="txtfonts">
           <h3>Text - fonts</h3>
           Dołączamy czcionki np. z Google Fonts:
-          Po wybraniu czcionki zaznaczam style, które mnie intesują, następnie jeśli będę umieszczać reguły css w pliku html wybieram link (umieszczam go w head), jeśli będę umieszczać wszystko w osobnym pliku css wybieram @import (umieszczam go na początku pliku css), dodatkowo ukazuje się informacja jak opisać czcionkę. 
-          <ul>Bezpieczna lista (interpretowanych bezproblemowo w większości przeglądarek:
+          Po wybraniu czcionki zaznaczam style, które mnie intesują, następnie jeśli będę umieszczać reguły css w pliku html wybieram link (umieszczam go w head), <br />
+          jeśli będę umieszczać wszystko w osobnym pliku css wybieram @import (umieszczam go na początku pliku css), dodatkowo ukazuje się informacja jak opisać czcionkę. 
+          <ul>Bezpieczna lista (interpretowanych bezproblemowo w większości przeglądarek):
              <li>Arial</li>
              <li>Arial Black</li>
              <li>Comic Sans Ms</li>
@@ -398,30 +399,28 @@
              <li>Trebuchet Ms</li>
              <li>Verdana</li>
           </ul>
-          italic, albo force italic czyli oblique (pochylenie niezaleźnie czy czcionka ma je w zestawie?)
-          font-variant: small-caps; capslock na treść z zachowaniem wielkich liter
-          jeśli nazwa jest wieloczłonowa piszesz ją w "Times New Roman"
-            w przypadku kilku wygląda to tak: "Lucida Console", Courier, monospace
-            serif jest ozdobniejszy, sans-serif jest prosty zwykle używany a monospace ma każdą literkę zajmującą tyle samo miejsca, nieważne czy to z czy i
-            style: normal, italic, oblique podobne do italic ale mniej wspierane
-            font weight: normal, bold albo w liczbach np. 300
-            font-variant: normal, small-caps wszystkie małe litery będą powiększone ale będa mniejsze niż duże litery
-            font-size default is 16px=1em
-            w px lub em np 30px lub 1.875em, 14px lub 0.875em
-            <code>
-                 pozwoli zachować taki sam rozmiar w każdej przeglądarce ale czy jest konieczne?
-                 body {
-                 font-size: 100%;
-                 }
-            </code>
-            określać size można też poprzez viewport 
-            Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
-            shortcut:
-            <code>
-                p.b {
-                    font: italic small-caps bold 12px/30px Georgia, serif;
-                  }
-            </code>
+          Jeśli nazwa jest wieloczłonowa piszemy ją w cudzysłowie, "Times New Roman", 
+          a jeśli podajemy kilka nazw wygląda to tak: "Lucida Console", Courier, monospace <br />
+          font-weight - normal (400), bold (700), bolder, lighter, initial (to it's default), inherit, 100-900 <br />
+          font-style - normal, italic (kursywa) lub oblique (wymuszona kursywa, nie zawsze wspierana) <br />
+          font-variant - normal (default), small-caps (małe litery będą powiększone, ale będą mniejsze niż duże litery), initial, inherit <br />
+          font-size - określane w px, %, em, za pomocą viewport, rownież określanie przez small, medium, large, smaller, larger, x-small, xx-small, x-large, xx-large, initial, inherit.<br />
+          Default to 16px=1em. <br />
+          Określanie % względem px: 
+          <pre><code>
+            p {
+              font-size: 30px;
+              line-height: 140%
+            }
+            140% z 30px da rozmiar 42px 
+          </code></pre> 
+          Shortcut:
+          <pre><code>
+            p. {
+              font: italic small-caps bold 30px Arial, serif;
+            }
+          </pre></code>
+
         </section><br /><br />
 
         <section id="link">
@@ -479,10 +478,12 @@
         <section id="txttransform">
           <h3>Text - transform</h3>
           text-transform: capitalize; - pirwsza litera każdego słowa we wskazanym zdaniu będzie duża,
+          
+          
           lowercase; - małe litery niezależnie od tekstu pierwotnego
           uppercase; - wszystkie duże litery
           text-align: center; - wiadomo
-          font-size: 30px; a potem line-height: 140% (z 30px)
+         
           text-indent (wgniecenie/wcięcie): 20px; odstęp akapitowy
           word-spacing: 30px/1em (1em=1xfontsize określony wcześniej?)
           white-space: nowrap; ciągnie tekst na długość tak jak piszesz w kodzie bez br i enterów, możesz też mu dać pre :D
@@ -1736,6 +1737,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 2.9 z dnia 07.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.0 z dnia 08.07.2020r.</p>
     </footer>
 </html>
