@@ -27,7 +27,6 @@
           <a href="#colors">Tytuł sekcji</a><br />kolory
           <a href="#gradient">Tytuł sekcji</a><br />gradient colors
           <a href="#txtfonts">Tytuł sekcji</a><br />text fonts
-          <a href="#txtdeco">Tytuł sekcji</a><br />text decoration
           <a href="#actions">Tytuł sekcji</a><br />actions with links and others
           <a href="#txttransform">Tytuł sekcji</a><br />txt transform
           <a href="#txteff">Tytuł sekcji</a><br />text effect
@@ -422,20 +421,6 @@
 
         </section><br /><br />
 
-        <section id="txtdeco">
-          <h3>Text - decoration</h3>
-          {text-decoration: none;}
-          możesz też napisać tak a {text-decoration: underline line-through overline;} dla pod/prze/nadkreślenia jednocześnie
-          letter-spacing: -2px/2px/20px odleglość liter od siebie
-          word-spacing: 2px;
-          text-indent: 20px odstęp akapitowy od strony
-          text-align: center; tego nie musisz tłumaczyć :) 
-          text-decoration-color: #000; linie przekreślające mają kolor czarny
-          text-shadow: 2pxw prawo 5pxdół  5pxrozmycie(4-10 najlepiej 5 przy 50 już nie widać) #000 kolor
-          - zmienia kierunek, text-shadow: -2px w lewo -5px w górę 
-          blink migający niespecjalnie zalecany
-        </section><br /><br />
-
         <section id="actions">
           <h3>Actions with links and others</h3>
           normalnie można je obrabiać + ich czynności:
@@ -470,39 +455,130 @@
         </section><br /><br />
 
         <section id="txttransform">
-          <h3>Text - transform</h3>
-          text-transform: capitalize; - pirwsza litera każdego słowa we wskazanym zdaniu będzie duża,
-          
-          
-          lowercase; - małe litery niezależnie od tekstu pierwotnego
-          uppercase; - wszystkie duże litery
-          text-align: center; - wiadomo
-         
-          text-indent (wgniecenie/wcięcie): 20px; odstęp akapitowy
-          word-spacing: 30px/1em (1em=1xfontsize określony wcześniej?)
-          white-space: nowrap; ciągnie tekst na długość tak jak piszesz w kodzie bez br i enterów, możesz też mu dać pre :D
+          <h3>Text - align, decoration, transform and more</h3>
+          1. text-align: left, right, center, justify, initial, inherit <br />
+          1.1 vertical-align: baseline (default), np. 20px/em/% (w górę) lub 20px/em/% (w dół), sub, super, top, middle, bottom, initial, inherit <br /> 
+          2. text-decoration: none, initial, inherit <br />
+          2.1 text-decoration-line: none, underline, overline, line-through, initial, inherit <br />
+          2.2 text-decoration-style: solid, double, dotted, dashed, wavy, initial, inherit <br />
+          2.3 text-decoration-color: red, #000283 itd. <br />
+          Przykład przekreślenia w stylu dashed w kolorze czerwonym: 
+          <pre><code>
+            p {
+              line-decoration: like-through dashed red;
+            }
+
+            Można to napisać również w ten sposób:
+
+            p {
+              line-decoration-line: line-through;
+              line-decoration-style: dashed;
+              line-decoration-color: red;
+            }
+          </code></pre>
+          3. text-indent: 20px - wcięcie tekstu/odstęp akapitowy na 20px, określać go można również w % lub em <br />
+          Wartości minusowe poskutkują wcięciem w prawo chowając tekst <br />
+          Przykład wcięcia w em:
+          <pre><code>
+            p {
+              text-indent: 4em;
+            }
+          </code></pre>
+          4. letter-spacing: np. 2px, 20px, -2px - odległość liter od siebie <br />
+          4.1 word-spacing: np. 2px,  20px, -40px - odległość wyrazów od siebie <br />
+          5. text-transform: none (default), capitalize, lowercase, uppercase, initial, inherit <br />
+          5.1 capitalize - pierwsza litera w każdym słowie będzie duża <br />
+          5.2 lowercase - każda litera będzie mała <br />
+          5.3 uppercase - każda litera będzie duża <br />
+          6. white-space: normal, nowrap, pre, pre-line, pre-wrap, initial, inherit <br />
+          6.1 normal (default)
+          <pre><code>
+            p {
+              white-space: normal;
+            }
+          </code></pre>
+          6.2 nowrap prezentuje tekst o takiej długości w jakiej jest zapisany pierwotnie
+          <pre><code>
+            p {
+              white-space: nowrap;
+            }
+          </code></pre>
+          6.3 pre prezentuje tekst dokładnie tak samo jak został napisany
+          <pre><code>
+            p {
+              white-space: pre;
+            }
+          </code></pre>
+          6.4 pre-line prezentuje tekst tak samo jak został napisany przyrównując każdą następną linijkę do krawędzi
+          <pre><code>
+            p {
+              white-space: pre-line;
+            }
+          </code></pre>
+          6.5 pre-wrap prezentuje tekst zachowując go tak jak został napisany, niemniej to co jest zbyt długie umieszcza w lini poniżej
+          <pre><code>
+            p {
+              white-space: pre-wrap;
+            }
+          </code></pre>
+          7. line-height: normal (default), number, px/em/cm/%, initial, inherit <br /> 
+          Dozwolone są wartości ujemne <br />
+          7.1 number zalecane, ustala odtęp od każdej lini na podstawie jej wysokości
+          <pre><code>
+            p {
+              line-height: 0.5;
+            }
+            Domyślnie:
+            p {
+              line-height: 1.0;
+            }
+            p {
+              line-height: 7.0;
+            }
+          </code></pre> 
+          7.2 Jednostki 
+          <pre><code>
+            p {
+              line-height: -3px;
+            }
+            p {
+              line-height: 2em;
+            }
+            p {
+              line-height: 30%;
+            }
+            100% i 1em to normal
+          </code></pre>
+          8. direction: 
+
+
+          <style>
+            p.test {
+              line-height: 1em;
+            }
+          </style>
+          <p class="test">Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w lini. Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w lini. Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w lini. Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w lini. Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w lini.</p>
+          <p class="test">Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie pierwszym.
+            Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie.
+            Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie.
+            Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie.
+            Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie.
+            Testowy paragraf o bardzo długiej i niemożebie nudnej treści powtórzony w rzędzie.
+          </p>
+
+          text-shadow: 2pxw prawo 5pxdół  5pxrozmycie(4-10 najlepiej 5 przy 50 już nie widać) #000 kolor
+          - zmienia kierunek, text-shadow: -2px w lewo -5px w górę 
+
           TEXT - div na span czyli clock element na inline element :
           display: inline albo inline-block wtedy możesz regulować height
-          text-align left, right, center albo justify
-          vertical-align top, middle, bottom
           direction: rtl, ltr  (to samo co w html bdo dir="rtl")
           unicode-bidi: override, normal, embed, isolate, isolate-override, plaintext, inherit <!--co to?-->
-          text decoration none - usuwa podkreślenia z linków
-          overline, line-through, underline
-          text-transform uppercase i lowercase zmieniają kazde litery na duże lub małe a capitalize każdą pierwszą robi dużą
-          text-indent - wcięcie akapitowe, odstęp określany w px
-          letter-spacing - odstęp od liter dopuszczalny -x w px
-          line-height 0.8 albo 1.8 dla przykładu
-          word-spacing w px dopuszczalny -x
-          white-space nwm? nowrap, normal, pre, pre-line, pre-wrap, inherit <!--?-->
           text shadow xpx w prawo xpx w dół xpx blur color, dopuszczalne -x w prawo i w górę i chyba też blur
           text-overflow clip, elipsis, string, inherit <!--?-->
           an inline element with display: block; is not allowed to have other block elements inside it.
           Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
-
-         Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
-
-         Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements. 
+          Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+          Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements. 
         </section><br /><br />
 
         <section id="txteff">
@@ -1731,6 +1807,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.1 z dnia 08.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.2 z dnia 08.07.2020r.</p>
     </footer>
 </html>
