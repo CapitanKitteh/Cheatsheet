@@ -737,93 +737,6 @@
            unicode-range	unicode-range	Optional. Defines the range of UNICODE characters the font supports. Default is "U+0-10FFFF"
         </section><br /><br />
 
-        <section id="align-valign">
-          <h3>align i valign póki co tutaj po ogarnięci wróca do text transform</h3>
-          align i vertical-align
-            .center {
-                margin: auto;
-                width: 50%;
-                border: 3px solid green;
-                padding: 10px;
-              }
-              Note: Center aligning has no effect if the width property is not set (or set to 100%).
-              img {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 40%;
-              }
-
-
-             left and right align using positioning
-             .right {
-                position: absolute;
-                right: 0px;
-                width: 300px;
-                border: 3px solid #73AD21;
-                padding: 10px;
-              }
-              Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
-              left and right align using float and clearfix if needed
-              .right {
-                float: right;
-                width: 300px;
-                border: 3px solid #73AD21;
-                padding: 10px;
-              }
-              Note: If an element is taller than the element containing it, and it is floated, it will overflow outside of its container. 
-              .clearfix {
-                overflow: auto;
-              }
-              left align using padding
-              .center {
-                padding: 70px 0;
-                border: 3px solid green;
-              }
-              center via padding and txt align
-              .center {
-                padding: 70px 0;
-                border: 3px solid green;
-                text-align: center;
-              }
-              center vertically via line-height
-              .center {
-                line-height: 200px;
-                height: 200px;
-                border: 3px solid green;
-                text-align: center;
-              }
-              
-              /* If the text has multiple lines, add the following: */
-              .center p {
-                line-height: 1.5;
-                display: inline-block;
-                vertical-align: middle;
-              }
-              center vertically via position and transform
-              .center {
-                height: 200px;
-                position: relative;
-                border: 3px solid green;
-              }
-              
-              .center p {
-                margin: 0;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-              }
-              flexbox center vertically
-              .center {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 200px;
-                border: 3px solid green;
-              }
-        </section><br /><br />
-
         <section id="position">
           <h3>Position</h3>
           position np spanu domyślna jest static czyli jedno po drugim inline
@@ -1849,6 +1762,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.3.1 z dnia 08.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.3.2 z dnia 08.07.2020r.</p>
     </footer>
 </html>
