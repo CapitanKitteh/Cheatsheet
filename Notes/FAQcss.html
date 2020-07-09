@@ -422,11 +422,13 @@
 
         <section id="actions">
           <h3>Actions with links and others</h3>
-          normalnie można je obrabiać + ich czynności:
+          Przykład użycia akcji na odnośnikach: 
           a:link - normalny, nieodwiedzony 
           a:hover - najechany 
-          a:active - kliknięty (i ew przytrzymany)
+          a:active - kliknięty (i ewentualnie przytrzymany)
           a:visited - użyty / odwiedzony
+          Gdy ustalamy wiele lub wszystkie obowiązuje kolejność: link, visited,hover, active.
+          
           sprawdź: 
           <code>
               a:link, a:visited {
@@ -447,10 +449,6 @@
           lifting effect article:hover {box/text-shadow: 5px 5px 20px rgba(0, 0, 0, .7);}
           płynne przejście transition: all 1s; w tym przypadku transition: box-shadow 1s, background #000 może być
           a nawet transition-delay: 2s;
-          a:link {color:green;} przed jakąkolwiek akcją
-          a:visited {color:yellow;} po kliknięciu
-          a:hover {color:black;} najechanie
-          a:active {color:red;} przytrzymanie
         </section><br /><br />
 
         <section id="txttransform">
@@ -1761,6 +1759,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.3.3 z dnia 08.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.4 z dnia 09.07.2020r.</p>
     </footer>
 </html>
