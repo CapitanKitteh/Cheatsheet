@@ -28,6 +28,7 @@
           <a href="#gradient">Tytuł sekcji</a><br />gradient colors
           <a href="#txtfonts">Tytuł sekcji</a><br />text fonts
           <a href="#actions">Tytuł sekcji</a><br />actions with links and others
+          <a href="#cursor">Cursor</a><br />
           <a href="#txttransform">Tytuł sekcji</a><br />txt transform
           <a href="#txteff">Tytuł sekcji</a><br />text effect
           <a href="#position">Tytuł sekcji</a><br />position 
@@ -76,7 +77,7 @@
               atrybut: wartość;
             }
             Nazwa selektora to nazwa tagu/elementu, dla id oznaczanego &quot;#&quot; a dla class &quot;.&quot; 
-            Kaskadowość oznacza odczytywanie reguł od góry do dołu, więc można gdzieś umieścić informację, o szarym kolorze tła dla nagłowka
+            Kaskadowość oznacza odczytywanie reguł od góry do dołu, więc można gdzieś umieścić informację o szarym kolorze tła dla nagłowka,
             a w dowolnym miejscu niżej określić to kolor czerwony dla tła nagłówka i to czerwony będzie wyświetlany.
             nadpisać można wszelkie zasady stosując &quot;!important&quot;
             Umieszczanie osobnego pliku css w pliku html: 
@@ -101,7 +102,7 @@
             vmax relative to 1% viewport larger dimension 
             % relative to parent element 
             inherit
-            Viewport to rozmiar okna przeglądarki, jeśli ma 50cm szerokości jego 1vw=0.5cm 
+            Viewport to rozmiar okna przeglądarki, jeśli ma 100cm szerokości jego 1vw=1cm 
 
             <!--max-width określa maksymalną szerokość dostosowując do ekranu, tzn. width określa konkretną szerokość wyświetlaną tak samo w przeglądarkach mobilnych jak i komputerowych,
             max width natomiast określa największą możliwą szerokość i na mniejszych ekrany wyświetli poziomy scroll albo się dostosuje do ekranu-->
@@ -427,29 +428,38 @@
           a:hover - najechany 
           a:active - kliknięty (i ewentualnie przytrzymany)
           a:visited - użyty / odwiedzony
-          Gdy ustalamy wiele lub wszystkie obowiązuje kolejność: link, visited,hover, active.
-          
-          sprawdź: 
-          <code>
-              a:link, a:visited {
-                  background-color: #f44336;
-                  color: white;
-                  padding: 14px 25px;
-                  text-align: center;
-                  text-decoration: none;
-                  display: inline-block;
-                }
-                
-                a:hover, a:active {
-                  background-color: red;
-                }
-          </code>
-          :hover, active, focus itd
-          article:active {opacity .4;} transparentność zmiejszy się kiedy przytrzymam element klikając
-          lifting effect article:hover {box/text-shadow: 5px 5px 20px rgba(0, 0, 0, .7);}
-          płynne przejście transition: all 1s; w tym przypadku transition: box-shadow 1s, background #000 może być
-          a nawet transition-delay: 2s;
+          Gdy ustalamy wiele lub wszystkie obowiązuje kolejność: link, visited, hover, active.
+          Efekty interakcji:
+          Po kliknięciu/przytrzymaniu elementu o class: pic jego transparentność się zmniejszy
+          <pre><code>
+            .pic:active {
+              opacity: .4;
+            }
+          </code></pre>
+          Po najechaniu na element (dobrze wygląda ze zdjęciami) o class: .pic utworzy się box shadow dając efekt uniesienia elementu, można to zrobić również z text-shadow
+          <pre><code>
+            .pic:hover {
+              box-shadow 5px 5px 20px rgba(0, 0, 0, .7);
+            }
+          </code></pre>
+          Płynne przejścia opisywane są w tym przykładzie jako 1sekunda 
+          <pre><code>
+            p.test:hover {
+            transition: 1s;
+            }
+          </code></pre>
+          Opóźnienie płynnego przejścia 
+          <pre><code>
+            p.test2:hover {
+              transition-delay: 3s;
+            }
+          </code></pre>
+
         </section><br /><br />
+
+        <section id="cursor">
+          <h3>Wygląd kursora</h3>
+      </section><br /><br />
 
         <section id="txttransform">
           <h3>Text - align, decoration, transform and more</h3>
@@ -1749,16 +1759,12 @@
             <h3>Title</h3>
         </section><br /><br />
 
-        <section id="40">
-            <h3>Title</h3>
-        </section><br /><br />
-
       </main>
 
     </body>
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.4 z dnia 09.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.5 z dnia 23.07.2020r.</p>
     </footer>
 </html>
