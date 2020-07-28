@@ -844,20 +844,42 @@
           Określanie pozycji elementów można wykonać za pomocą <br />
           position: static, relative, absolute, sticky, fixed oraz określena ich pozycji względem top, bottom, right, left. <br />
           1. Static - default dla elementów html<br />
-          (jedno po drugim inline)<br />
           2. Relative <br />
-          (czy tylko on jest określany przez kierunki?)<br/ >
-          (rezerwuje miejsce po przesunięciu)<br/ >
-          3. Absolute <br />
-          (ustawia się względem położonego wyżej relative a jeśli go niema uznaje zamiast niego body i zachowuje się jak fixed)<br />
-          (nie rezerwuje miejsca ale może nawarswiać się na innych elementach) <br />
+          Rezerwuje sobie miejsce z którego został przesunięty i przesuwamy go wedle jego własnej pozycji<br />
+          <pre><code>
+            div.prel {
+              position: relative;
+              left: 200px;
+              border: 2px solid #000283;
+              background-color: #000283;
+              color: white;
+            }
+          </code></pre>
+          3. Absolute <br /> <!--nie utawia się względem relative a powinien-->
+          Ustawiamy go względem położonego wyżej elementu z określoną pozycją relatywną jeśli takiej nie ma uznaje zamiast niej body, nie rezerwuje sobie miejsca <br />
+          <pre><code>
+              div.pabs {
+                position: absolute;
+                left: 200px;
+                border: 2px solid #000283;
+                background-color: #000283;
+                color: white;
+              }
+          </code></pre>
           4. Fixed <br />
-          (jest relatywny do viewportu a nie do własnej pozycji pierwotnej jak relative)<br />
-          (tam gdzie go ustalisz tam jest ale nie scrolluje z tobą)<br />
+          Ustawiamy go względem viewportu a nie do własnej pozycji pierwotnej jak relative<br />         
+          <pre><code>
+              div.fix {
+                position: fixed;
+                left: 200px;
+                border: 2px solid #000283;
+                background-color: #000283;
+                color: white;
+              }
+          </code></pre>
           5. Sticky <br />
-          (safari wymaga prefix -webkit-)<br />
-          (wymaga użycia minimum jednego określenia kierunku) <br />
-          (ustaloną ma pozycję ale leci z Tobą jak scrollujesz)<br />
+          Safari wymaga użycia prefix -webkit-, sticky wymaga użycia minimum jednego określenia położenia, ma określoną pozycję ale podczas scrollowania jest widoczny<br /> <br /><br />
+          <!--button do góry strony jako przykład-->
 
           Tip: Umieszczanie tekstu na zdjęciu: ujmij div zdjęcia jako relative a div tekstu jako absolute.
         </section><br /><br />
@@ -1843,6 +1865,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.9 z dnia 29.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.0 z dnia 28.07.2020r.</p>
     </footer>
 </html>
