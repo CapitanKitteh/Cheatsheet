@@ -939,40 +939,28 @@
 
         <section id="float">
           <h3>Float</h3>
-          float znasz a jeśli obok zdjęcia/tekstu masz tekst i chcesz dodać treść już poza floatem piszesz:
-            <p style="clear: reight/left/both;">nowy tekst poza float</p>
-            <p>dwa bloczki divove: jeden określony wyżej drugi identyczny
-                div#kontener {
-                    width: 776px;
-                }
-                nastepny tekst pod nim aby nie uciekał dalej za drugą ramkę przy rozszerzaniu w kolejnym divie z style="clear: both;"
-                opływanie elementów
-                left, right, none (default), inherit
-                clear decyduje gdzie nie może być lub może float
-                none (default) zezwala na float po obu stronach
-                left nic nie może być na float po lewej
-                right nic nie może być na float po prawejj
-                both po lewej i prawej nie są dozwolone floaty
-                inherit wiadomo
-                The most common way to use the clear property is after you have used a float property on an element.
-                When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. 
-                Your floated element will continue to float, but the cleared element will appear below it on the web page.
-                The following example clears the float to the left. Means that no floating elements are allowed on the left side (of the div):
-                div {
-                    clear: left;
-                  }
-    
-                  boxy
-    
-                  * {
-                    box-sizing: border-box;
-                  }
-                  
-                  .box {
-                    float: left;
-                    width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
-                    padding: 50px; /* if you want space between the images */
-                  }
+          Opływanie elementów - left, right, none (default), inherit <br />
+          Clear - none (default), left, right, both, inherit - clear oczyszcza po float <br />
+
+          1. Przekład ze zdjęciem z lewej strony, tekstem obok i pod spodem:
+          <pre><code>
+            div.box {
+              width: 200px;
+              height: 200px;
+              background-color: #000283;
+              float: right;
+            }
+          </code></pre>
+          2. Użycie float do wielu elementów jednocześnie: <br />
+          Dzielenie miejsca: 50% dla 2 elementów, 33,33% dla 3, 25% dla 4, 20% dla 5 itd <br />
+          Padding dla odstępu
+          <pre><code>
+            .imgpanel {
+              float: left;
+              width: 25%; 
+            }
+          </code></pre>
+
         </section><br /><br />
 
         <section id="overflow">
@@ -1023,6 +1011,17 @@
           Margin - Clears an area outside the border. The margin is transparent
           Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. 
           To calculate the full size of an element, you must also add padding, borders and margins.
+          boxy
+    
+          * {
+            box-sizing: border-box;
+          }
+          
+          .box {
+            float: left;
+            width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
+            padding: 50px; /* if you want space between the images */
+          }
         </section><br /><br />
 
         <section id="border">
@@ -1858,6 +1857,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.2 z dnia 28.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.3 z dnia 29.07.2020r.</p>
     </footer>
 </html>
