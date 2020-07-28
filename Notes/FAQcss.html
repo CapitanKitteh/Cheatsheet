@@ -841,50 +841,33 @@
 
         <section id="position">
           <h3>Position</h3>
-          position np spanu domyślna jest static czyli jedno po drugim inline
-            możesz ustalić relative dostosowując: top bottom right left
-            pamiętaj, że pozycjonując np top 50px zawartość spanu zejdzie o 50px w dół a miejsce nad nim będzie "zarezerwowane" i puste, więc trochę dupnie
-            natomiast unikniesz rezerwowania miejsca wpisując position absolute, dodatkowo jeśli masz tekst czy coś co najedzie na zawartość spanu, będzie się nawarstwiać, tzn tekst najedzie na tekst . dzięki absolute nie będzie już pustych miejsca
-            w przypadku bottom 0px będzie treść na dole i niezależnie od zmieniania rozmiaru okna będzie się tam trzymał,
-            natomiast w przypadku scrollowanej strony utknie w tym miejscu a żeby zrobić go responsywnego możemy ustalić jego miejsce na dole strony niezaleznie od rozmiaru okna i scrollowania wpisujemy fixed
-            przykład position fixed i bottom 0px:
-            div.menu_dolne {
-                position: fixed;
-                width: 100%;
-                height: 20px;
-                background-color: gray;
-                bottom: 0px;
-            }
-            <div class="menu_dolne">treść menu dolnego</div>
-            margines z obu stron dopasowany np do nagłówka strony (określonego np width na 300px) z tłem:
-            margin-left: auto;
-            margin-right: auto;
-            dopasowanie relatywno-absolutne, tekst z nagłówka znajduje się w klasie określającej nagłówek, klasa jest okreslona pozycją relatywną a span treść jest określona absolutem względem relatywnego nagłówka
-            w innej sytuacji, kiedy nie ma nagłówka i absolute nie jest relatywny, będzie się odnosil do całego widocznego okna przeglądarki
+          Określanie pozycji elementów można wykonać za pomocą <br />
+          position: static, relative, absolute, sticky, fixed oraz określena ich pozycji względem top, bottom, right, left. <br />
+          1. Static - default dla elementów html<br />
+          (jedno po drugim inline)<br />
+          2. Relative <br />
+          (czy tylko on jest określany przez kierunki?)<br/ >
+          (rezerwuje miejsce po przesunięciu)<br/ >
+          3. Absolute <br />
+          (ustawia się względem położonego wyżej relative a jeśli go niema uznaje zamiast niego body i zachowuje się jak fixed)<br />
+          (nie rezerwuje miejsca ale może nawarswiać się na innych elementach) <br />
+          4. Fixed <br />
+          (jest relatywny do viewportu a nie do własnej pozycji pierwotnej jak relative)<br />
+          (tam gdzie go ustalisz tam jest ale nie scrolluje z tobą)<br />
+          5. Sticky <br />
+          (safari wymaga prefix -webkit-)<br />
+          (wymaga użycia minimum jednego określenia kierunku) <br />
+          (ustaloną ma pozycję ale leci z Tobą jak scrollujesz)<br />
 
-            position
-            static, relative, fixed, absolute, sticky
-            static jest normalna w sumie nie zmienia nic i nie nadaje nic szczególnego
-            relative jest na swoim miejscu i ustawiany poprzez right/left top/bottom od własnej pozycji do relatywnej w której ma się znajdować w dodatku nie rusza się gdy scrollujemy
-            fixed nie rezerwuje sobie miejsca i jest również oznaczany jak relatywny co do pozycji, z tym, że rusza się ciągle kiedy scrollujemy. jest, przyczepiony jest relative to viewport a nie it's own position like a relative
-            absolute będzie relatywny względem położonego wyżej relative a jeśli takiego nie będzie, zamiast relative uzna body i zachowa się jak fixed 
-            sticky A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
-            tzn. na stronie masz menu które jest na górze strony, scrollując na dół ono jedzie z tobą, a dodatkowo, gdyby to była reklama położona na dole strony przed scrollowaniem, podczas przewijania w dół zachowałaby się jak relatywna ale gdy zniknie z viewport juz zachowa sie jak fixed. fajne 
-            Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example below). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
-            div.sticky {
-                position: -webkit-sticky; /* Safari */
-                position: sticky;
-                top: 0;
-                background-color: green;
-                border: 2px solid #4CAF50;
-              }
-              Note: If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.
-              umieszczanie tekstu na zdjęciu: zdjęcie w div jako relative, div tekstu jako absolute i gotowe
+          Tip: Umieszczanie tekstu na zdjęciu: ujmij div zdjęcia jako relative a div tekstu jako absolute.
         </section><br /><br />
 
         <section id="margin">
           <h3>margin</h3>
           margines
+          margines z obu stron dopasowany np do nagłówka strony (określonego np width na 300px) z tłem:
+          margin-left: auto;
+          margin-right: auto;
             można oczywiście określić dla wszystkich ale i każdego z osobna, 
             margin-left, margin-right, margin-top, margin-bottom
             auto - przeglądarka dopasowuje
@@ -1860,6 +1843,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.7 z dnia 28.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.8 z dnia 28.07.2020r.</p>
     </footer>
 </html>
