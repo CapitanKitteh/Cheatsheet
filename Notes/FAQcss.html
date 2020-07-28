@@ -886,33 +886,35 @@
 
         <section id="margin">
           <h3>Margin</h3>
-          margines
-          margines z obu stron dopasowany np do nagłówka strony (określonego np width na 300px) z tłem:
-          margin-left: auto;
-          margin-right: auto;
-            można oczywiście określić dla wszystkich ale i każdego z osobna, 
-            margin-left, margin-right, margin-top, margin-bottom
-            auto - przeglądarka dopasowuje
-            length - w px i innych jednostkach
-            % - width from element
-            inherit - dziecziczony of parent element
-            -x np -50% jest dozwolone
-            top right bottom left, i shortcut działają tutaj też
-            <code>
-                wyjaśnienie inherit:
-                div {
-                    border: 1px solid red;
-                    margin-left: 100px;
-                  }
-                  
-                  p.ex1 {
-                    margin-left: inherit;
-                  }
-            </code>
-            Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
-            This does not happen on left and right margins! Only top and bottom margins!
-            h1 margin: 0 0 50px 0
-            h2 margin: 20px 0 0 0 <!--sprawdź w css-->
+          Margines można określać dla wszystkich stron ale i każdej osobno: margin, margin-top, margin-right, margin-bottom, margin-left <br />
+          auto - przeglądarka dopasowuje <br />
+          length - w %, px i innych jednostkach <br />
+          width - w %, px i innych jednostkach <br />
+          inherit <br />
+          dozwolone wartości ujemne np. -50% <br />
+          kolejność w skrócie: top, right, bottom, left <br />
+          1. Margines top i bottom na 10px a left i right na 15px:
+          <pre><code>
+            .m1 {
+              margin: 10px 15px 10px 15px;
+            }
+          </code></pre>
+          2. Margines left na 80px a top na 30px:
+          <pre><code>
+            .m2 {
+              margin-left: 80px;
+              margin-top: 30px;
+            }
+          </code></pre>
+          3. Wyśrodkowanie elementu, np footera:
+          <pre><code>
+            .m3 {
+              text-align: center;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          </code></pre>
+
         </section><br /><br />
 
         <section id="padding">
@@ -1865,6 +1867,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.0 z dnia 28.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.1 z dnia 28.07.2020r.</p>
     </footer>
 </html>
