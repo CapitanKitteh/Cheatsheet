@@ -919,31 +919,22 @@
 
         <section id="padding">
           <h3>Padding</h3>
-          padding zasada wskazówek zegara top right bottom left działa, 
-            length - px itd
-            %
-            inherit
-            -x niedozwolone
-            shortcut możliwy
-            tak samo określanie każdego z osobna
-            <code>
-                Here, the div element is given a width of 300px. However, the actual width of the div element will be 350px (300px + 25px of left padding + 25px of right padding):
+          Padding elementu to jego wypełnienie/zwiększenie jego powierzchni a margin ustala margines od jego krawędzi. <br />
+          Kolejność w skrócie: top, right, bottom, left <br />
+          Można też określać każdy z osobna <br />
+          length - w %, px i innych jednostkach <br />
+          width - w %, px i innych jednostkach <br />
+          inherit <br />
+          Wartości ujemne niedozwolone<br />
+          1. Padding top 10px, right 25px, bottom 0px, left 5px:
+          <pre><code>
+            .padding {
+              padding: 10px 25px 0px 5px;
+              background-color: #000283;
+              color: white;
+            }
+          </code></pre>
 
-                    div {
-                      width: 300px;
-                      padding: 25px;
-                    }
-            </code>
-            To keep the width at 300px, no matter the amount of padding, you can use the box-sizing property. This causes the element to maintain its width; if you increase the padding, the available content space will decrease.
-            <code>
-                Use the box-sizing property to keep the width at 300px, no matter the amount of padding:
-
-                 div {
-                 width: 300px;
-                 padding: 25px;
-                 box-sizing: border-box;
-                 }
-            </code>
         </section><br /><br />
 
         <section id="float">
@@ -1867,6 +1858,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.1 z dnia 28.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.2 z dnia 28.07.2020r.</p>
     </footer>
 </html>
