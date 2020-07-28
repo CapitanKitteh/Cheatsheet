@@ -22,14 +22,14 @@
         <section id="tableofcontents">
           <a href="#about">About</a><br />
           <a href="#size-units">Size and units</a><br />
-          <a href="#attr-selectors">Attribute selectors</a><br />
-          <a href="#combinators">Cominators</a><br />
+          <a href="#attr-selectors">Selector attributes</a><br />
+          <a href="#combinators">Combinators</a><br />
           <a href="#colors">Colors</a><br />
           <a href="#gradient">Gradient colors</a><br />
           <a href="#txtfonts">Text fonts</a><br />
           <a href="#actions">Actions</a><br />
           <a href="#cursor">Cursor</a><br />
-          <a href="#txttransform">Text transform</a><br />
+          <a href="#txttransform">Text</a><br />
           <a href="#txteff">Text effects</a><br />
           <a href="#position">Position</a><br />
           <a href="#margin">Margin</a><br />
@@ -46,7 +46,7 @@
           <a href="#z-index">Z-index</a><br />
           <a href="#navbar">Navbar</a><br />
           <a href="#navbar-dropdown">Dropdown navbar</a><br />
-          <a href="#img">Pictures</a><br />
+          <a href="#img">Image</a><br />
           <a href="#imggallery">Image gallery</a><br />
           <a href="#imgsprites">Image sprites</a><br />
           <a href="#table">Tables</a><br />
@@ -70,7 +70,7 @@
 
       <main>
         <section id="about"> 
-          <h3>Informacje ogólne</h3>
+          <h3>About - Informacje ogólne</h3>
           <pre>
             Syntax:
             nazwaselektora {
@@ -109,7 +109,7 @@
         </section><br /><br />
 
         <section id="attr-selectors">
-          <h3>Atrybuty selektorów</h3>
+          <h3>Selector attributes</h3>
           W ten sposób można okreslić wygląd wielu, specyficznie określonych elementów.<br />
           1. Przykład dotyczący każdego linku z dowolnie określonym targetem:
           <pre><code>
@@ -215,7 +215,7 @@
         </section><br /><br />
         
         <section id="colors">
-          <h3>Kolory</h3>
+          <h3>Colors</h3>
           Kolory można określać przy pomocy wartości rgb, hex, hsl a również rgba i hsla <br />
           Dla wszystkich przykładów został użyty ten sam kolor, w przypadku rgba i hsla transparentny w 50%.<br />
           1. Kolory określane za pomocą wartości rgb (red, green, blue) 0-255: 
@@ -382,7 +382,7 @@
         </section><br /><br />
 
         <section id="txtfonts">
-          <h3>Text - fonts</h3>
+          <h3>Text fonts</h3>
           Dołączamy czcionki np. z Google Fonts:
           Po wybraniu czcionki zaznaczam style, które mnie intesują, następnie jeśli będę umieszczać reguły css w pliku html wybieram link (umieszczam go w head), <br />
           jeśli będę umieszczać wszystko w osobnym pliku css wybieram @import (umieszczam go na początku pliku css), dodatkowo ukazuje się informacja jak opisać czcionkę. 
@@ -422,7 +422,7 @@
         </section><br /><br />
 
         <section id="actions">
-          <h3>Actions with links and others</h3>
+          <h3>Actions</h3>
           Przykład użycia akcji na odnośnikach: 
           a:link - normalny, nieodwiedzony 
           a:hover - najechany 
@@ -458,7 +458,7 @@
         </section><br /><br />
 
         <section id="cursor">
-          <h3>Wygląd kursora</h3>
+          <h3>Cursor</h3>
           <pre>
             Najedź kursorem na przykłady aby zobaczyć ich efekt
             1. Auto i text dają taki sam efekt
@@ -557,7 +557,7 @@
       </section><br /><br />
 
         <section id="txttransform">
-          <h3>Text - align, decoration, transform and more</h3>
+          <h3>Text</h3>
           1. text-align: left, right, center, justify, initial, inherit <br />
           1.1 vertical-align: baseline (default), np. 20px/em/% (w górę) lub 20px/em/% (w dół), sub, super, top, middle, bottom, initial, inherit <br /> 
           2. text-decoration: none, initial, inherit <br />
@@ -726,7 +726,7 @@
         </section><br /><br />
 
         <section id="txteff">
-          <h3>text effects</h3>
+          <h3>Text effects</h3>
           text effects
           overflow kończacy się uciętym tekstem i drugi z (...)
           p.test1 {
@@ -863,7 +863,7 @@
         </section><br /><br />
 
         <section id="margin">
-          <h3>margin</h3>
+          <h3>Margin</h3>
           margines
           margines z obu stron dopasowany np do nagłówka strony (określonego np width na 300px) z tłem:
           margin-left: auto;
@@ -894,7 +894,7 @@
         </section><br /><br />
 
         <section id="padding">
-          <h3>padding</h3>
+          <h3>Padding</h3>
           padding zasada wskazówek zegara top right bottom left działa, 
             length - px itd
             %
@@ -923,7 +923,7 @@
         </section><br /><br />
 
         <section id="float">
-          <h3>float</h3>
+          <h3>Float</h3>
           float znasz a jeśli obok zdjęcia/tekstu masz tekst i chcesz dodać treść już poza floatem piszesz:
             <p style="clear: reight/left/both;">nowy tekst poza float</p>
             <p>dwa bloczki divove: jeden określony wyżej drugi identyczny
@@ -961,7 +961,7 @@
         </section><br /><br />
 
         <section id="overflow">
-          <h3>overflow</h3>
+          <h3>Overflow</h3>
           to czego potrzebujesz do książki!
             .tekst {
                 width: 300px; <!--o to to-->
@@ -986,7 +986,7 @@
         </section><br /><br />
 
         <section id="box">
-          <h3>box</h3>
+          <h3>Box</h3>
           box model
           <pre><code>
             div.tekst {
@@ -1011,7 +1011,7 @@
         </section><br /><br />
 
         <section id="border">
-          <h3>border</h3>
+          <h3>Border</h3>
           border-style: coś; dla każdej strony zamiast określania top, bottom i left,right
           border-style:coś1 coś2; coś1 dla góry i dołu, coś2 dla lewej i prawej strony
           border-style: góra prawa dół lewa kolejność wartości
@@ -1072,7 +1072,7 @@
         </section><br /><br />
 
         <section id="borderoutline">
-          <h3>outline borders</h3>
+          <h3>Outline borders</h3>
           outline borders
             outline jest jak objechanie markerem jak ramką dookoła tekstu, nie zmienia się jego szerokość najeżdża na "padding" ale jest outline
             outline-style, color, width, offset 
@@ -1084,7 +1084,7 @@
         </section><br /><br />
 
         <section id="borderimage">
-          <h3>border image</h3>
+          <h3>Border image</h3>
           border-image 
           używanie zdjęcia jako border wymaga ustalenia bordera, jego src jako zdjęcia oraz: 
           gdzie uciąć zdjęcie i czy je powtarzać czy rozciągnąć
@@ -1097,7 +1097,7 @@
         </section><br /><br />
 
         <section id="background">
-          <h3>background</h3>
+          <h3>Background</h3>
           background-color: black; 
           background-image: url ('nazwapliku.format');
           background-repeat: no-repeat ;  albo repeat-x powtarza się poziomo adekwatnie do tego repeat-y w pionie
@@ -1127,7 +1127,7 @@
         </section><br /><br />
 
         <section id="background-multi">
-          <h3>multiple background (layerd)</h3>
+          <h3>Multiple background (layerd)</h3>
           multiple backgrounds 
           i guess it's the z-index 
           The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.
@@ -1207,7 +1207,7 @@
         </section><br /><br />
 
         <section id="navbar">
-          <h3>navbar</h3>
+          <h3>Navbar</h3>
           navbar
             vertical pionowy
             ul {
@@ -1286,7 +1286,7 @@
         </section><br /><br />
 
         <section id="navbar-dropdown">
-          <h3>dropdown navbar</h3>
+          <h3>Dropdown navbar</h3>
           dropdown navbar
           <style>
             .dropdown {
@@ -1400,7 +1400,7 @@
         </section><br /><br />
 
         <section id="img">
-          <h3>Zdjęcia</h3>
+          <h3>Images</h3>
           Zdjęcie w div backgroung
           <pre><code>
             &lt;div class="article-image" style="background:url(nazwazdj.format)"&gt;&lt;/div&gt;
@@ -1416,7 +1416,7 @@
         </section><br /><br />
 
         <section id="imggallery">
-          <h3>image gallery</h3>Image gallery
+          <h3>Image gallery</h3>
           css :
           <style>
             div.gallery {
@@ -1458,7 +1458,7 @@
         </section><br /><br />
 
         <section id="imgsprites">
-          <h3>image sprites</h3>
+          <h3>Image sprites</h3>
           Image sprites
           We want to use the sprite image ("img_navsprites.gif") to create a navigation list.
           We will use an HTML list, because it can be a link and also supports a background image:
@@ -1514,12 +1514,12 @@
         </section><br /><br />
 
         <section id="table">
-          <h3>Tabele</h3>
+          <h3>Tables</h3>
           tabelki to samo co z resztą plus td możesz stylizować dowolnie do tego padding zamiast cellpadding
         </section><br /><br />
 
         <section id="list">
-          <h3>lists</h3>
+          <h3>Lists</h3>
           list-style-type: none; 
           list-style-position: inside albo outside ( ładne oddzielenie kropek od tekstu lub przeplatanie)
           list style-type (do ol) decimal liczbowe, lower-alpha upper-alpha lower i upper-roman 
@@ -1547,7 +1547,7 @@
         </section><br /><br />
 
         <section id="inputs">
-          <h3>inputs</h3>
+          <h3>Inputs</h3>
           css input forms :D 
           input[type=text] - will only select text fields
           input[type=password] - will only select password fields
@@ -1578,7 +1578,7 @@
         </section><br /><br />
 
         <section id="icons">
-          <h3>icons</h3>
+          <h3>Icons</h3>
           ikony można umieścić jak external plik w head 
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
           <!--czy mogę go umieścić w external css jak font family?-->
@@ -1706,7 +1706,7 @@
         </section><br /><br />
 
         <section id="website-layout">
-          <h3>website layout</h3>
+          <h3>Website layout</h3>
           website layout
           We will create a 3-column layout, and change it to a 1-column layout on smaller screens:
           Example
@@ -1738,7 +1738,7 @@
         </section><br /><br />
 
         <section id="pseudoclass">
-          <h3>pseudoclasses</h3>
+          <h3>Pseudoclasses</h3>
           pseudo-classe
             For example, it can be used to:
              Style an element when a user mouses over it
@@ -1785,7 +1785,7 @@
         </section><br /><br />
 
         <section id="counters">
-          <h3>counters</h3>
+          <h3>Counters</h3>
           counters <!--nie rozumiem tego-->
           To work with CSS counters we will use the following properties:
           counter-reset - Creates or resets a counter
@@ -1843,6 +1843,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.8 z dnia 28.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 3.9 z dnia 29.07.2020r.</p>
     </footer>
 </html>
