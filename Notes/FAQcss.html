@@ -1336,14 +1336,88 @@
 
         <section id="borderoutline">
           <h3>Outline borders</h3>
-          outline borders
-            outline jest jak objechanie markerem jak ramką dookoła tekstu, nie zmienia się jego szerokość najeżdża na "padding" ale jest outline
-            outline-style, color, width, offset 
-            style: dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden zupełnie jak w borderstyle
-            width zazwyczaj thin 1px medium 3px i thick 5px albo normalnie w px itd
-            color standardowo a dodatkowo invert 
-            color dodaje tylko d outline a sam border może być domyślnie czarny, chyba że w border-color ustalimy inaczej
-            offset: border black outline 1px solid red i outline-offset: 15px oddzieli outline od bordera na określoną odległość
+          Outline zakreśla dookoła elementu a nie jak border na jego granicy<br />
+          outline: style, color, width, offset <br />
+          Żaden atrybut nie będzie miał wpływu jeśli nie bedzie określony outline-style <br />
+          1.1 Outline-style dotted i jednocześnie różnica między border a outline na podstawie background:
+          <pre><code>
+            .otsdotted {
+              outline: 4px dotted #033797;
+              background-color: #f5b097;
+              border: 1px solid black;
+            }
+          </code></pre>
+          1.2 Outline-style dashed:
+          <pre><code>
+            .otsdashed {
+              outline: 4px dashed #033797;
+            }
+          </code></pre>
+          1.3 Outline-style solid:
+          <pre><code>
+            .otssolid {
+              outline: 4px solid #033797;
+            }
+          </code></pre>
+          1.4 Outline-style double:
+          <pre><code>
+            .otsdouble {
+              outline: 4px double #033797;
+            }
+          </code></pre>
+          1.5 Outline-style groove:
+          <pre><code>
+            .otsgroove {
+              outline: 4px groove #033797;
+            }
+          </code></pre>
+          1.6 Outline-style ridge:
+          <pre><code>
+            .otsridge {
+              outline: 4px ridge #033797;
+            }
+          </code></pre>
+          1.7 Outline-style inset:
+          <pre><code>
+            .otsinset {
+              outline: 4px inset #033797;
+            }
+          </code></pre>
+          1.8 Outline-style outset:
+          <pre><code>
+            .otsoutset {
+              outline: 4px outset #033797;
+            }
+          </code></pre>
+          1.9 Outline-style none:
+          <pre><code>
+            .otsnone {
+              outline: 4px none #033797;
+            }
+          </code></pre>
+          1.10 Outline-style hidden:
+          <pre><code>
+            .otshidden {
+              outline: 4px hidden #033797;
+            }
+          </code></pre>
+          2.1 Offset na 1px, border dla zobrazowania:
+          <pre><code>
+            .otoff {
+              border: 1px solid black;
+              outline: 4px solid #033797;;
+              outline-offset: 1px;
+            }
+          </code></pre>
+          2.2 Offset na 5px:
+          <pre><code>
+            .otoff1 {
+              border: 1px solid black;
+              outline: 4px solid #033797;
+              outline-offset: 5px;
+            }
+          </code></pre>
+
         </section><br /><br />
 
         <section id="borderimage">
@@ -2115,6 +2189,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.6 z dnia 29.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.7 z dnia 29.07.2020r.</p>
     </footer>
 </html>
