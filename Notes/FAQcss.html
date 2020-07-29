@@ -965,27 +965,66 @@
 
         <section id="overflow">
           <h3>Overflow</h3>
-          to czego potrzebujesz do książki!
-            .tekst {
-                width: 300px; <!--o to to-->
-                background-color: red;
-                overflow: visible(pokaż mimo przepełnienia - jako przykład był dodany height na 300px i tekst leciał dalej a tło było 300x300)
-                overflow hidden ukrywa to co wyszło poza określony width i height tekst
-                overflow auto doda slider w przypadku przepełnienia
-                overflow scroll dodaje slider zawsze, nieaktywny gdy tekstu jest za mało i w dodatku na dole boczny też
+          Decyduje jak ma zostać przedtawiony tekst wychodzący poza granice określonej szerokości <br />
+          overflow: visible, hidden, auto, scroll oraz overflow-y i overflow-x <br />
+          1. Overflow visible przykłady będą pokazane na divach z szarym tłem dla zobrazowania granic: <br />
+          Visible wyjedzie tekstem poza granice ale tekst będzie widoczny
+          <pre><code>
+            .ovis {
+              width: 700px;
+              height: 100px;
+              background-color: grey;
+              overflow: visible;
             }
-            <div class="tekst">w choinkę duzo tekstu</div>
+          </code></pre>
+          2. Overflow hidden również wyjedzie poza granice ale tekst zostanie ucięty i ukryty:
+          <pre><code>
+            .ohid {
+              width: 700px;
+              height: 100px;
+              background-color: grey;
+              overflow: hidden;
+            }
+          </code></pre>
+          3. Overflow auto sam dostosuje czy dać scroll w poziomie lub pionie:
+          <pre><code>
+            .oaut {
+              width: 700px;
+              height: 100px; 
+              background-color: grey;
+              overflow: auto;
+            }
+          </code></pre>
+          4. Overflow scroll doda suwaki w poziomie i w pionie ale działający będzie tylko ten, którego potrzebuje:
+          <pre><code>
+            .oscr {
+              width: 700px;
+              height: 100px;
+              background-color: grey;
+              overflow: scroll;
+            }
+          </code></pre>
+          5. Overflow-y i overflow-x określają co ma się dziać z tekstem wychodzącym na konkretne strony <br />
+          Przykład pierwszy: oś y ukryta a oś x z poziomym suwakiem:
+          <pre><code>
+            .oxy1 {
+              width: 700px;
+              height: 100px;
+              background-color: grey;
+              overflow-y: hidden;
+              overflow-x: scroll;
+            }
+          </code></pre>
+          Przykład drugi: oś y auto:
+          <pre><code>
+            .oxy2 {
+              width: 700px;
+              height: 100px;
+              background-color: grey;
+              overflow-y: auto;
+            }
+          </code></pre>
 
-            overflow (scroll)
-            odpowiada za decyzję, czy zawartość ma być clipowana czy nie. jeśli nie i np tebtbox będzie 20x20px a text większy i overflow: visible to text wyjedzie poza box.
-            hidden ukryje text wystający nie dodając scrolla, po prostu utnie
-            scroll it clipps text and adds scroll dodaje też poziomy nawet jeśli go nie potrzeba dlatego lepiej używac auto
-            auto dodaje scroll tylko wtedy, gdy jest konieczny
-            In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
-            div {
-                overflow-x: hidden; /* Hide horizontal scrollbar */
-                overflow-y: scroll; /* Add vertical scrollbar */
-              }   opcja alternatywna dla auto
         </section><br /><br />
 
         <section id="box">
@@ -1857,6 +1896,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.3 z dnia 29.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.4 z dnia 29.07.2020r.</p>
     </footer>
 </html>
