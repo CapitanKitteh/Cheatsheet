@@ -1065,57 +1065,189 @@
 
         <section id="border">
           <h3>Border</h3>
-          border-style: coś; dla każdej strony zamiast określania top, bottom i left,right
-          border-style:coś1 coś2; coś1 dla góry i dołu, coś2 dla lewej i prawej strony
-          border-style: góra prawa dół lewa kolejność wartości
-          Borders:
-            dotted - kropkowana
-            dashed - kreskowana jak z ogłoszeń do wycięcia
-            solid - zwykła 
-            double - podwójna
-            groove - 3D zależna od koloru, prosta
-            ridge - krawędziowa, progowa? zależna od koloru 3D
-            inset - piękna, wklęsła zależna od koloru i 3D
-            outset - jak button trochę zlaeżna od koloru i 3D
-            none - logiczne
-            hidden - też
-            mixed w kolejności: top right bottom left
-            żaden atrybut nie będzie działał na border dopóki nie zostanie określony właśnie border-style
-            border-width najlepiej określać w px ale można napisać po prostu medium czy thick
-            określa też wedle kolejności i ilości 
-            5px dotyczy wszystkich 
-            5px 20px 5 dla top i bottom a 20 dla right i left
-            5px 10px 15px 30px 5 top 10 right 15 bottom i 30 left 
-            to samo dotyczy kolorów bordera
-            bardziej specyficznie można uzyć atrybutów:
-             border-top-style, border-right-style, border-bottom-style, border-left-style
-             skrót:
-                 długi:
-                 border-width 5px
-                 border-style (required) solid
-                 border-color red
-                 krótki:
-                 p {
-                    border: 5px solid red;
-                  }
+          Border: color, style, width, collapse?, spacing <br />
+          Border-style moze być określany dla ogółu lub każdej strony z osoba w kolejnościach: <br />
+          border-style: top&bottom left&right lub <br />
+          borderstyle: top right bottom left <br />
+          Żaden atrybut nie będzie miał pływu na border dopóki nie zostanie określony border-style 
+          1.1 Border-style: dotted 
+          <pre><code>
+            .bsdotted {
+              border: 5px dotted grey;
+            }
+          </code></pre>
+          1.2 Border-style: dashed
+          <pre><code>
+            .bsdashed {
+              border: 5px dashed grey;
+            }
+          </code></pre>
+          1.3 Border-style: solid
+          <pre><code>
+            .bssolid {
+              border: 5px solid grey;
+            }
+          </code></pre>
+          1.4 Border-style: double
+          <pre><code>
+            .bsdouble {
+              border: 5px double grey;
+            }
+          </code></pre>
+          1.5 Border-style: groove
+          <pre><code>
+            .bsgroove {
+              border: 5px groove grey;
+            }
+          </code></pre>
+          1.6 Border-style: ridge
+          <pre><code>
+            .bsridge {
+              border: 5px ridge grey;
+            }
+          </code></pre>
+          1.7 Border-style: inset
+          <pre><code>
+            .bsinset {
+              border: 5px inset grey;
+            }
+          </code></pre>
+          1.8 Border-style: outset
+          <pre><code>
+            .bsoutset {
+              border: 5px outset grey;
+            }
+          </code></pre>
+          1.9 Border-style: none
+          <pre><code>
+            .bsnone {
+              border: 5px none grey;
+            }
+          </code></pre>
+          1.10 Border-style: hidden
+          <pre><code>
+            .bshidden {
+              border: 5px hidden;
+            }
+          </code></pre>
+          2. Border-collapse: collapse i separate
+          <pre><code>
+            .tabtxt {
+              text-align: center;
+              width: 45%;
+              float: left;
+              margin: 20px;
+            }
+            .coll {
+              border: 2px solid black;
+              border-collapse: collapse;
+            }
+            .sep {
+              border: 2px solid black;
+              border-collapse: separate;
+            }
+            .tfoot {
+              background-color: coral;
+            }
+            .cap {
+              font-size: 25px;
+              font-weight: bolder;
+            }
+          </code></pre>
 
-                  border jeśli jest wyznaczony dla table, th i td lub więcej niż jednego elementu blisko siebie no wiesz, to możesz zrobić border-collapse: collapse i połączyć taki niepotrzebny podwójny border w jeden
-            text-align i vertical align 
-            th {
-                text-align: left;
-              }
-              tr:hover {background-color: #f5f5f5;} na hover zmienia tło
-              th, td {
-                border-bottom: 1px solid #ddd;
-              } jak horizontal rules
-              zebra stripes:
-              tr:nth-child(even) {background-color: #f2f2f2;}
-              For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
-              kiedy tabela jest duża i chcesz scroll poxiomy w tym przykładzie :
-              <div style="overflow-x:auto;"> table </div>
+          <!-- przykład w komentarzu
+          <style>
+            .tabtxt {
+              text-align: center;
+              width: 45%;
+              float: left;
+              margin: 20px;
+            }
+            .coll {
+              border: 2px solid black;
+              border-collapse: collapse;
+            }
+            .sep {
+              border: 2px solid black;
+              border-collapse: separate;
+            }
+            .tfoot {
+              background-color: coral;
+            }
+            .cap {
+              font-size: 25px;
+              font-weight: bolder;
+            }
+          </style>
+          <table class="tabtxt coll">
+            <caption class="cap">border-collapse: collapse</caption>
+             <thead>
+              <tr class="coll">
+                <th class="coll">Nagłówek 1</th>
+                <th class="coll">Nagłówek 2</th>
+                <th class="coll">Nagłówek 3</th>
+              </tr>
+             </thead>
+             <tfoot class="tfoot coll">
+               <tr class="coll">
+                 <td colspan="3" class="coll">&copy;Blanka Witczak</td>
+               </tr>
+             </tfoot>
+             <tbody>
+               <tr class="coll">
+                 <td class="coll">1</td>
+                 <td class="coll">2</td>
+                 <td class="coll">3</td>
+               </tr>
+               <tr class="coll">
+                 <td class="coll">1.1</td>
+                 <td class="coll">1.2</td>
+                 <td class="coll">1.3</td>
+               </tr>
+               <tr class="coll">
+                 <td class="coll">2.1</td>
+                 <td class="coll">2.2</td>
+                 <td class="coll">2.3</td>
+               </tr>
+             </tbody>
+          </table>
+
+          <table class="tabtxt sep">
+            <caption class="cap">border-collapse: separate</caption>
+             <thead>
+              <tr class="sep">
+                <th class="sep">Nagłówek 1</th>
+                <th class="sep">Nagłówek 2</th>
+                <th class="sep">Nagłówek 3</th>
+              </tr>
+             </thead>
+             <tfoot class="tfoot sep">
+               <tr class="sep">
+                 <td colspan="3" class="sep">&copy;Blanka Witczak</td>
+               </tr>
+             </tfoot>
+             <tbody>
+               <tr class="sep">
+                 <td class="sep">1</td>
+                 <td class="sep">2</td>
+                 <td class="sep">3</td>
+               </tr>
+               <tr class="sep">
+                 <td class="sep">1.1</td>
+                 <td class="sep">1.2</td>
+                 <td class="sep">1.3</td>
+               </tr>
+               <tr class="sep">
+                 <td class="sep">2.1</td>
+                 <td class="sep">2.2</td>
+                 <td class="sep">2.3</td>
+               </tr>
+             </tbody>
+          </table> -->
+
         </section><br /><br />
 
-        <section id="borderradius">
+        <section id="borderradius" style="clear: left;">
           <h3>Border radius</h3>
           border radius rogi: 10px lewy górny, 20px prawy górny, 2px prawy dolny i 50px lewy dolny zgodnie z zegarem
           border-top-left-radius pierwsza wartosć określi zakrzywienie a druga zakrzywienie do w tym przypadku lewej strony dodatkowo
@@ -1569,6 +1701,15 @@
         <section id="table">
           <h3>Tables</h3>
           tabelki to samo co z resztą plus td możesz stylizować dowolnie do tego padding zamiast cellpadding
+          tr:hover {background-color: #f5f5f5;} na hover zmienia tło
+          th, td {
+            border-bottom: 1px solid #ddd;
+          } jak horizontal rules
+          zebra stripes:
+          tr:nth-child(even) {background-color: #f2f2f2;}
+          For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
+          kiedy tabela jest duża i chcesz scroll poxiomy w tym przykładzie :
+          <div style="overflow-x:auto;"> table </div>
         </section><br /><br />
 
         <section id="list">
@@ -1896,6 +2037,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.4 z dnia 29.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.5 z dnia 29.07.2020r.</p>
     </footer>
 </html>
