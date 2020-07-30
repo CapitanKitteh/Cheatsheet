@@ -1422,15 +1422,123 @@
 
         <section id="borderimage">
           <h3>Border image</h3>
-          border-image 
-          używanie zdjęcia jako border wymaga ustalenia bordera, jego src jako zdjęcia oraz: 
-          gdzie uciąć zdjęcie i czy je powtarzać czy rozciągnąć
-           border-image	A shorthand property for setting all the border-image-* properties
-           border-image-source	Specifies the path to the image to be used as a border
-           border-image-slice	Specifies how to slice the border image
-           border-image-width	Specifies the widths of the border image
-           border-image-outset	Specifies the amount by which the border image area extends beyond the border box
-           border-image-repeat	Specifies whether the border image should be repeated, rounded or stretched
+          Border-image pozwala na dostosowanie fragmentu zdjęcia i wykorzystanie go jako border <br />
+          Wymagane jest użycie src zdjęcia, bordera, informacji gdzie uciąć i jak przetwarzać (potwarzać czy rozciągnąć) zdjęcie <br />
+          1. Przykładem będzie border o szerokości 25px, padding 5px, bez określonych dodatkowych wartości w border-image będzie on tylko w rogach:<br />
+          Background color dla zobrazowania granic, wielkość obrazka ustalamy poprzez szerokość bordera
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png);
+            }
+          </code></pre>
+          2. Border-image-slice zdjęcie jest domyślnie dzielone na 9 części(jak kwadrat w sudoku), 4 rogi, 4 boki i środek(domyślnie transparentny) defaultem jest 100% <br />
+          border-image-slice: %, fill, number, initial, inherit <br /> 
+          2.1 Border-image-slice w 50%, gdzie 100% to określenie całości przekątnej:
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 50%;
+            }
+          </code></pre>
+          2.2 Border-image-slice w 33%:
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 33%;
+            }
+          </code></pre>
+          2.3 Border-image-slice w 33% ze zdefiniowanym fill:
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 33% fill;
+            }
+          </code></pre>
+          2.4 Border-image-slice z number 100:
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 100;
+            }
+          </code></pre>
+          2.5 Border-image-slice z number 300 tak samo jak 100%:
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 300;
+            }
+          </code></pre>
+          3. Border-image-repeat: stretch(default), repeat, round, space, initial, inherit<br />
+          3.1 Border-image-repeat: stretch:
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 33% stretch;
+            }
+          </code></pre>
+          3.2 Border-image-repeat: repeat:
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 33% repeat;
+            }
+          </code></pre>
+          3.3 Border-image-repeat: round (dostosowuje):
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 33% round;
+            }
+          </code></pre>
+          3.4 Border-image-repeat: space:
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 33% space;
+            }
+          </code></pre>
+          4. Border-image-outset: 0 default tutaj 1px:
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 33% round;
+              border-image-outset: 1px;
+            }
+          </code></pre>
+          4.1 Border-image-outset: określony w kolejności 30px top, 1px right, 15px bottom, 20px left:
+          <pre><code>
+            .brdrimg {
+              background-color: #fcc8aa;
+              border: 25px solid transparent;
+              padding: 5px;
+              border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 33% round;
+              border-image-outset: 30px 1px 15px 20px;
+            }
+          </code></pre>
+
         </section><br /><br />
 
         <section id="background">
@@ -2189,6 +2297,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.7 z dnia 29.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.8 z dnia 30.07.2020r.</p>
     </footer>
 </html>
