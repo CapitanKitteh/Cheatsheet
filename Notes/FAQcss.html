@@ -1541,6 +1541,24 @@
 
         </section><br /><br />
 
+        <section id="z-index">
+          <h3>Z-index</h3>
+          z index- głębokość przenikalność, layer number
+          <pre><code>
+            Z index i warswty:
+            .kwadracik {
+                position: absolute;
+                left: 0px;
+                width: 100px;
+                height: 100px;
+            }
+            <div class="kwadracik" style="background-color:green;" top: 0px; z-index: 1;> </div>
+            <div class="kwadracik" style="background-color:yellow;" top: 20px; z-index: 2;> </div>
+            <div class="kwadracik" style="background-color:red;" top: 40px; z-index: 3;> </div>
+            jeżeli mamy jeszcze tekst na warstwie domyślnej 0? to kolory miałyby -1, -2 i -3 wyglądając tak samo ale z tekstem na wierzchu
+          </code></pre>
+        </section><br /><br />
+
         <section id="background">
           <h3>Background</h3>
           background-color: black; 
@@ -1631,24 +1649,6 @@
              border-box - (default) the background is painted to the outside edge of the border
              padding-box - the background is painted to the outside edge of the padding
              content-box - the background is painted within the content box
-        </section><br /><br />
-
-        <section id="z-index">
-          <h3>Z-index</h3>
-          z index- głębokość przenikalność, layer number
-          <pre><code>
-            Z index i warswty:
-            .kwadracik {
-                position: absolute;
-                left: 0px;
-                width: 100px;
-                height: 100px;
-            }
-            <div class="kwadracik" style="background-color:green;" top: 0px; z-index: 1;> </div>
-            <div class="kwadracik" style="background-color:yellow;" top: 20px; z-index: 2;> </div>
-            <div class="kwadracik" style="background-color:red;" top: 40px; z-index: 3;> </div>
-            jeżeli mamy jeszcze tekst na warstwie domyślnej 0? to kolory miałyby -1, -2 i -3 wyglądając tak samo ale z tekstem na wierzchu
-          </code></pre>
         </section><br /><br />
 
         <section id="navbar">
@@ -2297,6 +2297,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.8 z dnia 30.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.9 z dnia 30.07.2020r.</p>
     </footer>
 </html>
