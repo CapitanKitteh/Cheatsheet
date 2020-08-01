@@ -1027,51 +1027,6 @@
 
         </section><br /><br />
 
-        <section id="box">
-          <h3>Box</h3>
-          Przykładem będzie div, ważne aby odróżniać content(zawartość diva), padding, border i margin <br />
-          Div użyty do przykładu będzie miał width: 250px i height: 50px i border dla zobrazowania granic:
-          <pre><code>
-            .boxdiv {
-              border: 2px dashed #000283;
-              width: 250px;
-              height: 55px;
-            }
-          </code></pre>
-          Padding jest transparentny chyba, że określimy inaczej i zwiększa pole dookoła contentu tutaj o 35px:
-          <pre><code>
-            .boxpadd {
-              border: 2px dashed #000283;
-              padding: 35px;
-              width: 250px;
-              height: 55px;
-            }
-          </code></pre>
-          Border o szerokości 10px:
-          <pre><code>
-            .boxborder {
-              border: 10px dashed #000283;
-              padding: 35px;
-              width: 250px;
-              height: 55px;
-            }
-          </code></pre>
-          Margin o szerokości 40px: 
-          <pre><code>
-            .boxmargin {
-              margin: 40px;
-              border: 10px dashed #000283;
-              padding: 35px;
-              width: 250px;
-              height: 55px;
-            }
-          </code></pre>
-          Box width:  40 + 10 + 35 + 250 + 35 + 10 +  40 = 420px <br />
-          Box height: 40 + 10 + 35 + 55 + 35 + 10 + 40 = 225px <br />
-          Określanie box-sizing - content-box(default) uznaje width i height tylko contentu lub border-box uznaje width i height cntent+padding+border
-
-        </section><br /><br />
-
         <section id="border">
           <h3>Border</h3>
           Border: color, style, width, collapse <br />
@@ -1545,6 +1500,84 @@
               padding: 5px;
               border-image: url(F:Projects/Cheatsheet/Sources/CSS/brdrimg.png) 33% round;
               border-image-outset: 30px 1px 15px 20px;
+            }
+          </code></pre>
+
+        </section><br /><br />
+
+        <section id="box">
+          <h3>Box</h3>
+          Przykładem będzie div, ważne aby odróżniać content(zawartość diva), padding, border i margin <br />
+          Div użyty do przykładu będzie miał width: 250px i height: 50px i border dla zobrazowania granic:
+          <pre><code>
+            .boxdiv {
+              border: 2px dashed #000283;
+              width: 250px;
+              height: 55px;
+            }
+          </code></pre>
+          Padding jest transparentny chyba, że określimy inaczej i zwiększa pole dookoła contentu tutaj o 35px:
+          <pre><code>
+            .boxpadd {
+              border: 2px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
+            }
+          </code></pre>
+          Border o szerokości 10px:
+          <pre><code>
+            .boxborder {
+              border: 10px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
+            }
+          </code></pre>
+          Margin o szerokości 40px: 
+          <pre><code>
+            .boxmargin {
+              margin: 40px;
+              border: 10px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
+            }
+          </code></pre>
+          Box width:  40 + 10 + 35 + 250 + 35 + 10 +  40 = 420px <br />
+          Box height: 40 + 10 + 35 + 55 + 35 + 10 + 40 = 225px <br />
+          Określanie box-sizing - content-box(default) uznaje width i height tylko contentu lub border-box uznaje width i height cntent+padding+border<br /><br />
+
+          Box-shadow 1
+          <pre><code>
+            .bshadow {
+              box-shadow: 10px 10px;
+            }
+          </code></pre>
+          Box shadow 2:
+          <pre><code>
+            .bxsdw {
+              box-shadow: 5px 5px 15px rgba(0, 2, 131, 0.4);
+            }
+            .boxmargin {
+              margin: 40px;
+              border: 10px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
+            }
+          </code></pre>
+          Box-shadow 3:
+          <pre><code>
+            .bxsdw {
+              box-shadow: 5px 0 15px rgba(0, 2, 131, 0.4), -5px 0 15px rgba(0, 2, 131, 0.4);
+            }
+            .boxmargin {
+              margin: 40px;
+              border: 10px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
             }
           </code></pre>
 
@@ -2135,36 +2168,10 @@
 
         <section id="shadoweff">
           <h3>shadow effect</h3>
-          shadow effect
-         juz to masz, 
-         The following example shows a red neon glow shadow:
-         h1 {
-          text-shadow: 0 0 3px #FF0000;
-        }
-        z minusami idą w lewo i w górę a bez -x idą w prawo i górę
-        multiple shadows
-        h1 {
-          text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
-        }
-
-
         You can also use the text-shadow property to create a plain border around some text (without shadows):
         h1 {
           color: yellow;
           text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        }
-
-        wszystko tak samo ale nie text tylko box shadow :
-        div {
-          box-shadow: 10px 10px;
-        }
-
-
-        You can also use the box-shadow property to create paper-like cards: bardzo fajny efekt
-        div.card {
-          width: 250px;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          text-align: center;
         }
         </section><br /><br />
 
@@ -2306,6 +2313,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.0 z dnia 1.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.0.1 z dnia 1.08.2020r.</p>
     </footer>
 </html>
