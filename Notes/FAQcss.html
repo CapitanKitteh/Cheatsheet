@@ -53,7 +53,6 @@
           <a href="#list">Lists</a><br />
           <a href="#inputs">Inputs</a><br />
           <a href="#icons">Icons</a><br />
-          <a href="#shadoweff">Shadow effect</a><br />
           <a href="#website-layout">Website layout</a><br />
           <a href="#pseudoclass">Pseudoclasses</a><br />
           <a href="#counters">Counters</a><br />
@@ -719,6 +718,13 @@
           <pre><code>
             p {
               text-shadow: -5px -5px 5px #000283;
+            }
+          </code></pre>
+          10.6 Boder dla tekstu z użyciem text-shadow:
+          <pre><code>
+            .sdweff{
+              color: #fcc8aa;
+              text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             }
           </code></pre>
 
@@ -2165,15 +2171,6 @@
              https://material.io/resources/icons/?style=baseline
         </section><br /><br />
 
-        <section id="shadoweff">
-          <h3>shadow effect</h3>
-        You can also use the text-shadow property to create a plain border around some text (without shadows):
-        h1 {
-          color: yellow;
-          text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-        }
-        </section><br /><br />
-
         <section id="website-layout">
           <h3>Website layout</h3>
           website layout
@@ -2277,7 +2274,6 @@
 
         <section id="dunno">
           <h3>Jeszcze nie wiem gdzie to dać:</h3>
-          cursor: help; działa tak jak tekst w ramce po najechaniu ale od razu
           opacity: 0.1-1;
           filter: alpha(opacity=60) tutaj 0-100
         </section><br /><br />
@@ -2312,6 +2308,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.0.2 z dnia 1.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.0.3 z dnia 1.08.2020r.</p>
     </footer>
 </html>
