@@ -257,113 +257,116 @@
           <h3>Gradient colors</h3>
           Przejścia kolorów mogą być liniowe (w dół, w górę, w prawo, w lewo, po przekątnej, wedle stopnia) jak i promieniowe określane od ich środka.<br />
           1. Aby utworzyć liniowe przejście potrzebne są minimum dwa kolory <br />
-          Syntax:
+          1.1 Syntax:
           <pre><code>
-            p {
+            .gradientexample1 {
             background-image: linear-gradient(direction, color1, color2);
             }
           </code></pre>
-          1.1 Przykład zielono-niebieskiego przejścia top to bottom (default) :
+          1.2 Przykład zielono-niebieskiego przejścia top to bottom (default) :
           <pre><code>
-            p {
+            .gradientexample2 {
               background-image: linear-gradient(green, blue);
             }
           </code></pre>
           Zamiana kolorów miejscami pozwoli uzyskać efekt bottom to top.<br />
-          1.2 Przykład zielono-niebieskiego przejścia w prawo :
+          1.3 Przykład zielono-niebieskiego przejścia w prawo :
           <pre><code>
-            p {
+            .gradientexample3 {
               background-image: linear-gradient(to right, green, blue);
             }
           </code></pre>
-          1.3 Przykład zielono-niebieskiego przejścia w lewo :
+          1.4 Przykład zielono-niebieskiego przejścia w lewo :
           <pre><code>
-            p {
+            .gradientexample4 {
               background-image: linear-gradient(to left, green, blue);
             }
           </code></pre>
-          1.4 Przykład zielono-niebieskiego przejścia po przekątnej do górnej lewej strony :
+          1.5 Przykład zielono-niebieskiego przejścia po przekątnej do górnej lewej strony :
           <pre><code>
-            p {
+            .gradientexample5 {
               background-image: linear-gradient(to top left, green, blue);
             }
           </code></pre>
-          1.5 Przykład zielono-niebieskiego przejścia po przekątnej do górnej prawej strony :
+          1.6 Przykład zielono-niebieskiego przejścia po przekątnej do górnej prawej strony :
           <pre><code>
-            p {
+            .gradientexample6 {
               background-image: linear-gradient(to top right, green, blue);
             }
           </code></pre>
-          1.6 Przykład zielono-niebieskiego przejścia po przekątnej do dolnej lewej strony :
+          1.7 Przykład zielono-niebieskiego przejścia po przekątnej do dolnej lewej strony :
           <pre><code>
-            p {
+            .gradientexample7 {
               background-image: linear-gradient(to bottom left, green, blue);
             }
           </code></pre>
-          1.7 Przykład zielono-niebieskiego przejścia po przekątnej do dolnej prawej strony :
+          1.8 Przykład zielono-niebieskiego przejścia po przekątnej do dolnej prawej strony :
           <pre><code>
-            p {
+            .gradientexample8 {
               background-image: linear-gradient(to bottom right, green, blue);
             }
           </code></pre>
-          1.8 Określanie procentowe ilości koloru : <br />
+          1.9 Określanie procentowe ilości koloru : <br />
           Wystarczy określić jeden lub pożądane wartości, w tym przykładzie red zajmie domyślnie pozostałe 50%.
           <pre><code>
-            p {
+            .gradientexample9 {
               background-image: linear-gradient(coral 10%, orange 40%, red);
             }
           </code></pre>
-          1.9 Więcej kolorów :
+          1.10 Więcej kolorów :
           <pre><code>
-            p {
+            .gradientexample10 {
               background-image: linear-gradient(grey, teal 30%, coral, black, gold)
             }
           </code></pre>
-          1.10 Określanie kąta przejścia : <br />
+          1.11 Określanie kąta przejścia : <br />
           Takie samo jak w przypadku to top czyli 0deg oraz 360deg (red on bottom)<br />
           Tak samo jak w przypadku to right, czyli 90deg<br />
           Tak samo jak w przypadku to bottom (domyślnie), czyli 180deg (red on top) w przykładzie poniżej <br />
           Tak samo jak w przypadku to left, czyli 270deg<br />
           <pre><code>
-            p.test {
+            .gradientexample11 {
               background-image: linear-gradient(180deg, #fa7272 30%, #ecff83 60%, #6890ff 100%); 
             }
           </code></pre>
-          1.11 Brak przejścia, pasy kolorów, czyli wielokrotnie określanie umiejscowienia koloru :
+          1.12 Brak przejścia, pasy kolorów, czyli wielokrotnie określanie umiejscowienia koloru :
           <pre><code>
-            p {
+            .gradientexample12 {
               background-image: linear-gradient(red 20%, gray 20% 40%, green 40% 60%, black 60% 80%, blue 80%);
             }
           </code></pre>
-          1.12 Powtarzanie określonego przejścia : <br />
+          1.13 Powtarzanie określonego przejścia : <br />
           0% czerwonego oznacza jego początek tuż przy krawędzi w tym przypadku lewej ponieważ kierunek określony jest w prawo <br />
           20% żółtego oznacza jego położenie na 20% ze 100% <br />
           30% przy kolorze niebieskim oznacza miejsce jego zakończenia<br />
           W przypadku czerwonego 0%, żółtego 60% i niebieskiego 40% żółty będzie położony w miejscu 60% ze 100% a niebieski zniknie z przejścia.<br />
           <pre><code>
-            p {
+            .gradientexample13 {
               background-color: repeating-linear-gradient(#fa7272 0%, #ecff83 20%, #6890ff 30%)
             }
-          </code></pre>
+          </code></pre> <br />
 
           2. Przejścia promieniowe również są tworzone z minimum dwóch kolorów <br />
           Syntax:
-          p {
+          .gradientex1 {
             background-image: radial-gradient(shape size at position, color1, color2);
           } <br />
-          2.1 Kształt circle albo ellipse(default)
+          2.1 Kształt circle
           <pre><code>
-            p {
+            .gradientex2 {
               background-image: radial-gradient(circle, green, blue);
             }
-            p {
+          </code></pre>
+          2.1.1 Ellipse (default)
+          <pre><code>
+            .gradientex3 {
               background-image: radial-gradient(ellipse, green, blue);
             }
           </code></pre>
-          2.2 Umieszczenie środka gradientu i rozmiar do wszystkich pierwsza wartość odnosi się do osi x/położenia poziomego a druga do osi y/położenia pionowego <br />
+          2.2 Umieszczenie środka gradientu i rozmiar do wszystkich: pierwsza wartość odnosi się do osi x/położenia poziomego a druga do osi y/położenia pionowego <br />
           Closest-side i closest-corner są mniejsze a farthest-side i farthest-corner są większe
           <pre><code>
-            p {
+            .gradientex4 {
               background-image: radial-gradient(closest-side 20% 70%, green, blue);
             }
           </code></pre>
@@ -372,7 +375,7 @@
           45% niebieskiego umieszczone na długości 100% promienia nie całego bloku <br />
           75% koloru teal jest wyznacznikiem końca przejścia i tam zaczyna się powtarzanie <br />
           <pre><code>
-            p {
+            .gradientex5 {
               background-image: repeating-radial-gradient(circle, green 0%, blue 45%, teal 75%);
             }
           </code></pre>
@@ -2388,6 +2391,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.0.5 z dnia 1.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.0.6 z dnia 1.08.2020r.</p>
     </footer>
 </html>
