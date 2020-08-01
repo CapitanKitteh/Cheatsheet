@@ -554,7 +554,7 @@
               }
             </code></pre>
           </pre>
-      </section><br /><br />
+        </section><br /><br />
 
         <section id="txttransform">
           <h3>Text</h3>
@@ -1029,38 +1029,47 @@
 
         <section id="box">
           <h3>Box</h3>
-          box model
+          Przykładem będzie div, ważne aby odróżniać content(zawartość diva), padding, border i margin <br />
+          Div użyty do przykładu będzie miał width: 250px i height: 50px i border dla zobrazowania granic:
           <pre><code>
-            div.tekst {
-                background-color: gray;
-                padding: 50px; <!--padding left: 50px, right 50px, bottom -->
-                text-align: justify;
-                margin: 40px;
-                border: 3px solid black;
-                width:200px; 
-            }
-            div#opakowaniebox {
-                width: 386px; <!--200px + 50x + 50px + 3px + 3px + 40px + 40px-->
-                border: 1px dotted green;
+            .boxdiv {
+              border: 2px dashed #000283;
+              width: 250px;
+              height: 55px;
             }
           </code></pre>
-          Content - The content of the box, where text and images appear
-          Padding - Clears an area around the content. The padding is transparent
-          Border - A border that goes around the padding and content
-          Margin - Clears an area outside the border. The margin is transparent
-          Important: When you set the width and height properties of an element with CSS, you just set the width and height of the content area. 
-          To calculate the full size of an element, you must also add padding, borders and margins.
-          boxy
-    
-          * {
-            box-sizing: border-box;
-          }
-          
-          .box {
-            float: left;
-            width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
-            padding: 50px; /* if you want space between the images */
-          }
+          Padding jest transparentny chyba, że określimy inaczej i zwiększa pole dookoła contentu tutaj o 35px:
+          <pre><code>
+            .boxpadd {
+              border: 2px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
+            }
+          </code></pre>
+          Border o szerokości 10px:
+          <pre><code>
+            .boxborder {
+              border: 10px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
+            }
+          </code></pre>
+          Margin o szerokości 40px: 
+          <pre><code>
+            .boxmargin {
+              margin: 40px;
+              border: 10px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
+            }
+          </code></pre>
+          Box width:  40 + 10 + 35 + 250 + 35 + 10 +  40 = 420px <br />
+          Box height: 40 + 10 + 35 + 55 + 35 + 10 + 40 = 225px <br />
+          Określanie box-sizing - content-box(default) uznaje width i height tylko contentu lub border-box uznaje width i height cntent+padding+border
+
         </section><br /><br />
 
         <section id="border">
@@ -1247,7 +1256,7 @@
 
         </section><br /><br />
 
-        <section id="borderradius" style="clear: left;">
+        <section id="borderradius">
           <h3>Border radius</h3>
           Zaokrąglenie granic w kolejności: top&left, top&right, bottom&right, bottom&left<br />
           Określane konkretnie pojedyńcze rogi: border-top-left-radius, border-top-right-radius, border-bottom-left-radius, border-bottom-right-radius <br />
@@ -2297,6 +2306,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 4.9 z dnia 30.07.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.0 z dnia 1.08.2020r.</p>
     </footer>
 </html>
