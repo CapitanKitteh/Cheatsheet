@@ -1734,8 +1734,9 @@
           </code></pre>
           Box width:  40 + 10 + 35 + 250 + 35 + 10 +  40 = 420px <br />
           Box height: 40 + 10 + 35 + 55 + 35 + 10 + 40 = 225px <br />
-          Określanie box-sizing - content-box(default) uznaje width i height tylko contentu lub border-box uznaje width i height cntent+padding+border<br />
+          Określanie box-sizing - content-box(default) uznaje width i height tylko contentu lub border-box uznaje width i height content+padding+border<br /> <br />
 
+          Background-clip <br />
           Dopasowanie tła do: border 
           <pre><code>
             .boxbackground1 {
@@ -1851,11 +1852,17 @@
          background: color, image, repeat, attachment, position <br />
          background-image: url ("nazwapliku.format"); <br />
          background-repeat: no-repeat, repeat-x powtarzanie tła w poziomie, repeat-y powtarzanie w pionie <br />
-         background-position: left top, left center, left bottom, center top, center center, center bottom, right top, right center, right bottom
-         Lub %: pierwsza wartość na osi x w poziomie druga wartość na osi y w pionie <br /> 
+         background-position: left top, left center, left bottom, center top, center center, center bottom, right top, right center, right bottom <br />
+         background-position: %; pierwsza wartość na osi x a druga wartość na osi y<br /> 
          background-attachment: scroll; będzie razem ze stroną przewijać <br />
          background-attachment: fixed; nie będzie przewijać razem ze stroną <br />
-         background-attachment: local; ustalony np dla section lub main będzie się zachowywał jak scroll <br />
+         background-attachment: local; ustalony np. dla section lub main będzie się zachowywał jak scroll na przydzielonej powierzchni <br />
+         background-size: auto; oryginalny rozmiar zdjęcia <br />
+         background-size: określane w px/%/i innych jednostkach, pierwsza wartość to width, druga height, jeśli określimy jedną druga ustawi się na auto <br />
+         background-size: cover; pokrywa całe tło, nawet jeśli musi rozciągnać lub uciąć kawałek na bokach <br />
+         background-size; contain; umieszcza zdjęcie w jego pełnym wymiarze, nawet jeśli nie pokrywa tła w całości <br />
+         background-clip w sekcji box <br />
+
         </section><br /><br />
 
         <section id="background-multi">
@@ -2507,6 +2514,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.4.1 z dnia 2.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.4.2 z dnia 3.08.2020r.</p>
     </footer>
 </html>
