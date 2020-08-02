@@ -1734,7 +1734,44 @@
           </code></pre>
           Box width:  40 + 10 + 35 + 250 + 35 + 10 +  40 = 420px <br />
           Box height: 40 + 10 + 35 + 55 + 35 + 10 + 40 = 225px <br />
-          Określanie box-sizing - content-box(default) uznaje width i height tylko contentu lub border-box uznaje width i height cntent+padding+border<br /><br />
+          Określanie box-sizing - content-box(default) uznaje width i height tylko contentu lub border-box uznaje width i height cntent+padding+border<br />
+
+          Dopasowanie tła do: border 
+          <pre><code>
+            .boxbackground1 {
+              margin: 40px;
+              border: 10px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
+              background-clip: border-box;
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          Dopasowanie tła do: padding 
+          <pre><code>
+            .boxbackground2 {
+              margin: 40px;
+              border: 10px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
+              background-clip: padding-box;
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          Dopasowanie tła do: content 
+          <pre><code>
+            .boxbackground3 {
+              margin: 40px;
+              border: 10px dashed #000283;
+              padding: 35px;
+              width: 250px;
+              height: 55px;
+              background-clip: content-box;
+              background-color: #fcc8aa;
+            }
+          </code></pre>
 
           Box-shadow 1
           <pre><code>
@@ -2470,6 +2507,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.4 z dnia 2.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.4.1 z dnia 2.08.2020r.</p>
     </footer>
 </html>
