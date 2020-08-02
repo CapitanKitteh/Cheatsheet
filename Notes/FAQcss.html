@@ -1811,32 +1811,14 @@
 
         <section id="background">
           <h3>Background</h3>
-          background-color: black; 
-          background-image: url ('nazwapliku.format');
-          background-repeat: no-repeat ;  albo repeat-x powtarza się poziomo adekwatnie do tego repeat-y w pionie
-          zakładając, że jest teraz jedno zdjęcie w rogu a mamy jakiś tekst, poza zdjęciem i pod tekstem tło będzie czarne
-          background-position: center; 
-          backgroud-attachment: fixed; (scrollujesz stroną a tło jest nadal na środku)
-          background-position: 50% 50% od lewej i od góry w zależności od zawartości strony
-          background i jego atrybuty: color, image, repeat, attachment, position
-         color określany nazwą, rgb lub hex # 
-         dodatkowo po określeniu tła można dodać opacity 0.0-1.0 1 to pełne krycie a 0.0 całkowita transparentność, może to np. w przypadku diva zmienić również transparentność tekstu!
-         image url("źródłopliku.format"); 
-         repeat-y repeat-x no-repeat 
-         background-position: right top; określa konkretnie gdzie ma się znajdować tło
-         attachment fixed oznacza, że tło nie będzie scrollowac razem ze stroną a scroll oczywiście to oznacza 
-         Przykładowy kod:
-            body {
-                background-color: #ffffff;
-                background-image: url("img_tree.png");
-                background-repeat: no-repeat;
-                background-position: right top;
-              }
-
-              Skrócony kod:
-              body {
-                background: #ffffff url("img_tree.png") no-repeat right top;
-              }
+         background: color, image, repeat, attachment, position <br />
+         background-image: url ("nazwapliku.format"); <br />
+         background-repeat: no-repeat, repeat-x powtarzanie tła w poziomie, repeat-y powtarzanie w pionie <br />
+         background-position: left top, left center, left bottom, center top, center center, center bottom, right top, right center, right bottom
+         Lub %: pierwsza wartość na osi x w poziomie druga wartość na osi y w pionie <br /> 
+         background-attachment: scroll; będzie razem ze stroną przewijać <br />
+         background-attachment: fixed; nie będzie przewijać razem ze stroną <br />
+         background-attachment: local; ustalony np dla section lub main będzie się zachowywał jak scroll <br />
         </section><br /><br />
 
         <section id="background-multi">
@@ -2488,6 +2470,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.3.1 z dnia 2.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.4 z dnia 2.08.2020r.</p>
     </footer>
 </html>
