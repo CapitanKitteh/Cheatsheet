@@ -1780,20 +1780,40 @@
 
         <section id="z-index">
           <h3>Z-index</h3>
-          z index- głębokość przenikalność, layer number
+          Numer warstwy - layer number, wymagane pozycjonowanie
           <pre><code>
-            Z index i warswty:
-            .kwadracik {
-                position: absolute;
-                left: 0px;
-                width: 100px;
-                height: 100px;
+            .zindex1 {
+              width: 100px;
+              height: 100px;
+              background-color: paleturquoise;
+              position: absolute;
+              z-index: 1;
+              left: 60px;
             }
-            <div class="kwadracik" style="background-color:green;" top: 0px; z-index: 1;> </div>
-            <div class="kwadracik" style="background-color:yellow;" top: 20px; z-index: 2;> </div>
-            <div class="kwadracik" style="background-color:red;" top: 40px; z-index: 3;> </div>
-            jeżeli mamy jeszcze tekst na warstwie domyślnej 0? to kolory miałyby -1, -2 i -3 wyglądając tak samo ale z tekstem na wierzchu
+            .zindex2 {
+              width: 100px;
+              height: 100px;
+              background-color: #265b7e;
+              position: absolute;
+              z-index: 2;
+              left: 120px;
+            }
+            .zindex3 {
+              width: 100px;
+              height: 100px;
+              background-color: #1f2c74;
+              position: absolute;
+              z-index: 3;
+              left: 160px;
+            }
           </code></pre>
+          <!--
+            <div class="zindex1"> </div>
+            <div class="zindex2"> </div>
+            <div class="zindex3"> </div>
+        
+          <br /><br /><br /><br /><br />-->
+
         </section><br /><br />
 
         <section id="background">
@@ -2136,7 +2156,8 @@
               <img src="img_forest.jpg" alt="Forest" width="600" height="400">
             </a>
             <div class="desc">Add a description of the image here</div>
-          </div>
+          </div> 
+          <br /><br /><br />
         </section><br /><br />
 
         <section id="imgsprites">
@@ -2498,6 +2519,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.2.2 z dnia 2.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.3 z dnia 2.08.2020r.</p>
     </footer>
 </html>
