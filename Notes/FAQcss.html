@@ -400,7 +400,112 @@
           </ul>
           Jeśli nazwa jest wieloczłonowa piszemy ją w cudzysłowie, "Times New Roman", 
           a jeśli podajemy kilka nazw wygląda to tak: "Lucida Console", Courier, monospace <br />
+          1. Zastosowanie font-family czcionki z pliku, tutaj nazwanie czcionki, która użyta będzie w opisach:
+          <pre><code>
+            @font-face {
+              font-family: description;
+              src: url(nazwaczcionki.format);
+            }
+            .labeldescription {
+              font-family: description;
+            }
+          </code></pre>
+          1.1 Dodanie pogrubienia do czcionki:
+          <pre><code>
+            @font-face {
+              font-family: description;
+              src: url(nazwaczcionki_bold.format);
+              font-weight: bold;
+            }
+          </code></pre> <br />
+
           font-weight: normal (400), bold (700), bolder, lighter, initial (to it's default), inherit, 100-900 <br />
+          2. Font-weight - grubość czcionki <br />
+          2.1 Font-weight: 100:
+          <pre><code>
+            .fontweightex1 {
+              font-weight: 100;
+            }
+          </code></pre>
+          2.2 Font-weight: 200:
+          <pre><code>
+            .fontweightex2 {
+              font-weight: 200;
+            }
+          </code></pre>
+          2.3 Font-weight: 300:
+          <pre><code>
+            .fontweightex3 {
+              font-weight: 300;
+            }
+          </code></pre>
+          2.4 Font-weight: 400:
+          <pre><code>
+            .fontweightex4 {
+              font-weight: 400;
+            }
+          </code></pre>
+          2.5 Font-weight: 500:
+          <pre><code>
+            .fontweightex5 {
+              font-weight: 500;
+            }
+          </code></pre>
+          2.6 Font-weight: 600:
+          <pre><code>
+            .fontweightex6 {
+              font-weight: 600;
+            }
+          </code></pre>
+          2.7 Font-weight: 7:
+          <pre><code>
+            .fontweightex7 {
+              font-weight: 700;
+            }
+          </code></pre>
+          2.8 Font-weight: 800:
+          <pre><code>
+            .fontweightex8 {
+              font-weight: 800;
+            }
+          </code></pre>
+          2.9 Font-weight: 900:
+          <pre><code>
+            .fontweightex9 {
+              font-weight: 900;
+            }
+          </code></pre>
+
+          2.10 Font-weight: normal(default):
+          <pre><code>
+            .fontweightex10 {
+              font-weight: normal;
+            }
+          </code></pre>
+          2.11 Font-weight: light:
+          <pre><code>
+            .fontweightex11 {
+              font-weight: light;
+            }
+          </code></pre>
+          2.12 Font-weight: lighter:
+          <pre><code>
+            .fontweightex12 {
+              font-weight: lighter;
+            }
+          </code></pre>
+          2.13 Font-weight: bold:
+          <pre><code>
+            .fontweightex13 {
+              font-weight: bold;
+            }
+          </code></pre>
+          2.14 Font-weight: bolder:
+          <pre><code>
+            .fontweightex14 {
+              font-weight: bolder;
+            }
+          </code></pre>
           font-style: normal, italic (kursywa) lub oblique (wymuszona kursywa, nie zawsze wspierana) <br />
           font-variant: normal (default), small-caps (małe litery będą powiększone, ale będą mniejsze niż duże litery), initial, inherit <br />
           font-size: określane w px, %, em, za pomocą viewport, rownież określanie przez small, medium, large, smaller, larger, x-small, xx-small, x-large, xx-large, initial, inherit.<br />
@@ -418,7 +523,62 @@
             .fontsexample2 {
               font: italic small-caps bold 30px Arial, serif;
             }
-          </pre></code>
+          </pre></code> <br />
+
+          3.1 Font-stretch: ultra-condensed:
+          <pre><code>
+            .fontstretchex1 {
+              font-stretch: ultra-condensed;
+            }
+          </code></pre>
+          3.2 Font-stretch: extra-condensed:
+          <pre><code>
+            .fontstretche2 {
+              font-stretch: extra-condensed;
+            }
+          </code></pre>
+          3.3 Font-stretch: condensed:
+          <pre><code>
+            .fontstretchex3 {
+              font-stretch: condensed;
+            }
+          </code></pre>
+          3.4 Font-stretch: semi-condensed:
+          <pre><code>
+            .fontstretchex4 {
+              font-stretch: semi-condensed;
+            }
+          </code></pre>
+          3.5 Font-stretch: normal(default):
+          <pre><code>
+            .fontstretchex5 {
+              font-stretch: normal;
+            }
+          </code></pre>
+          3.6 Font-stretch: semi-expanded:
+          <pre><code>
+            .fontstretchex6 {
+              font-stretch: semi-expanded;
+            }
+          </code></pre>
+          3.7 Font-stretch: expanded:
+          <pre><code>
+            .fontstretchex7 {
+              font-stretch: expanded;
+            }
+          </code></pre>
+          3.8 Font-stretch: extra-expanded:
+          <pre><code>
+            .fontstretchex8 {
+              font-stretch: extra-expanded;
+            }
+          </code></pre>
+          3.9 Font-stretch: ultra-expanded:
+          <pre><code>
+            .fontstretchex9 {
+              font-stretch: ultra-expanded;
+            }
+          </code></pre> <br />
 
         </section><br /><br />
 
@@ -760,6 +920,18 @@
               text-overflow: ellipsis;
             }
           </code></pre> <br />
+          9.3 Overflow: visible ukazuje tekst po najechaniu:
+          <pre><code>
+            .txtoverflowexample {
+              width: 200px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .txtoverflowexample:hover {
+              overflow: visible;
+            }
+          </code></pre>
 
           10 text-shadow: none, h-shadow, v-shadow, blur-radius, color, initial, inherit <br />
           Cień można określić w następujący sposób:
@@ -815,116 +987,60 @@
 
         <section id="txteff">
           <h3>Text effects</h3>
-          text effects
-          overflow kończacy się uciętym tekstem i drugi z (...)
-          p.test1 {
-            white-space: nowrap;
-            width: 200px;
-            border: 1px solid #000000;
-            overflow: hidden;
-            text-overflow: clip;
-          }
-          
-          p.test2 {
-            white-space: nowrap;
-            width: 200px;
-            border: 1px solid #000000;
-            overflow: hidden;
-            text-overflow: ellipsis;
-          }
-
-          The following example shows how you can display the overflowed content when hovering over the element:
-          div.test:hover {
-            overflow: visible;
-          }
+          Różne efekty tekstowe: <br />
 
 
-          długa linia tekstu która dla estetyki nie będzie wymgaała br może zostać podzielona tym: 
-          p {
-            word-wrap: break-word;
-          }
+          X. Długa linia tekstu nie wymagająca br do podzielenia:
+          <pre><code>
+            .wordwrapex1 {
+              word-wrap: break-word;
+            }
+          </code></pre>
+          X.1 Długa linia tekstu nie wymagająca br z określonym width:
+          <pre><code>
+            .wordwrapex2 {
+              width: 400px;
+              word-wrap: break-word;
+            }
+          </code></pre> <br />
 
-          zawartość np małego okienka będzie dzielona na 1. nowa linia z wyrazem i 2. nowa linia dzieląc wyraz dowolnie np 
-          1.zawartość
-          tekstu
-          2.zawart 
-          ość te 
-          kstu 
+          X2. Tekst podzielony z zachowaniem całych wyrazów:
+          <pre><code>
+            .wordbreakex1 {
+              width: 400px;
+              word-break: keep-all;
+            }
+          </code></pre>
+          X2.1 Tekst podzielony z przerwaniem wyrazów:
+          <pre><code>
+            .wordbreakex2 {
+              width: 400px;
+              word-break: break-all;
+            }
+          </code></pre> <br />
 
-          p.test1 {
-            word-break: keep-all;
-          }
-          
-          p.test2 {
-            word-break: break-all;
-          }
+          X3. Ułożenie tekstu default - horizontal-tb:
+          <pre><code>
+            .writingmode1 {
+              width: 200px;
+              writing-mode: horizontal-tb;
+            }
+          </code></pre>
+          X3.1 Ułożenie tekstu w pione left to right:
+          <pre><code>
+            .writingmode2 {
+              height: 300px;
+              writing-mode: vertical-lr;
+            }
+          </code></pre>
+          X3.2 Ułożenie tekstu w pionie right to left:
+          <pre><vode>
+            .writingmode3 {
+              height: 300px;
+              writing-mode: vertical-rl;
+            }
+          </vode></pre> <br />
 
-
-          <!--nie rozumiem czemu to ma służyć:-->
-          p.test1 {
-            writing-mode: horizontal-tb;
-          }
-          
-          span.test2 {
-            writing-mode: vertical-rl;
-          }
-          
-          p.test2 {
-            writing-mode: vertical-rl;
-          }
-
-
-          <!--tego też za bardzo nie rozumiem, nie lepiej użyć linku z google fonts jeśli nie używam własnego fontu?-->
-          In the @font-face rule; first define a name for the font (e.g. myFirstFont) and then point to the font file.
-          Tip: Always use lowercase letters for the font URL. Uppercase letters can give unexpected results in IE.
-          To use the font for an HTML element, refer to the name of the font (myFirstFont) through the font-family property:
-          @font-face {
-            font-family: myFirstFont;
-            src: url(sansation_light.woff);
-          }
-          
-          div {
-            font-family: myFirstFont;
-          }
-
-          pogrubienie:
-          @font-face {
-            font-family: myFirstFont;
-            src: url(sansation_bold.woff);
-            font-weight: bold;
-          }
-          The file "sansation_bold.woff" is another font file, that contains the bold characters for the Sansation font.
-          Browsers will use this whenever a piece of text with the font-family "myFirstFont" should render as bold.
-          This way you can have many @font-face rules for the same font.
-
-
-           SPIS Z TABELI 
-           font-family	name	Required. Defines a name for the font
-           src	URL	Required. Defines the URL of the font file
-           font-stretch	normal
-           condensed
-           ultra-condensed
-           extra-condensed
-           semi-condensed
-           expanded
-           semi-expanded
-           extra-expanded
-           ultra-expanded	Optional. Defines how the font should be stretched. Default is "normal"
-           font-style	normal
-           italic
-           oblique	Optional. Defines how the font should be styled. Default is "normal"
-           font-weight	normal
-           bold
-           100
-           200
-           300
-           400
-           500
-           600
-           700
-           800
-           900	Optional. Defines the boldness of the font. Default is "normal"
-           unicode-range	unicode-range	Optional. Defines the range of UNICODE characters the font supports. Default is "U+0-10FFFF"
         </section><br /><br />
 
         <section id="position">
@@ -1053,7 +1169,7 @@
 
         <section id="overflow">
           <h3>Overflow</h3>
-          Decyduje jak ma zostać przedtawiony tekst wychodzący poza granice określonej szerokości <br />
+          Decyduje jak ma zostać przedtawiony tekst lub element wychodzący poza granice określonej szerokości <br />
           overflow: visible, hidden, auto, scroll oraz overflow-y i overflow-x <br />
           1. Overflow visible przykłady będą pokazane na divach z szarym tłem dla zobrazowania granic: <br />
           Visible wyjedzie tekstem poza granice ale tekst będzie widoczny
@@ -2391,6 +2507,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.0.9 z dnia 1.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.1 z dnia 2.08.2020r.</p>
     </footer>
 </html>
