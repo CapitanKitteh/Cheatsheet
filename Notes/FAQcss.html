@@ -931,72 +931,15 @@
             .txtoverflowexample:hover {
               overflow: visible;
             }
-          </code></pre>
-
-          10 text-shadow: none, h-shadow, v-shadow, blur-radius, color, initial, inherit <br />
-          Cień można określić w następujący sposób:
-          Pierwsza wartość to przesunięcie cienia względem tekstu w poziomie w przykładzie wynosi 2px <br />
-          Druga wartość to przesunięcie w pionie również 2px <br />
-          Trzecia wartość to kolor w tym przypadku #000283 <br />
-          10.1 Przykład średnio czytelny:
-          <pre><code>
-            .txtshadoweff1 {
-              text-shadow: 2px 2px #000283;
-            }
-            </code></pre>
-          10.2 Dodam kolejną, na trzecim miejscu wartość, czyli blur-radius o wartości 5px:
-          <pre><code> 
-            .txtshadoweff2 {
-              text-shadow: 2px 2px 5px #000283;
-            }
           </code></pre> 
-          10.3 Przykład na białym kolorze tekstu:
-          <pre><code>
-            .txtshadoweff3 {
-              color: white;
-              text-shadow: 2px 2px 5px #000000
-            }
-          </code></pre>
-          10.4 Przykład efektu neon w kolorze mięty: 
-          <pre><code>
-            .txtshadoweff4 {
-              text-shadow: 0px 0px 5px #03f7f7;
-            }
-          </code></pre>
-          10.5 Podwójny kolor neonu:
-          <pre><code>
-            .txtshadoweff5 {
-              text-shadow: 0px 0px 5px #ff643d, 0px 0px 5px #8671ff; 
-            }
-          </code></pre>
-          10.6 Dopuszczalne są także wartości ujemne:
-          <pre><code>
-            .txtshadoweff6 {
-              text-shadow: -5px -5px 5px #000283;
-            }
-          </code></pre>
-          10.7 Boder dla tekstu z użyciem text-shadow:
-          <pre><code>
-            .txtshadoweff7 {
-              color: #fcc8aa;
-              text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-            }
-          </code></pre>
 
-        </section><br /><br />
-
-        <section id="txteff">
-          <h3>Text effects</h3>
-          Różne efekty tekstowe: <br />
-
-
-          X. Długa linia tekstu nie wymagająca br do podzielenia:
+          10. Długa linia tekstu nie wymagająca br do podzielenia:
           <pre><code>
             .wordwrapex1 {
               word-wrap: break-word;
             }
           </code></pre>
-          X.1 Długa linia tekstu nie wymagająca br z określonym width:
+          10.1 Długa linia tekstu nie wymagająca br z określonym width:
           <pre><code>
             .wordwrapex2 {
               width: 400px;
@@ -1004,14 +947,14 @@
             }
           </code></pre> <br />
 
-          X2. Tekst podzielony z zachowaniem całych wyrazów:
+          11. Tekst podzielony z zachowaniem całych wyrazów:
           <pre><code>
             .wordbreakex1 {
               width: 400px;
               word-break: keep-all;
             }
           </code></pre>
-          X2.1 Tekst podzielony z przerwaniem wyrazów:
+          11.1 Tekst podzielony z przerwaniem wyrazów:
           <pre><code>
             .wordbreakex2 {
               width: 400px;
@@ -1019,27 +962,77 @@
             }
           </code></pre> <br />
 
-          X3. Ułożenie tekstu default - horizontal-tb:
+          12. Ułożenie tekstu default - horizontal-tb:
           <pre><code>
             .writingmode1 {
               width: 200px;
               writing-mode: horizontal-tb;
             }
           </code></pre>
-          X3.1 Ułożenie tekstu w pione left to right:
+          12.1 Ułożenie tekstu w pione left to right:
           <pre><code>
             .writingmode2 {
               height: 300px;
               writing-mode: vertical-lr;
             }
           </code></pre>
-          X3.2 Ułożenie tekstu w pionie right to left:
+          12.2 Ułożenie tekstu w pionie right to left:
           <pre><vode>
             .writingmode3 {
               height: 300px;
               writing-mode: vertical-rl;
             }
           </vode></pre> <br />
+
+          13 text-shadow: none, h-shadow, v-shadow, blur-radius, color, initial, inherit <br />
+          Cień można określić w następujący sposób:
+          Pierwsza wartość to przesunięcie cienia względem tekstu w poziomie w przykładzie wynosi 2px <br />
+          Druga wartość to przesunięcie w pionie również 2px <br />
+          Trzecia wartość to kolor w tym przypadku #000283 <br />
+          13.1 Przykład średnio czytelny:
+          <pre><code>
+            .txtshadoweff1 {
+              text-shadow: 2px 2px #000283;
+            }
+            </code></pre>
+          13.2 Dodam kolejną, na trzecim miejscu wartość, czyli blur-radius o wartości 5px:
+          <pre><code> 
+            .txtshadoweff2 {
+              text-shadow: 2px 2px 5px #000283;
+            }
+          </code></pre> 
+          13.3 Przykład na białym kolorze tekstu:
+          <pre><code>
+            .txtshadoweff3 {
+              color: white;
+              text-shadow: 2px 2px 5px #000000
+            }
+          </code></pre>
+          13.4 Przykład efektu neon w kolorze mięty: 
+          <pre><code>
+            .txtshadoweff4 {
+              text-shadow: 0px 0px 5px #03f7f7;
+            }
+          </code></pre>
+          13.5 Podwójny kolor neonu:
+          <pre><code>
+            .txtshadoweff5 {
+              text-shadow: 0px 0px 5px #ff643d, 0px 0px 5px #8671ff; 
+            }
+          </code></pre>
+          13.6 Dopuszczalne są także wartości ujemne:
+          <pre><code>
+            .txtshadoweff6 {
+              text-shadow: -5px -5px 5px #000283;
+            }
+          </code></pre>
+          13.7 Boder dla tekstu z użyciem text-shadow:
+          <pre><code>
+            .txtshadoweff7 {
+              color: #fcc8aa;
+              text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            }
+          </code></pre>
 
         </section><br /><br />
 
@@ -2507,6 +2500,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.1 z dnia 2.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.2 z dnia 2.08.2020r.</p>
     </footer>
 </html>
