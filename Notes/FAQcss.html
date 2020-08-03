@@ -1907,6 +1907,7 @@
           Navbar to lista linków ułożona w określony sposób <br />
           Bazą do przykładów będzie unordered list <br />
 
+          <!-- źródlo: 
             <ul class="nav1">
               <li class="nav2"><a href="##" class="nav3">Home</a></li>
               <li class="nav2"><a href="##" class="nav3">Clothes</a></li>
@@ -1916,8 +1917,8 @@
               <li class="nav2"><a href="##" class="nav3">Account</a></li>
               <li class="nav2"><a href="##" class="nav3">About</a></li>
             </ul>
+          -->
 
-            Teraz pozbywamy się kropek, ustalamy margin i padding wedle uznania <br />
             Display: inline dla poziomu, display: block dla pionu <br />
             1. Z tłem i ozdobnymi border: outset i inset 
             <pre><code>
@@ -1941,18 +1942,17 @@
                 font-size: 25px;
               }
             </code></pre>
-
             2. Bez tła
             <pre><code>
-              .nav1 {
+              .nav11 {
                 list-style-type: none;
                 margin: 2%;
               }
-              li.nav2 {
+              li.nav21 {
                 display: inline;
                 margin: 15px 5px 15px 5px; 
               }
-              a.nav3 {
+              a.nav31 {
                 text-decoration: none;
                 color: white;
                 background-color: #033797;
@@ -1963,25 +1963,211 @@
             </code></pre>
             3. Odnośnikiem jest sam tekst 
             <pre><code>
-              .nav1 {
+              .nav12 {
                 list-style-type: none;
                 margin: 2%;
               }
-              li.nav2 {
+              li.nav22 {
                 display: inline;
                 margin: 15px 5px 15px 5px; 
               }
-              a.nav3 {
+              a.nav32 {
                 text-decoration: none;
                 color: black;
                 font-size: 25px;
               }
             </code></pre>
+            4. Odnośnikiem jest sam tekst z dodatkowym gradientem w tle 
+            <pre><code>
+              .nav13 {
+                list-style-type: none;
+                margin: 2%;
+                background-image: linear-gradient( to right, #3f72a1, #223977 , #21217c);
+                padding: 15px;
+              }
+              li.nav23 {
+                display: inline;
+                margin: 15px 5px 15px 5px; 
+              }
+              a.nav33 {
+                text-decoration: none;
+                color: white;
+                font-size: 25px;
+              }
+            </code></pre> <br />
+
+            5. Pionowy navbar 
+            <pre><code>
+              .nav14 {
+                list-style-type: none;
+                width: 120px;
+                margin: 0;
+                padding: 15px;
+                background-color: #000283;
+                border: 4px inset #033797;
+              }
+              li.nav24 {
+                display: block;
+                margin: 15px 5px 15px 5px; 
+              }
+              a.nav34 {
+                text-decoration: none;
+                background-color: #033797;
+                border: 4px outset #000283;
+                color: white;
+                padding: 5px;
+                font-size: 25px;
+              }
+            </code></pre>
+            6. Bez tła 
+            <pre><code>
+              .nav15 {
+                list-style-type: none;
+                width: 90px;
+                margin: 0;
+                padding: 15px;
+              }
+              li.nav25 {
+                display: block;
+                margin: 15px 5px 15px 5px; 
+              }
+              a.nav35 {
+                text-decoration: none;
+                background-color: #033797;
+                border: 4px outset #000283;
+                color: white;
+                padding: 5px;
+                font-size: 25px;
+              }
+            </code></pre>
+            7. Odnośnikiem jest tylko tekst 
+            <pre><code>
+              .nav16 {
+                list-style-type: none;
+                width: 90px;
+                margin: 0;
+                padding: 15px;
+              }
+              li.nav26 {
+                display: block;
+                margin: 15px 5px 15px 5px; 
+              }
+              a.nav36 {
+                text-decoration: none;
+                color: black;
+                font-size: 25px;
+              }
+            </code></pre>
+            8. Odnośnikiem jest sam tekst, gradient w tle
+            <pre><code>
+              .nav17 {
+                list-style-type: none;
+                width: 90px;
+                margin: 0;
+                background-image: linear-gradient( to right, #3f72a1, #223977 , #21217c);
+                padding: 15px;
+              }
+              li.nav27 {
+                display: block;
+                margin: 15px 5px 15px 5px; 
+              }
+              a.nav37 {
+                text-decoration: none;
+                color: white;
+                font-size: 25px;
+              }
+            </code></pre> <br />
+
+            9. Horizontal & dropdown 
+            <pre><code>
+              .nav18 {
+                list-style-type: none;
+                margin: 2%;
+                background-image: linear-gradient( to right, #3f72a1, #223977 , #21217c);
+                padding: 15px;
+              }
+              li.nav28 {
+                display: inline;
+                margin: 15px 5px 15px 5px; 
+              }
+              a.nav38 {
+                text-decoration: none;
+                color: white;
+                font-size: 25px;
+              }
+
+
+              .dropnav1 {
+                list-style-type: none;
+                display: none;
+                position: absolute;
+              }
+
+              li.dropnav2 {
+                display: none;
+              }
+              a.dropnav3 {
+                border: 1px dashed #000283;
+                display: none;
+                text-decoration: none;
+                color: white;
+                font-size: 25px;
+                width: 140px;
+                padding: 15px;
+                background-image: linear-gradient( to right, #3f72a1, #223977 , #21217c);
+                z-index: 1;
+              }
+
+              .sticker1 {
+                position: relative;
+              }
+              .sticker1:hover li.dropnav2 {
+                display: block;
+              }
+              .sticker1:hover a.dropnav3 {
+                display: block;
+              }
+              .sticker1:hover ul.dropnav1 {
+                display: block;
+              }
+            </code></pre>
+
+            <!-- źródło: 
+                        <ul class="nav1">
+              <li class="nav2"><a href="##" class="nav3">Home</a></li>
+              <li class="nav2"><a href="##" class="nav3">Clothes</a></li>
+              <li class="nav2 sticker1"><a href="##" class="nav3 sticker2">Stickers</a>
+                <ul class="dropnav1">
+                  <li class="dropnav2"><a href="##" class="dropnav3">Memes pack</a></li>
+                  <li class="dropnav2"><a href="##" class="dropnav3">Music pack</a></li>
+                  <li class="dropnav2"><a href="##" class="dropnav3">Food pack</a></li>
+                  <li class="dropnav2"><a href="##" class="dropnav3">Game pack</a></li>
+                  <li class="dropnav2"><a href="##" class="dropnav3">Mystery pack</a></li>
+                </ul>
+             </li>
+              <li class="nav2"><a href="##" class="nav3">Books</a></li>
+              <li class="nav2"><a href="##" class="nav3">Gadgets</a></li>
+              <li class="nav2"><a href="##" class="nav3">Account</a></li>
+              <li class="nav2"><a href="##" class="nav3">About</a></li>
+            </ul> -->
             
+            <ul class="nav1">
+              <li class="nav2"><a href="##" class="nav3">Home</a></li>
+              <li class="nav2"><a href="##" class="nav3">Clothes</a></li>
+              <li class="nav2"><a href="##" class="nav3">Stickers</a></li>
+              <li class="nav2"><a href="##" class="nav3">Books</a></li>
+              <li class="nav2"><a href="##" class="nav3">Gadgets</a></li>
+              <li class="nav2"><a href="##" class="nav3">Account</a></li>
+              <li class="nav2"><a href="##" class="nav3">About</a></li>
+            </ul>
             <style>
               .nav1 {
                 list-style-type: none;
                 margin: 2%;
+                background-image: linear-gradient( to right, #3f72a1, #223977 , #21217c);
+                padding: 15px;
+                position: sticky;
+                top: 0px;
               }
               li.nav2 {
                 display: inline;
@@ -1989,71 +2175,11 @@
               }
               a.nav3 {
                 text-decoration: none;
-                color: black;
+                color: white;
                 font-size: 25px;
               }
             </style>
 
-
-
-
-
-
-
-          <br /><br /><br />
-
-          navbar
-            vertical pionowy
-            ul {
-              list-style-type: none;
-              margin: 0;
-              padding: 0;
-              width: 200px;
-              background-color: #f1f1f1;
-            }
-          
-            li a {
-              display: block;
-              color: #000;
-              padding: 8px 16px;
-              text-decoration: none;
-            }
-            
-            
-            pionowy stały
-            ul {
-              list-style-type: none;
-              margin: 0;
-              padding: 0;
-              width: 25%;
-              background-color: #f1f1f1;
-              height: 100%; /* Full height */
-              position: fixed; /* Make it stick, even on scroll */
-              overflow: auto; /* Enable scrolling if the sidenav has too much content */
-            }
-
-
-
-            Add an "active" class to the current link to let the user know which page he/she is on:
-            .active {
-              background-color: #4CAF50;
-            }
-
-            navbar stoi niezależnie od scrolla na top lub bottom :
-            ul {
-              position: fixed;
-              top: 0; <!--albo bottom: 0px;-->
-              width: 100%;
-            }
-            Note: Fixed position might not work properly on mobile devices.
-
-            sticky option to upper one
-            ul {
-              position: -webkit-sticky; /* Safari */
-              position: sticky;
-              top: 0;
-            }
-            Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example above). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
 
         </section><br /><br />
 
@@ -2565,6 +2691,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.5 z dnia 3.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.5.1 z dnia 3.08.2020r.</p>
     </footer>
 </html>
