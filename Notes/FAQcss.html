@@ -1904,6 +1904,104 @@
 
         <section id="navbar">
           <h3>Navbar</h3>
+          Navbar to lista linków ułożona w określony sposób <br />
+          Bazą do przykładów będzie unordered list <br />
+
+            <ul class="nav1">
+              <li class="nav2"><a href="##" class="nav3">Home</a></li>
+              <li class="nav2"><a href="##" class="nav3">Clothes</a></li>
+              <li class="nav2"><a href="##" class="nav3">Stickers</a></li>
+              <li class="nav2"><a href="##" class="nav3">Books</a></li>
+              <li class="nav2"><a href="##" class="nav3">Gadgets</a></li>
+              <li class="nav2"><a href="##" class="nav3">Account</a></li>
+              <li class="nav2"><a href="##" class="nav3">About</a></li>
+            </ul>
+
+            Teraz pozbywamy się kropek, ustalamy margin i padding wedle uznania <br />
+            Display: inline dla poziomu, display: block dla pionu <br />
+            1. Z tłem i ozdobnymi border: outset i inset 
+            <pre><code>
+              .nav1 {
+                list-style-type: none;
+                margin: 2%;
+                padding: 15px;
+                background-color: #000283;
+                border: 4px inset #033797;
+              }
+              li.nav2 {
+                display: inline;
+                margin: 15px 5px 15px 5px; 
+              }
+              a.nav3 {
+                text-decoration: none;
+                color: white;
+                background-color: #033797;
+                border: 4px outset #000283;
+                padding: 10px 40px 10px 40px;
+                font-size: 25px;
+              }
+            </code></pre>
+
+            2. Bez tła
+            <pre><code>
+              .nav1 {
+                list-style-type: none;
+                margin: 2%;
+              }
+              li.nav2 {
+                display: inline;
+                margin: 15px 5px 15px 5px; 
+              }
+              a.nav3 {
+                text-decoration: none;
+                color: white;
+                background-color: #033797;
+                border: 4px outset #000283;
+                padding: 15px 40px 15px 40px;
+                font-size: 25px;
+              }
+            </code></pre>
+            3. Odnośnikiem jest sam tekst 
+            <pre><code>
+              .nav1 {
+                list-style-type: none;
+                margin: 2%;
+              }
+              li.nav2 {
+                display: inline;
+                margin: 15px 5px 15px 5px; 
+              }
+              a.nav3 {
+                text-decoration: none;
+                color: black;
+                font-size: 25px;
+              }
+            </code></pre>
+            
+            <style>
+              .nav1 {
+                list-style-type: none;
+                margin: 2%;
+              }
+              li.nav2 {
+                display: inline;
+                margin: 15px 5px 15px 5px; 
+              }
+              a.nav3 {
+                text-decoration: none;
+                color: black;
+                font-size: 25px;
+              }
+            </style>
+
+
+
+
+
+
+
+          <br /><br /><br />
+
           navbar
             vertical pionowy
             ul {
@@ -1921,11 +2019,6 @@
               text-decoration: none;
             }
             
-            /* Change the link color on hover */
-            li a:hover {
-              background-color: #555;
-              color: white;
-            }
             
             pionowy stały
             ul {
@@ -1939,21 +2032,6 @@
               overflow: auto; /* Enable scrolling if the sidenav has too much content */
             }
 
-            poziomy
-            li {
-              display: inline;
-            }
-            
-            inny sposób z float
-            li {
-              float: left;
-            }
-            
-            a {
-              display: block;
-              padding: 8px;
-              background-color: #dddddd;
-            }
 
 
             Add an "active" class to the current link to let the user know which page he/she is on:
@@ -1977,8 +2055,6 @@
             }
             Note: Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix (see example above). You must also specify at least one of top, right, bottom or left for sticky positioning to work.
 
-            dropdown navbar
-            https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_navbar
         </section><br /><br />
 
         <section id="navbar-dropdown">
@@ -2489,6 +2565,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.4.3 z dnia 3.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.5 z dnia 3.08.2020r.</p>
     </footer>
 </html>
