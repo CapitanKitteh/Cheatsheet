@@ -1867,64 +1867,39 @@
 
         <section id="background-multi">
           <h3>Multiple background (layerd)</h3>
-          multiple backgrounds 
-          i guess it's the z-index 
-          The different background images are separated by commas, and the images are stacked on top of each other, where the first image is closest to the viewer.
-          background-image: url(img_flwr.gif), url(paper.gif); flower będzie on top of paper 
-          ustawienia obu po przecinach :
-          #example1 {
-            background-image: url(img_flwr.gif), url(paper.gif);
-            background-position: right bottom, left top;
-            background-repeat: no-repeat, repeat;
-          }
-          shortcut, ale w tym przypadku nie polecam bo można sie pogubić 
-          #example1 {
-            background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
-          }
+          Wielowarstwowe tła są wpisywane po przecinku, pierwszy w kolejności będzie wyświetlany ponad innymi <br />
+          Przykład w iframe:
+          <pre><code>
+            body {
+              background-image: url("finish2.jpg"), url("oldbook.jpg"), url("snacks2.jpg");
+              background-position: left bottom, left center, center center;
+              background-repeat: no-repeat, no-repeat, no-repeat;
+              background-size: 47vw 30vh, 35vw 50vh, cover;
+            }
+          </code></pre> <br />
+          <!--
+            .bgiframe {
+              width: 95vw;
+              height: 50vh;
+            }
 
-          The CSS background-size property allows you to specify the size of background images.
-          The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.
-          The contain keyword scales the background image to be as large as possible (but both its width and its height must fit inside the content area). As such, depending on the proportions of the background image and the background positioning area, there may be some areas of the background which are not covered by the background image.
-          The cover keyword scales the background image so that the content area is completely covered by the background image (both its width and height are equal to or exceed the content area). As such, some parts of the background image may not be visible in the background positioning area. 
+          <iframe src="F:/Projects/Cheatsheet/Sources/CSS/backgroundiframe.html" class="bgiframe"></iframe> <br /> -->
+
+          Ustawienie zdjęcia zakrywającego zawsze całe tło, również w iframe:
+          <pre><code>
+            html {
+              background: url("snacks2.jpg") no-repeat center fixed;
+              background-size: cover;
+            }
+          </code></pre> <br />
+          <!--
+            .bgiframe2 {
+              width: 60vw;
+              height: 40vh;
+            }
           
+          <iframe src="F:/Projects/Cheatsheet/Sources/CSS/backgroundiframe2.html" class="bgiframe2"></iframe> <br /> -->
 
-          Now we want to have a background image on a website that covers the entire browser window at all times.
-
-          The requirements are as follows:
-           Fill the entire page with the image (no white space)
-           Scale image as needed
-           Center image on page
-           Do not cause scrollbars
-           The following example shows how to do it; Use the <html> element (the <html> element is always at least the height of the browser window). Then set a fixed and centered background on it. Then adjust its size with the background-size property:
-             html {
-             background: url(img_man.jpg) no-repeat center fixed;
-             background-size: cover;
-             }
-
-           <!--tego nie rozumiem:-->
-           You could also use different background properties on a <div> to create a hero image (a large image with text), and place it where you want.
-
-           Example
-           .hero-image {
-           background: url(img_man.jpg) no-repeat center;  
-           background-size: cover;
-           height: 500px;
-           position: relative;
-           }
-
-             The CSS background-origin property specifies where the background image is positioned.
-             The property takes three different values:
-             border-box - the background image starts from the upper left corner of the border
-             padding-box - (default) the background image starts from the upper left corner of the padding edge
-             content-box - the background image starts from the upper left corner of the content
-
-             The CSS background-clip property specifies the painting area of the background.
-
-             The property takes three different values:
-             
-             border-box - (default) the background is painted to the outside edge of the border
-             padding-box - the background is painted to the outside edge of the padding
-             content-box - the background is painted within the content box
         </section><br /><br />
 
         <section id="navbar">
@@ -2514,6 +2489,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.4.2 z dnia 3.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.4.3 z dnia 3.08.2020r.</p>
     </footer>
 </html>
