@@ -2445,30 +2445,226 @@
 
         <section id="list">
           <h3>Lists</h3>
-          list-style-type: none; 
-          list-style-position: inside albo outside ( ładne oddzielenie kropek od tekstu lub przeplatanie)
-          list style-type (do ol) decimal liczbowe, lower-alpha upper-alpha lower i upper-roman 
-          list-style-image: url('zdjecie.format');
-          ul {
-            list-style-image: url('sqpurple.gif');
-          }
-          zdjęcie jako checkmark?marker
-          list-style-position: outside albo inside
-          tzn. np jeśli li będzie miał border to domyślnie czyli outside kropka marker li będzie poza porderem
-          remove default settings:
-          ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-          }
-          shortcut:
-          ul {
-            list-style: square inside url("sqpurple.gif");
-          }
-          popularne w menu
-          li {
-            display: inline;
-          }
+          List-style-type:
+          Default i źródło przykładu 
+          <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+          </ul>
+          <ol>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+          </ol>
+          1. Disc
+          <pre><code>
+            ul.listex1 {
+              list-style-type: disc;
+            }
+            ol.listex1 {
+              list-style-type: disc;
+            }
+          </code></pre>
+          2. Circle  
+          <pre><code>
+            ul.listex2 {
+              list-style-type: circle;
+            }
+            ol.listex2 {
+              list-style-type: circle;
+            }
+          </code></pre>
+          3. Square
+          <pre><code>
+            ul.listex3 {
+              list-style-type: square;
+            }
+            ol.listex3 {
+              list-style-type: square;
+            }
+          </code></pre>
+          4. Lower alpha 
+          <pre><code>
+            ul.listex4 {
+              list-style-type: lower-alpha;
+            }
+            ol.listex4 {
+              list-style-type: lower-alpha;
+            }
+          </code></pre>
+          5. Upper alpha 
+          <pre><code>
+            ul.listex5 {
+              list-style-type: upper-alpha;
+            }
+            ol.listex5 {
+              list-style-type: upper-alpha;
+            }
+          </code></pre>
+          6. Lower latin 
+          <pre><code>
+            ul.listex6 {
+              list-style-type: lower-latin;
+            }
+            ol.listex6 {
+              list-style-type: lower-latin;
+            }
+          </code></pre>
+          7. Upper latin 
+          <pre><code>
+            ul.listex7 {
+              list-style-type: upper-latin;
+            }
+            ol.listex7 {
+              list-style-type: upper-latin;
+            }
+          </code></pre>
+          8. Lower greek 
+          <pre><code>
+            ul.listex8 {
+              list-style-type: lower-greek;
+            }
+            ol.listex8 {
+              list-style-type: lower-greek;
+            }
+          </code></pre>
+          9. Upper greek  
+          <pre><code>
+            ul.listex9 {
+              list-style-type: upper-greek;
+            }
+            ol.listex9 {
+              list-style-type: upper-greek;
+            }
+          </code></pre>
+          10. Lower roman 
+          <pre><code>
+            ul.listex10 {
+              list-style-type: lower-roman;
+            }
+            ol.listex10 {
+              list-style-type: lower-roman;
+            }
+          </code></pre>
+          11. Upper roman 
+          <pre><code>
+            ul.listex11 {
+              list-style-type: upper-roman;
+            }
+            ol.listex11 {
+              list-style-type: upper-roman;
+            }
+          </code></pre>
+          12. Decimal 
+          <pre><code>
+            ul.listex12 {
+              list-style-type: decimal;
+            }
+            ol.listex12 {
+              list-style-type: decimal;
+            }
+          </code></pre>
+          13. Decimal leading zero 
+          <pre><code>
+            ul.listex13 {
+              list-style-type: decimal-leading-zero;
+            }
+            ol.listex13 {
+              list-style-type: decimal-leading-zero;
+            }
+          </code></pre>
+          14. None 
+          <pre><code>
+            ul.listex14 {
+              list-style-type: none;
+            }
+            ol.listex14 {
+              list-style-type: none;
+            }
+          </code></pre> <br />
+
+          List-style-position <br />
+          2.1 Inside 
+          <pre><code>
+            ul.listex21 {
+              width: 150px;
+              list-style-position: inside;
+            }
+            ol.listex21 {
+              width: 150px;
+              list-style-position: inside;
+            }
+            li.listliex21 {
+              border: 1px solid black;
+            }
+          </code></pre>
+          <!-- źródło:
+          <ul class="listex21">
+            <li class="listliex21">List item 1</li>
+            <li class="listliex21">List item 2</li>
+            <li class="listliex21">List item 3</li>
+          </ul>
+          <ol class="listex21">
+            <li class="listliex21">List item 1</li>
+            <li class="listliex21">List item 2</li>
+            <li class="listliex21">List item 3</li>
+          </ol>
+          -->
+          2.2 Outside 
+          <pre><code>
+            ul.listex22 {
+              width: 150px;
+              list-style-position: outside;
+            }
+            ol.listex22 {
+              width: 150px;
+              list-style-position: outside;
+            }
+            li.listliex22 {
+              border: 1px solid black;
+            }
+          </code></pre>
+          <!-- źródło:
+          <ul class="listex22">
+            <li class="listliex22">List item 1</li>
+            <li class="listliex22">List item 2</li>
+            <li class="listliex22">List item 3</li>
+          </ul>
+          <ol class="listex22">
+            <li class="listliex22">List item 1</li>
+            <li class="listliex22">List item 2</li>
+            <li class="listliex22">List item 3</li>
+          </ol>
+          -->
+          <br />
+
+          List-style-image <br />
+          3.1 Tutaj rozmiar zdjęcia to 10x10 px
+          <pre><code>
+            ul.listex31 {
+              width: 150px;
+              list-style-image: url("F:/Projects/Cheatsheet/Sources/CSS/listimage.png");
+            }
+            ol.listex31 {
+              width: 150px;
+              list-style-image: url("F:/Projects/Cheatsheet/Sources/CSS/listimage.png");
+            }
+          </code></pre>
+          <!-- źródło: 
+          <ul class="listex31">
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+          </ul>
+          <ol class="listex31">
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+          </ol>
+          -->
+          <br />
+
         </section><br /><br />
 
         <section id="inputs">
@@ -2708,6 +2904,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.7 z dnia 4.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.8 z dnia 5.08.2020r.</p>
     </footer>
 </html>
