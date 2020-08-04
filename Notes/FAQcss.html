@@ -49,7 +49,6 @@
           <a href="#list">Lists</a><br />
           <a href="#inputs">Inputs</a><br />
           <a href="#icons">Icons</a><br />
-          <a href="#website-layout">Website layout</a><br />
           <a href="#pseudoclass">Pseudoclasses</a><br />
           <a href="#counters">Counters</a><br />
           <a href="#dunno">Dunno</a><br />
@@ -2791,38 +2790,6 @@
              https://material.io/resources/icons/?style=baseline
         </section><br /><br />
 
-        <section id="website-layout">
-          <h3>Website layout</h3>
-          website layout
-          We will create a 3-column layout, and change it to a 1-column layout on smaller screens:
-          Example
-          /* Create three equal columns that floats next to each other */
-          .column {
-            float: left;
-            width: 33.33%;
-          }
-
-          /* Clear floats after the columns */
-          .row:after {
-            content: "";
-            display: table;
-            clear: both;
-          }
-
-          /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
-          @media screen and (max-width: 600px) {
-            .column {
-              width: 100%;
-            }
-          }
-          Tip: Do you wonder how the @media rule works? Read more about it in our CSS Media Queries chapter.
-          .footer {
-            background-color: #F1F1F1;
-            text-align: center;
-            padding: 10px;
-          }
-        </section><br /><br />
-
         <section id="pseudoclass">
           <h3>Pseudoclasses</h3>
           pseudo-classe
@@ -2904,6 +2871,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.8 z dnia 5.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.8.1 z dnia 5.08.2020r.</p>
     </footer>
 </html>
