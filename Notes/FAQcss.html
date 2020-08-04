@@ -2183,45 +2183,37 @@
 
         <section id="imggallery">
           <h3>Image gallery</h3>
-          css :
-          <style>
-            div.gallery {
-              margin: 5px;
-              border: 1px solid #ccc;
-              float: left;
-              width: 180px;
-            }
-            
-            div.gallery:hover {
-              border: 1px solid #777;
-            }
-            
-            div.gallery img {
-              width: 100%;
-              height: auto;
-            }
-            
-            div.desc {
-              padding: 15px;
+          Galeria zdjęć z opisami 
+          <pre><code>
+            figcaption.cap {
               text-align: center;
+              padding: 10px;
             }
-            </style>
 
-          zdjęcia:
-          <div class="gallery">
-            <a target="_blank" href="img_5terre.jpg">
-              <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-          </div>
+            .imggallery {
+              float: left;
+              border: 1px solid grey;
+            }
+          </code></pre>
           
-          <div class="gallery">
-            <a target="_blank" href="img_forest.jpg">
-              <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-          </div> 
-          <br /><br /><br />
+          <!-- źródło:
+          <figure class="imggallery">
+            <img src="F:Projects/Cheatsheet/Sources/CSS/bulwary2.jpg" alt="Bulwary w Szczecinie" width="300px" height="300px">
+            <figcaption class="cap">Szczecińskie bulwary wieczorną porą</figcaption>
+          </figure>
+
+          <figure class="imggallery">
+            <img src="F:Projects/Cheatsheet/Sources/CSS/kulturkawwa2.jpg" alt="Pałac kultury w Warszawie" width="300px" height="300px">
+            <figcaption class="cap">Pałac kultury w Warszawie</figcaption>
+          </figure>
+
+          <figure class="imggallery">
+            <img src="F:Projects/Cheatsheet/Sources/CSS/odra2.jpg" alt="Panorama nad Odrą" width="300px" height="300px">
+            <figcaption class="cap">Panorama nad Odrą</figcaption>
+          </figure>
+           
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> -->
+
         </section><br /><br />
 
         <section id="imgsprites">
@@ -2559,6 +2551,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.6 z dnia 4.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.6.1 z dnia 4.08.2020r.</p>
     </footer>
 </html>
