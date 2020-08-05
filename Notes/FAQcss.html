@@ -2668,33 +2668,132 @@
 
         <section id="inputs">
           <h3>Inputs</h3>
-          css input forms :D 
-          input[type=text] - will only select text fields
-          input[type=password] - will only select password fields
-          input[type=number] - will only select number fields itd
-          Use the padding property to add space inside the text field.
-          Tip: When you have many inputs after each other, you might also want to add some margin, to add more space outside of them
-          przykład zastosowania [nawiasów w css]
-          input[type=text] {
-            border: 2px solid red;
-            border-radius: 4px;
-          }
-          :focus czyli kliknięte gotowe do wpisywania
-          input[type=text]:focus {
-            background-color: lightblue;
-          }
-          If you want an icon inside the input, use the background-image property and position it with the background-position property. Also notice that we add a large left padding to reserve the space of the icon
-          In this example we use the CSS transition property to animate the width of the search input when it gets focus. You will learn more about the transition property later, in our CSS Transitions chapter.
-          input[type=text] {
-            transition: width 0.4s ease-in-out;
-          }
-          
-          input[type=text]:focus {
-            width: 100%;
-          }
-          Tip: Use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom right corner)
-          na button warto dodać, to samo na linki i zdjęcia wszystkie klikane elementy :
-          cursor: pointer;
+          1.  Przykłady standardowe, dodałam padding i margin 
+          <pre><code>
+              .inputex1 {
+                padding: 10px;
+                margin: 5px;
+              }
+              .textareaex1 {
+                resize: none;
+                margin: 5px;
+              }
+          </code></pre>
+          <!-- źródło: 
+            <form method="post" action="mailto:google.com" accept-charset="utf-8" enctype="multipart/form-data">
+              <label for="1">Przykładowy input - tekst</label><input type="text" name="plaintext" id="1" class="inputex1"> <br />
+              <label for="2">Przykładowy input - tekst</label><input type="text" name="plaintext" id="2" class="inputex1"> <br />
+              <label for="3">Przykładowy input - submit</label><input type="submit" name="submit" id="3" class="inputex1" value="Submit"> <br />
+              <label for="4">Przykładowe pole tekstowe</label><textarea name="plaintextarea" id="4" class="textareaex1" cols="25" rows="5"></textarea> <br />
+            </form>
+          --> 
+          <br />
+          2. Dodajemy border 
+          <pre><code>
+            .inputex21 {
+              padding: 10px;
+              margin: 5px;
+              border: 4px inset #033797;
+            }
+            .inputex22 {
+              padding: 10px;
+              margin: 5px;
+              border: 1px wavy #033797;
+            }
+            .inputex23 {
+              padding: 10px;
+              margin: 5px;
+              border: 2px solid #000283;
+              border-radius: 10px;
+            }
+            .textareaex2 {
+              resize: none;
+              margin: 5px;
+              border: 2px dotted black;
+            }
+          </code></pre>
+          <!-- źródło: 
+           <form method="post" action="mailto:google.com" accept-charset="utf-8" enctype="multipart/form-data">
+            <label for="1">Przykładowy input - tekst</label><input type="text" name="plaintext" id="1" class="inputex21"> <br />
+            <label for="2">Przykładowy input - tekst</label><input type="text" name="plaintext" id="2" class="inputex22"> <br />
+            <label for="3">Przykładowy input - submit</label><input type="submit" name="submit" id="3" class="inputex23" value="Submit"> <br />
+            <label for="4">Przykładowe pole tekstowe</label><textarea name="plaintextarea" id="4" class="textareaex2" cols="25" rows="5"></textarea> <br />
+           </form>
+          -->
+          <br />
+          3. Działania :focus 
+          <pre><code>
+            .inputex31 {
+              padding: 10px;
+              margin: 5px;
+              border: 4px inset #033797;
+            }
+            .inputex32 {
+              padding: 10px;
+              margin: 5px;
+              border: 1px wavy #033797;
+            }
+            .inputex33 {
+              padding: 10px;
+              margin: 5px;
+              border: 2px solid #000283;
+              border-radius: 10px;
+            }
+            .textareaex3 {
+              resize: none;
+              margin: 5px;
+              border: 2px dotted black;
+              box-shadow: 0px 0px 10px black;
+            }
+
+            .inputex31:hover {
+              background-color: #033797;
+            }
+            .inputex31:focus {
+              background-color: #033797;
+              color: white;
+            }
+            .inputex32:focus {
+              border: 4px outset grey;
+            }
+            .inputex33:focus {
+              background-color: #b6b1b1;
+            }
+            .textareaex3:focus {
+              box-shadow: 3px 3px 10px black;
+            }
+          </code></pre>
+          <!-- źródło: 
+            <form method="post" action="mailto:google.com" accept-charset="utf-8" enctype="multipart/form-data">
+              <label for="1">Przykładowy input - tekst</label><input type="text" name="plaintext" id="1" class="inputex31"> <br />
+              <label for="2">Przykładowy input - tekst</label><input type="text" name="plaintext" id="2" class="inputex32"> <br />
+              <label for="3">Przykładowy input - submit</label><input type="submit" name="submit" id="3" class="inputex33" value="Submit"> <br />
+              <label for="4">Przykładowe pole tekstowe</label><textarea name="plaintextarea" id="4" class="textareaex3" cols="25" rows="5"></textarea> <br />
+            </form>
+          -->
+          <br /> <br />
+          4. Ostylowanie select 
+          <pre><code>
+            .selex1 {
+              padding: 5px;
+              width: 100px;
+              background-color: #fcc8aa;
+            }
+            .selex1:hover {
+              background-color: white;
+            }
+          </code></pre>
+          <!-- źródło: 
+            <caption>Wybierz owoc</caption>
+            <select class="selex1">
+              <option>Borówka</option>
+              <option>Arbuz</option>
+              <option>Kiwi</option>
+              <option>Malina</option>
+            </select>
+          -->
+          <br />
+
         </section><br /><br />
 
         <section id="icons">
@@ -2871,6 +2970,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.8.1 z dnia 5.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.9 z dnia 5.08.2020r.</p>
     </footer>
 </html>
