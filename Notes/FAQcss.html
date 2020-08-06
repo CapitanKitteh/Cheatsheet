@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1-0">
         <meta name="keywords" content="css, style, kurs, programowanie">
         <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/CapitanKitteh/Cheatsheet/master/Sources/CSS/FAQcss.css" />
+        <script src="https://kit.fontawesome.com/b25a028b57.js" crossorigin="anonymous"></script>
 
     </head>
     
@@ -2798,95 +2799,31 @@
 
         <section id="icons">
           <h3>Icons</h3>
-          ikony można umieścić jak external plik w head 
-          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-          <!--czy mogę go umieścić w external css jak font family?-->
-          For those looking to self host the web font, some additional setup is necessary. Host the icon font in a location, for example https://example.com/material-icons.woff and add the following CSS rule:
-           @font-face {
-           font-family: 'Material Icons';
-           font-style: normal;
-           font-weight: 400;
-           src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-           src: local('Material Icons'),
-           local('MaterialIcons-Regular'),
-           url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-           url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-           url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-           }
+          Umieszczanie ikon w head dokumentu html - przykłady z użyciem Font Awesome <br /><br />
 
-           In addition, the CSS rules for rendering the icon will need to be declared to render the font properly. These rules are normally served as part of the Google Web Font stylesheet, but will need to be included manually in your projects when self-hosting the font:
-             .material-icons {
-             font-family: 'Material Icons';
-             font-weight: normal;
-             font-style: normal;
-             font-size: 24px;  /* Preferred icon size */
-             display: inline-block;
-             line-height: 1;
-             text-transform: none;
-             letter-spacing: normal;
-             word-wrap: normal;
-             white-space: nowrap;
-             direction: ltr;
-             
-             /* Support for all WebKit browsers. */
-             -webkit-font-smoothing: antialiased;
-             /* Support for Safari and Chrome. */
-             text-rendering: optimizeLegibility;
+          &lt;script src=&quot;https://kit.fontawesome.com/yourkitname.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;; <br />
 
-             /* Support for Firefox. */
-             -moz-osx-font-smoothing: grayscale;
+          1. Rozmiar ikon można określać za pomocą oznaczeń jak i jednostek em, px i innych: <br />
+          1.1 Fa-xs: <i class="fas fa-laptop-code fa-xs"></i> <br /><br />
+          1.2 Fa-sm: <i class="fas fa-laptop-code fa-sm"></i> <br /><br />
+          1.3 Fa-lg: <i class="fas fa-laptop-code fa-lg"></i> <br /><br />
+          1.4 Fa-2x: <i class="fas fa-laptop-code fa-2x"></i> <br /><br />
+          1.5 Fa-3x: <i class="fas fa-laptop-code fa-3x"></i> <br /><br />
+          1.6 Fa-4x: <i class="fas fa-laptop-code fa-4x"></i> <br /><br />
+          1.7 Fa-5x: <i class="fas fa-laptop-code fa-5x"></i> <br /><br />
+          1.8 Fa-6x: <i class="fas fa-laptop-code fa-6x"></i> <br /><br />
+          1.9 Fa-7x: <i class="fas fa-laptop-code fa-7x"></i> <br /><br />
+          1.10 Fa-8x: <i class="fas fa-laptop-code fa-8x"></i> <br /><br />
+          1.11 Fa-9x: <i class="fas fa-laptop-code fa-9x"></i> <br /><br />
+          1.12 Fa-10x: <i class="fas fa-laptop-code fa-10x"></i> <br /><br /><br />
 
-             /* Support for IE. */
-             font-feature-settings: 'liga';
-             }
+          2. 
 
-             wprowadzenie ikony, i lub span class zazwyczaj i najlepiej .material-icons i zamiast tekstu nazwa ikony 
-             <i class="material-icons">face</i> opcjonalnie
-             <i class="material-icons">&#xE87C;</i> numerycznie dla nie wspierających nazw przeglądarek
 
-             zalecane ustawienia resizingu i dark/ligh mode 
-             /* Rules for sizing the icon. */
-             .material-icons.md-18 { font-size: 18px; }
-             .material-icons.md-24 { font-size: 24px; }
-             .material-icons.md-36 { font-size: 36px; }
-             .material-icons.md-48 { font-size: 48px; }
-              
-             /* Rules for using icons as black on a light background. */
-             .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
-             .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
-             
-             /* Rules for using icons as white on a dark background. */
-             .material-icons.md-light { color: rgba(255, 255, 255, 1); }
-             .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+          <style>
+          </style>
+          <i class="fas fa-laptop-code fa-xs"></i>
 
-             przykład 18px :
-             <i class="material-icons md-18">face</i>
-             .material-icons.md-18 { font-size: 18px; }
-
-             To set a custom icon color, define a CSS rule specifying the desired color for the font:
-              
-             .material-icons.orange600 { color: #FB8C00; }
-             and then use the class when referring to the icon:
-             <i class="material-icons orange600">face</i>
-
-             <!--
-             schowaj to w klikany pokazujący się opis
-             PNGs suitable for Android are available from the material icons library. These come in all the supported screen densities so they should look good on any device.
-
-             The icons are also available in the material design icons git repository in the same combination of colors and sizes named as follows:
-
-             */drawable-{{density}}/ic_{{name}}_{{color}}_{{size}}dp.png
-             A density-independent VectorDrawable is provided which is supported from Android Lollipop and later:
-
-             */drawable-anydpi-v21/ic_{{name}}_black_24dp.xml
-             The Vector Drawable is currently only available as a black 24dp icon. This is for compatibility with our most standard icon size. To render the icon in a different color, use drawable tinting available on Android Lollipop.
-
-             When using the Vector Drawable, it may not be necessary to include the xxxhdpi density PNG since it is unlikely a device supporting that screen density does not support Vector Drawables.-->
-
-             <!--IOS
-             Material icons also work well within iOS apps. In both the material icons library and git repository, these icons are packaged up in Xcode imagesets which will work easily with Xcode Asset Catalogs (xcassets). These imagesets can be added to any Xcode Asset Catalogs by dragging them into Xcode on to the asset catalog or by copying the folder into the xcasset folder.
-             link do repo https://github.com/google/material-design-icons/tree/master/iconfont -->
-             https://material.io/resources/icons/?style=baseline
         </section><br /><br />
 
         <section id="pseudoclass">
@@ -2970,6 +2907,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.9 z dnia 5.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.9.1 z dnia 6.08.2020r.</p>
     </footer>
 </html>
