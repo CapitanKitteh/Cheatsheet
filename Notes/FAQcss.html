@@ -2804,6 +2804,7 @@
           &lt;script src=&quot;https://kit.fontawesome.com/yourkitname.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;; <br />
 
           1. Rozmiar ikon można określać za pomocą oznaczeń jak i jednostek em, px i innych: <br />
+          &lt;i class=&quot;nazwaikony fa-xs&quot;&gt;&lt;/i&gt; <br />
           1.1 Fa-xs: <i class="fas fa-laptop-code fa-xs"></i> <br /><br />
           1.2 Fa-sm: <i class="fas fa-laptop-code fa-sm"></i> <br /><br />
           1.3 Fa-lg: <i class="fas fa-laptop-code fa-lg"></i> <br /><br />
@@ -2817,12 +2818,65 @@
           1.11 Fa-9x: <i class="fas fa-laptop-code fa-9x"></i> <br /><br />
           1.12 Fa-10x: <i class="fas fa-laptop-code fa-10x"></i> <br /><br /><br />
 
-          2. 
+          2. Ikony w unordered list  <br />
+          &lt;ul class=&quot;fa-ul&quot;&gt; <br />
+            &lt;li&gt;&lt;span class=&quot;fa-li&quot;&gt;&lt;i class=&quot;fas fa-plus&quot;&gt;&lt;/i&gt;&lt;/span&gt;List item 1&lt;/li&gt; <br />
+            &lt;li&gt;&lt;span class=&quot;fa-li&quot;&gt;&lt;i class=&quot;fas fa-minus&quot;&gt;&lt;/i&gt;&lt;/span&gt;List item 2&lt;/li&gt; <br />
+            &lt;li&gt;&lt;span class=&quot;fa-li&quot;&gt;&lt;i class=&quot;fas fa-exclamation&quot;&gt;&lt;/i&gt;&lt;/span&gt;List item 3&lt;/li&gt; <br />
+          &lt;/ul&gt; <br />
 
+          <ul class="fa-ul">
+            <li><span class="fa-li"><i class="fas fa-plus"></i></span>List item 1</li>
+            <li><span class="fa-li"><i class="fas fa-minus"></i></span>List item 2</li>
+            <li><span class="fa-li"><i class="fas fa-exclamation"></i></span>List item 3</li>
+          </ul> <br />
 
-          <style>
-          </style>
-          <i class="fas fa-laptop-code fa-xs"></i>
+          3. Animowane ikony tworzymy przy pomocy fa-spin (ciągłe obracanie) oraz fa-pulse (obracanie 8-stopniowe) w rozmiarze 2x <br />
+          3.1 Fa-spin <br />
+          &lt;i class=&quot;fas fa-spinner fa-spin&quot;&gt;&lt;/i&gt; <br />
+          &lt;i class=&quot;fas fa-sync-alt fa-spin&quot;&gt;&lt;/i&gt; <br />
+          &lt;i class=&quot;fas fa-fan fa-spin&quot;&gt;&lt;/i&gt; <br />
+
+          <i class="fas fa-spinner fa-2x fa-spin"></i> <br />
+          <i class="fas fa-sync-alt fa-2x fa-spin"></i> <br />
+          <i class="fas fa-fan fa-2x fa-spin"></i> <br />
+          3.2 Fa-pulse <br />
+          &lt;i class=&quot;fas fa-spinner fa-pulse&quot;&gt;&lt;/i&gt; <br />
+          &lt;i class=&quot;fas fa-sync-alt fa-pulse&quot;&gt;&lt;/i&gt; <br />
+          &lt;i class=&quot;fas fa-fan fa-pulse&quot;&gt;&lt;/i&gt; <br />
+
+          <i class="fas fa-spinner  fa-2x fa-pulse"></i> <br />
+          <i class="fas fa-sync-alt fa-2x fa-pulse"></i> <br />
+          <i class="fas fa-fan fa-2x fa-pulse"></i> <br /> <br />
+
+          4. Obracanie fa-rotate- i odwracanie ikon fa-flip- w rozmiarze 3x <br />
+          4.1 &lt;i class=&quot;far fa-save fa-3x&quot;&gt;&lt;/i&gt; <br />
+          4.2 &lt;i class=&quot;far fa-save fa-3x fa-rotate-90&quot;&gt;&lt;/i&gt; <br />
+          4.3 &lt;i class=&quot;far fa-save fa-3x fa-rotate-180&quot;&gt;&lt;/i&gt; <br />
+          4.4 &lt;i class=&quot;far fa-save fa-3x fa-rotate-270&quot;&gt;&lt;/i&gt; <br />
+          4.5 &lt;i class=&quot;far fa-save fa-3x fa-flip-horizontal&quot;&gt;&lt;/i&gt; <br />
+          4.6 &lt;i class=&quot;far fa-save fa-3x fa-flip-vertical&quot;&gt;&lt;/i&gt; <br />
+
+          4.1 <i class="far fa-save fa-3x"></i> <br />
+          4.2 <i class="far fa-save fa-3x fa-rotate-90"></i> <br />
+          4.3 <i class="far fa-save fa-3x fa-rotate-180"></i> <br />
+          4.4 <i class="far fa-save fa-3x fa-rotate-270"></i> <br />
+          4.5 <i class="far fa-save fa-3x fa-flip-horizontal"></i> <br />
+          4.6 <i class="far fa-save fa-3x fa-flip-vertical"></i> <br /> <br />
+
+          5. Ustalenie szerokości fa-fw w rozmiarze 2x <br />
+          5.1 Default <br />
+          &lt;span&gt;&lt;i class=&quot;fas fa-grip-lines fa-2x&quot;&gt;&lt;/i&gt;&lt;/span&gt; <br />
+          &lt;span&gt;&lt;i class=&quot;fas fa-grip-lines-vertical fa-2x&quot;&gt;&lt;/i&gt;&lt;/span&gt; <br />
+
+          <span><i class="fas fa-grip-lines fa-2x"></i></span> <br />
+          <span><i class="fas fa-grip-lines-vertical fa-2x"></i></span> <br />
+          5.2 Fa-fw <br />
+          &lt;span&gt;&lt;i class=&quot;fas fa-grip-lines fa-2x fa-fw&quot;&gt;&lt;/i&gt;&lt;/span&gt; <br />
+          &lt;span&gt;&lt;i class=&quot;fas fa-grip-lines-vertical fa-2x fa-fw&quot;&gt;&lt;/i&gt;&lt;/span&gt; <br />
+
+          <span><i class="fas fa-grip-lines fa-2x fa-fw"></i></span> <br />
+          <span><i class="fas fa-grip-lines-vertical fa-2x fa-fw"></i></span> <br />
 
         </section><br /><br />
 
@@ -2907,6 +2961,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.9.1 z dnia 6.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.9.2 z dnia 6.08.2020r.</p>
     </footer>
 </html>
