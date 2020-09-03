@@ -608,29 +608,224 @@
           <br /><br />
           X. :disabled 
           <pre><code>
-            input:disabled {
+            .inputexX:disabled {
               background-color: #fcc8aa;
             }
           </code></pre>
           <input name="bakery" value="Croissant" disabled="disabled" /> <br />
           X :checked 
           <pre><code>
-            input:checked {
+            .inputexX:checked {
               margin: 20px;
             }
           </code></pre>
           <input name="bakery" type="checkbox" value="Croissant" id="pseudoclassex1" checked><label for="pseudoclassex1">Croissant</label> <br />
+          X :active 
+          <pre><code>
+            #pseudoclassexX:active {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          <input name="bakery" value="Croissant" id="pseudoclassex92" disabled> <br />
+          X :empty <!--Przykład?-->
+          <pre><code>
+            #pseudoclassexX:empty {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przyklad <br />
+          x :enabled 
+          <pre><code>
+            #pseudoclassexX:enabled {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          Przykład <br />
+          X :first-child 
+          <pre><code>
+            #pseudoclassexX:first-child {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład nie wymagający utworzenia klassy ani id przy zachowaniu nienaruszalności innych rzykładów.. testowane na li x3 działa, na ul z pod ul i kolejnym ul już nie. <br />
+          X :last-child
+          <pre><code>
+            #pseudoclassexX:last-child {
+              background-color: #fcc8aa; <!--może być inny-->
+            }
+          </code></pre>
+          X :nth-child(3) 
+          <pre><code>
+            #pseudoclassexX:nth-child(3) {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          co 3 dziecko przykładu <br />
+          X :first-of-type 
+          <pre><code>
+            #pseudoclassexX {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          pierwszy np p w section <br />
+          X :last-of-type 
+          <pre><code>
+            #pseudoclassexX:last-of-type {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          X :nth-last-of-type(4) 
+          <pre><code>
+            #pseudoclassexX:nth-last-of-type(4) {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          4 od końca to samo dziecko rodzica <br />
+          X :nth-of-type(4) 
+          <pre><code>
+            #pseudoclassexX:nth-of-type(4) {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          4 to samo dziecko rodzica <br />
+          X :only-of-type 
+          <pre><code>
+            #pseudoclassexX:only-of-type {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          każde to samo dziecko rodzica <br />
+          X :only-child 
+          <pre><code>
+            #pseudoclassexX:only-child {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          wybrane, jedyne dziecko rodzica <br />
+          X :focus konieczne kliknięcie w input
+          <pre><code>
+            #pseudoclassexX:focus {
+            background-color: #fcc8aa;
+          }
+          </code></pre>
+          <input name="bakery" value="Croissant" id="pseudoclassex92"> <br />
+          X :hover 
+          <pre><code>
+            #pseudoclassexX:hover {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład input disabed albo i nie, możesz dawać readonly jak chcesz i się sprawdzi  <br />
+          X :in-range 
+          <pre><code>
+            #pseudoclassexX:in-range {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład z input range może się nada <br />
+          X :out-of-range
+          <pre><code>
+            #pseudoclassexX:out-of-range {
+              background-color:#fcc8aa;
+            }
+          </code></pre>
+          X :invalid 
+          <pre><code>
+            #pseudoclassexX:invalid {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład z jakąs błędną daną? <br />
+          X :valid 
+          <pre><code>
+            #pseudoclassexX:valid {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład z jakąs zgodną daną? <br />
+          X :lang(pl)
+          <pre><code>
+            #pseudoclassexX:lang(pl) {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład z może divami albo p oznaczonymi różnymi lang a w zawartości cytaty? <br />
+          X :link 
+          <pre><code>
+            #pseudoclassexX:link {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          dodaj tutaj ahref, nieodwiedzony pusty link <br />
+          X :visited 
+          <pre><code>
+            #pseudoclassexX:visited {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          dodaj tutaj ahref, przykładem jest odwiedzony pusty link <br />
+          X :read-only 
+          <pre><code>
+            #pseudoclassexX:readonly {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład input z readonly <br />
+          X :read-write
+          <pre><code>
+            #pseudoclassexX:read-write {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład inputu bez readonly <br />
+          X :required
+          <pre><code>
+            #pseudoclassexX:required {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład inputu z required <br />
+          X :optional
+          <pre><code>
+            #pseudoclassexX:optional {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład inputu z optional <br />
+          X :root
+          <pre><code>
+            #pseudoclassexX:root {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład <br />
+          X :target
+          <pre><code>
+            #pseudoclassexX:target {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          przykład <br />
+          X :not(selector) 
+          <pre><code>
+            #pseudoclassexX:not(selector) {
+              background-color: #fcc8aa;
+            }
+          </code></pre>
+          wybierz coś <br />
+
+
 
 
 
 
           <br /><br /><br />
           <style>
-            input:checked {
-              margin: 20px;
+            #pseudoclassex92:hover {
+              background-color: #fcc8aa;
             }
           </style>
-          <input name="bakery" type="checkbox" value="Croissant" id="pseudoclassex1" checked><label for="pseudoclassex1">Croissant</label> <br />
+
 
 
         </section><br /><br />
@@ -3039,6 +3234,6 @@
 
     <footer>
         <p align="center"><a name="bottom" href="#top">Do góry strony</a></p><br />
-        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.9.4 z dnia 9.08.2020r.</p>
+        <p align="center" id="bottom">&copy;Blanka Witczak wersja 5.9.5 z dnia 3.09.2020r.</p>
     </footer>
 </html>
